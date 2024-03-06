@@ -1,0 +1,64 @@
+import React from "react";
+import {
+  Table,
+  TableHeader,
+  TableHead,
+  TableBody,
+  TableRow,
+  TableCell,
+} from "@/components/ui/table";
+import { newTokensMock } from "@/utils/mockData3";
+
+export default function All() {
+  return (
+    <>
+      <Table className="text-left overflow-x-hidden w-full">
+        <TableHeader>
+          <TableRow className="border-none bg-[#0C141F]">
+            <TableHead className="w-[100px] font-semibold md:font-bold lg:font-bold text-[9px] md:text-xs lg:text-xs ">
+              Age
+            </TableHead>
+            <TableHead className="w-[80px] font-semibold md:font-bold lg:font-bold text-[9px] md:text-xs lg:text-xs">
+              Token Name
+            </TableHead>
+
+            <TableHead className="font-semibold md:font-bold lg:font-bold text-[9px] md:text-xs lg:text-xs">
+              <div className="text-center w-[120px] md:w-[120px] lg:w-[120px]">
+                Scam Score
+              </div>
+            </TableHead>
+
+            <TableHead className="w-[100px] font-semibold md:font-bold lg:font-bold text-[9px] md:text-xs lg:text-xs">
+              Price
+            </TableHead>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          {newTokensMock?.map((row, index) => (
+            <TableRow key={index} className="border-none">
+              <TableCell className="w-[100px] flex items-center font-normal text-[9px] md:text-xs lg:text-xs">
+                {row.Age}
+              </TableCell>
+              <TableCell className="w-[80px] font-normal text-[9px]md:text-xs lg:text-xs">
+                {row.TokenName}
+              </TableCell>
+              <TableCell className="text-center w-[120px]  font-bold text-[9px] md:text-xs lg:text-xs">
+                <span
+                  className="font-normal text-center text-[9px] md:text-xs lg:text-xs"
+                  style={{
+                    color: [0, 2, 3].includes(index) ? "#1BA97F" : "#E63E3A",
+                  }}
+                >
+                  {row.scamScore}
+                </span>
+              </TableCell>
+              <TableCell className="w-[100px] font-normal text-[9px] md:text-xs lg:text-xs">
+                {row.price}
+              </TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </>
+  );
+}

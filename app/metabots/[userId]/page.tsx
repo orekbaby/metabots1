@@ -1,0 +1,105 @@
+// Import necessary modules and components
+import React from "react";
+import dynamic from "next/dynamic";
+import Image from "next/image";
+import Multichart from "@/components/metabots/multi-chart/Multichart";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+
+const Tabs = dynamic(() => import("@/components/metabots/Dashboard/Tabs"), {
+  ssr: false,
+});
+
+const Chart = dynamic(() => import("@/components/metabots/charts/Chart"), {
+  ssr: false,
+});
+
+const TradeTabs = dynamic(
+  () => import("@/components/metabots/Dashboard/tradeTabs/TradeTabs"),
+  {
+    ssr: false,
+  }
+);
+
+const PriceTabs = dynamic(
+  () => import("@/components/metabots/Dashboard/latestTrades/PriceTabs"),
+  {
+    ssr: false,
+  }
+);
+
+const TokenDetails = dynamic(
+  () => import("@/components/metabots/tokenDetails/TokenDetails"),
+  {
+    ssr: false,
+  }
+);
+
+const TokenDetailsMobile = dynamic(
+  () => import("@/components/metabots/tokenDetails/TokenDetailsMobile"),
+  {
+    ssr: false,
+  }
+);
+
+// Define the Page component
+interface PageProps {
+  // Define any additional props specific to the Page component
+}
+const Page: React.FC<PageProps> = (props) => {
+  // Example data (replace this with your actual data or fetch it)
+
+  return (
+    <>
+      <TokenDetailsMobile />
+      <div className="hidden md:flex lg:flex items-center">
+        <TokenDetails />
+      </div>
+      <div className="flex w-full gap-2">
+        <div className="flex-[72%] flex flex-col gap-2">
+          <div className="flex gap-2">
+            <div className=" hidden md:inlin lg:inline flex-[39%] mr-4">
+              <Dialog>
+                <DialogTrigger>
+                  <h2 className="font-semibold text-sm  w-fit text-[#FFC107] my-2 border-b-[1px] border-[#FFC107]">
+                    Multi-Chart
+                  </h2>
+                </DialogTrigger>
+                <DialogContent className="max-w-[95vw] max-h-[95vh] h-[95vh] w-[95vw] bg-[#0A1019] border border-slate-800 left-1/2 top-1/2 overflow-y-auto">
+                  <Multichart />
+                </DialogContent>
+              </Dialog>
+
+              {/* Pass the props to the Chart component */}
+              <Chart />
+            </div>
+            <div className="hidden md:inline lg:inline flex-[59%] border-[1px] border-[#212E40] p-2 rounded-[8px] mt-4 md:mt-0 lg:mt-0">
+              <Tabs />
+            </div>
+          </div>
+          <div className="hidden md:inline lg:inline w-full border-[1px] border-[#212E40] p-2 rounded-[8px] mt-6">
+            <PriceTabs />
+          </div>
+        </div>
+        <div className="hidden md:inline lg:inline flex-[25%]">
+          <div className="border-[1px] border-[#212E40] rounded-[8px] p-2">
+            <h3 className="font-bold text-xs md:text-base lg:text-base mb-2">
+              Your Wallets
+            </h3>
+            <Image
+              className="rounded-[8px]"
+              src="/fraud.png"
+              alt="fraud"
+              width={346}
+              height={50}
+            />
+          </div>
+          <div className="border-[1px] border-[#212E40] rounded-[8px] p-2 mt-3">
+            <TradeTabs />
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Page;

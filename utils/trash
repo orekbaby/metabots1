@@ -1,0 +1,137 @@
+// const Settings: React.FC = () => {
+// Settings.displayName = "Settings";
+// npx shadcn-ui@latest add slider
+// import { Slider } from "@/components/ui/slider";
+// <Slider defaultValue={[33]} max={100} step={1} />;
+// import React from "react";
+// import { Button } from "@/components/ui/button";
+// import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+// import SettingsTab from "@/components/wallet/settingTab/SettingsTab";
+// import { BsFillExclamationCircleFill } from "react-icons/bs";
+// import { IoIosArrowUp } from "react-icons/io";
+// import { Slider } from "@/components/ui/slider";
+// import { Switch } from "@/components/ui/switch";
+// import { useEffect, useState } from 'react';
+//   <div className="grid grid-cols-3 w-full justify-between items-center gap-5">
+//     {tokenInfo.filter((data) => data.title !== price)}
+//   </div>;
+
+// export default function Settings() {
+
+// function MyComponent() {
+//   const [isSwitchOn, setIsSwitchOn] = useState(false);
+
+//   useEffect(() => {
+//     // This useEffect hook runs only on the client side
+//     // You can use it to fetch data, set up subscriptions, etc.
+//     // Here, we're initializing the switch state based on local storage
+//     const storedSwitchState = localStorage.getItem('switchState');
+//     if (storedSwitchState !== null) {
+//       setIsSwitchOn(JSON.parse(storedSwitchState));
+//     }
+//   }, []); // Empty dependency array ensures the effect runs only once on mount
+
+//   const handleSwitchToggle = () => {
+//     setIsSwitchOn((prev) => !prev);
+//   };
+
+//   useEffect(() => {
+//     // This useEffect hook runs whenever the switch state changes
+//     // Here, we're updating local storage with the latest switch state
+//     localStorage.setItem('switchState', JSON.stringify(isSwitchOn));
+//   }, [isSwitchOn]); // Dependency array ensures the effect runs when isSwitchOn changes
+
+//   return (
+//     <Dialog>
+//       <DialogTrigger>
+// //         <Button
+// //           className="bg-[#212E40] text-white rounded-[6px]"
+// //           variant="default"
+// //           size="sm"
+// //         >
+// //           Settings
+// //         </Button>
+// //       </DialogTrigger>
+// //       <DialogContent className="bg-[#0C141F] p-3 border-none">
+// //         <div>
+// //           <SettingsTab />
+// //           <div className="flex p-2 justify-start gap-3 items-center border-b-[1px] border-[#212E40]">
+// //             <h3 className=" text-sm font-medium text-left">Trade Settings</h3>
+// //             <BsFillExclamationCircleFill />
+// //             <IoIosArrowUp className=" text-sm md:text-base lg:text-base" />
+// //           </div>
+// //           <div className="mt-6">
+// //             <h3 className="text-sm md:text-base lg:base font-bold text-white">
+// //               Scam Score Settings:
+// //             </h3>
+// //             <p className="text-[#FFC107] font-medium text-[10px] md:text-xs lg:text-xs">
+// //               Between 0-100%
+// //             </p>
+// //             <Slider
+// //               defaultValue={[33]}
+// //               max={100}
+// //               step={1}
+// //               className="bg-[#0D6EFD] w-full h-2 rounded-lg mt-4"
+// //             />
+// //           </div>
+// //           <div className="mt-6">
+// //             <h3 className="text-sm md:text-base lg:base font-bold text-white">
+// //               Scam Score Settings:
+// //             </h3>
+// //             <p className="text-[#FFC107] font-medium text-[10px] md:text-xs lg:text-xs">
+// //               Between 0-100%
+// //             </p>
+// //             <Slider
+// //               defaultValue={[33]}
+// //               max={100}
+// //               step={1}
+// //               className="bg-[#0D6EFD] w-full h-2 rounded-lg mt-4"
+// //             />
+// //           </div>
+// //           <div className="flex justify-between mt-8">
+// //             <p className="text-xs md:text-base lg:text-base font-medium">
+// //               Fail Safe protection:
+// //             </p>
+// //             <Switch className="bg-[#168FFF]" />
+// //           </div>
+// //           <div className="flex justify-between mt-8">
+// //             <p className="text-xs md:text-base lg:text-base font-medium">
+// //               Fail Safe protection:
+// //             </p>
+// //             <Switch className="bg-[#168FFF]" />
+// //           </div>
+// //           <div className="flex pb-2 mt-8 justify-start gap-3 items-center border-b-[1px] border-[#212E40]">
+// //             <h3 className=" text-sm font-medium text-left">Trade Settings</h3>
+// //             <BsFillExclamationCircleFill />
+// //             <IoIosArrowUp className=" text-sm md:text-base lg:text-base" />
+// //           </div>
+// //           <div className="flex justify-between mt-8">
+// //             <p className="text-xs md:text-base lg:text-base font-medium">
+// //               Fail Safe protection:
+// //             </p>
+// //             <Switch style={{ backgroundColor: "#168FFF" }} />
+// //           </div>
+
+// //           <Button
+// //             size="lg"
+// //             className=" mt-8 w-full h-[38px] md:h-[44px] lg:h-[44px] rounded-[6px] md:rounded-[8px] lg:rounded-[8px] py-[10px] px-[18px] bg-[#0D6EFD]
+// //              text-white text-[14px] md:text-base lg:text-base font-semibold leading-[23.8px]"
+// //           >
+// //             Update
+// //           </Button>
+// //         </div>
+// //       </DialogContent>
+// //     </Dialog>
+// //   );
+// // }
+
+// // export { Settings };
+// // }
+
+//    <Image
+//           src="/top.png"
+//           alt="fraud"
+//           width={1134}
+//           height={73}
+//           className="hidden md:inline lg:inline"
+//         />

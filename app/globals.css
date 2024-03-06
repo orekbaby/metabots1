@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: #101720;
+  color: #e8e8e8; /* Setting text color for the whole body */
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  max-width: 100%;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+}
+
+main {
+  max-width: 100%;
+}
