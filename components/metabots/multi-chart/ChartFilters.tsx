@@ -1,8 +1,6 @@
-"use client";
-import React from "react";
-import { useState } from "react";
+import React, { FC } from "react";
 import { GrFormClock } from "react-icons/gr";
-
+import { Button } from "@/components/ui/button";
 import {
   Select,
   SelectContent,
@@ -10,17 +8,26 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Button } from "@/components/ui/button";
 
-const ChartFilters = () => {
-  const [columns, setColumns] = useState(1);
-  const [height, setHeight] = useState(5);
-  const [gaps, setGaps] = useState(5);
+interface Props {
+  columns: number;
+  height: number;
+  gaps: number;
+  setColumns: (value: number) => void;
+  setHeight: (value: number) => void;
+  setGaps: (value: number) => void;
+}
 
+const ChartFilters: FC<Props> = ({
+  columns,
+  height,
+  gaps,
+  setColumns,
+  setGaps,
+  setHeight,
+}) => {
   const handleColumnDecrease = () => {
-    if (columns > 1) {
-      setColumns(columns - 1);
-    }
+    setColumns(columns - 1);
   };
 
   const handleColumnIncrease = () => {
@@ -28,28 +35,23 @@ const ChartFilters = () => {
   };
 
   const handleHeightDecrease = () => {
-    if (height > 5) {
-      setHeight(height - 5);
-    }
+    setHeight(height - 1);
   };
 
   const handleHeightIncrease = () => {
-    setHeight(height + 5);
+    setHeight(height + 1);
   };
 
-  const handleGapDecrease = () => {
-    if (gaps > 5) {
-      setGaps(gaps - 5);
-    }
+  const handleGapsDecrease = () => {
+    setGaps(gaps - 1);
   };
 
-  const handleGapIncrease = () => {
-    setGaps(gaps + 5);
+  const handleGapsIncrease = () => {
+    setGaps(gaps + 1);
   };
 
   return (
     <>
-      {" "}
       <div className="flex gap-8 mb-5 w-full h-fit items-center">
         <h1 className="font-semibold text-lg">Multi chart</h1>
         <div className="border px-3 border-[#212E40] rounded-md flex gap-1 items-center">
@@ -76,6 +78,7 @@ const ChartFilters = () => {
             </SelectContent>
           </Select>
         </div>
+
         <div className="border p-3 border-[#212E40] rounded-md flex gap-1 items-center">
           <p className="font-normal text-sm">Columns</p>
           <Button
@@ -83,12 +86,14 @@ const ChartFilters = () => {
             size="sm"
             className="w-[20px] h-[20px] bg-transparent border border-[#212E40] hover:bg-transparent"
             onClick={handleColumnDecrease}
+            disabled={columns === 1} // Disable the button when columns === 1
           >
             -
           </Button>
           <p className="text-sm font-normal">{columns}</p>
           <Button
             onClick={handleColumnIncrease}
+            disabled={columns === 3} // Disable the button when columns === 3
             variant="outline"
             size="sm"
             className="w-[20px] h-[20px] bg-transparent border border-[#212E40] hover:bg-transparent"
@@ -103,13 +108,13 @@ const ChartFilters = () => {
             variant="outline"
             size="sm"
             className="w-[20px] h-[20px] bg-transparent border border-[#212E40] hover:bg-transparent"
-            onClick={handleColumnDecrease}
+            onClick={handleHeightDecrease}
           >
             -
           </Button>
-          <p className="text-sm font-normal">{columns}</p>
+          <p className="text-sm font-normal">{height}</p>
           <Button
-            onClick={handleColumnIncrease}
+            onClick={handleHeightIncrease}
             variant="outline"
             size="sm"
             className="w-[20px] h-[20px] bg-transparent border border-[#212E40] hover:bg-transparent"
@@ -124,16 +129,16 @@ const ChartFilters = () => {
             variant="outline"
             size="sm"
             className="w-[20px] h-[20px] bg-transparent border border-[#212E40] hover:bg-transparent"
-            onClick={handleColumnDecrease}
+            onClick={handleGapsDecrease}
           >
             -
           </Button>
-          <p className="text-sm font-normal">{columns}</p>
+          <p className="text-sm font-normal">{gaps}</p>
           <Button
-            onClick={handleColumnIncrease}
+            onClick={handleGapsIncrease}
             variant="outline"
             size="sm"
-            className="w-[20px] h-[20px] border bg-transparent border-[#212E40] hover:bg-transparent"
+            className="w-[20px] h-[20px] bg-transparent border border-[#212E40] hover:bg-transparent"
           >
             +
           </Button>
