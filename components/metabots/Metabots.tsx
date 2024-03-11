@@ -16,7 +16,7 @@ import { Button } from "@/components/ui/button";
 
 const Metabots = () => {
   return (
-    <div className="pl-2">
+    <div className="pl-[8px]">
       <div className=" w-full mb-20 md:mb-36 lg:mb-36">
         {" "}
         <div className="flex flex-col md:flex-row lg:flex-row justify-center">
