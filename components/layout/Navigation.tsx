@@ -10,6 +10,12 @@ export default function Navigation() {
     >
       <div className="flex justify between">
         <div className="flex items-center">
+          <Button
+            className="hidden md:inline lg:inline bg-[#0B0F16] rounded-md text-white mr-3 py-2 px-10 font-semibold text-[10px]"
+            variant="outline"
+          >
+            Log in
+          </Button>
           <Button className="hidden md:inline lg:inline bg-[#0D6EFD] rounded-md text-white mr-2 py-2 px-10 font-semibold text-[10px]">
             Sign Up
           </Button>

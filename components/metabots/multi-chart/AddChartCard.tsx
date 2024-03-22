@@ -21,7 +21,7 @@ const AddChartCard: FC<Props> = ({ height }) => {
           </div>
         </DialogTrigger>
 
-        <DialogContent className="max-w-[95vw] max-h-[95vh] h-[95vh] w-[95vw] bg-[#212E40] border-none left-1/2 top-1/2 overflow-y-auto">
+        <DialogContent className="max-w-[50vw] max-h-[70vh] h-[70vh] w-[50vw] bg-[#212E40] border-none left-1/2 top-1/2 overflow-y-auto">
           <Search />
         </DialogContent>
       </Dialog>

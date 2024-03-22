@@ -102,3 +102,25 @@ export const watchList = [
     subvalue: "-17.41%",
   },
 ];
+
+export const searchData = [
+  {
+    time: "3 mins ago",
+    address: "0x9cA4....89D21",
+    status: "listening",
+    icon: "./ruler&pen.png",
+  },
+
+  {
+    time: "3 mins ago",
+    address: "0x9cA4....89D21",
+    status: "listening",
+    icon: "./ruler&pen.png",
+  },
+  {
+    time: "3 mins ago",
+    address: "0x9cA4....89D21",
+    status: "listening",
+    icon: "./ruler&pen.png",
+  },
+];
