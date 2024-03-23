@@ -4,7 +4,6 @@
 /node_modules
 /.pnp
 .pnp.js
-.yarn/install-state.gz
 
 # testing
 /coverage
@@ -27,6 +26,9 @@ yarn-error.log*
 
 # local env files
 .env*.local
+.env
+.env
+*.env
 
 # vercel
 .vercel
@@ -34,3 +36,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Ignore macOS .DS_Store files
+.DS_Store
