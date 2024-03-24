@@ -165,7 +165,7 @@ export default function Home() {
               />
             </div>
             <div className="text-center md:text-left lg:text-left mb-5">
-              <Button className="w-[141px] h-[34px] md:w-44 md:h-10 lg:w-44 lg:h-10 bg-[#0D6EFD] rounded-md text-white py-2 px-4 font-normal md:font-medium lg:font-medium text-xs md:text-sm lg:text-sm">
+              <Button className="w-[141px] h-[34px] md:w-36 md:h-10 lg:w-36 lg:h-10 bg-[#0D6EFD] rounded-md text-white py-1 px-4 font-normal md:font-medium lg:font-medium text-xs md:text-sm lg:text-sm">
                 In Progress
               </Button>
             </div>
@@ -188,7 +188,7 @@ export default function Home() {
             </p>
 
             <div className="hidden md:flex lg:flexflex md:mb-0 lg:mb-0 justify-center md:justify-start lg:justify-start gap-5 md:gap-3 lg:gap-3">
-              <Button className="w-[141px] h-[34px] md:w-44 md:h-10 lg:w-44 lg:h-10 bg-[#0D6EFD] rounded-md text-white py-2 px-4 font-normal md:font-medium lg:font-medium text-xs md:text-sm lg:text-sm">
+              <Button className="w-[141px] h-[34px] md:w-36 md:h-10 lg:w-36 lg:h-10 bg-[#0D6EFD] rounded-md text-white py-1 px-2 font-normal md:font-medium lg:font-medium text-xs md:text-sm lg:text-sm">
                 View Page
               </Button>
             </div>
