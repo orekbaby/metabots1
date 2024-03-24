@@ -7,10 +7,10 @@ import FooterLandingPage from "@/components/metabots/FooterLandingPage";
 export default function Home() {
   return (
     <main className="mt-16 md:mt-32 lg:mt-32">
-      <div className="mx-auto w-full md:max-w-[1280px] lg:max-w-[1280px] md:px-6 lg:px-6">
-        <div className="text-center md:text-left lg:text-left flex flex-col md:flex-row lg:flex-row gap-10 md:gap-28 lg:gap-28 justify-between w-full mb-10 md:mb-28 lg:mb-28">
+      <div className="mx-auto w-full md:max-w-[1280px] lg:max-w-[1280px] md:px-4 lg:px-6">
+        <div className="text-center md:text-left lg:text-left flex flex-col md:flex-row lg:flex-row gap-10 md:gap-4 lg:gap-4 justify-between w-full mb-10 md:mb-28 lg:mb-28">
           <div className="w-full md:w-1/2 lg:w-1/2 pt-10">
-            <h1 className="font-bold text-[28.9px] md:text-[45.3px] lg:text-[45.3px] mb-5 w-full">
+            <h1 className="font-bold text-[28.9px] md:text-[42.3px] lg:text-[42.3px] mb-5 w-full">
               Smart{" "}
               <span
                 className="text-[#0D6EFD]

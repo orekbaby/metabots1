@@ -20,8 +20,8 @@ const FooterLandingPage = () => {
         </div>
       </div>
 
-      <div className="hidden md:flex lg:flex w-full mt-20">
-        <div className="bg-[#121212] border-b w-full h-[70px] border-[#262626] p-4">
+      <div className="hidden md:flex lg:flex w-full mt-36">
+        <div className="bg-[#121212] border-b w-full h-[70px] border-[#262626] pt-3 pb-7 px-4">
           <div className="flex justify-between items-center">
             <p className="text-[18px] font-medium">Blog</p>
             <div className="bg-[#121212]text-center text-[#EBEBEB] text-xs font-normal">
