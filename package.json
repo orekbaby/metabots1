@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "prebuild": "copyfiles -u 1 public/static/charting_library/**/* node_modules/charting_library",
+    "prebuild": "node copy-files.js",
     "start": "next start",
     "lint": "next lint"
   },
@@ -17,6 +17,7 @@
     "@radix-ui/react-tabs": "^1.0.4",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
+    "fs-extra": "^11.2.0",
     "lucide-react": "^0.303.0",
     "next": "14.0.4",
     "react": "^18",
