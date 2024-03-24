@@ -24,7 +24,7 @@ export default function Home() {
               Gain an unfair market advantage with our powerful set of DEX
               automation & on-chain copy trading tools.
             </p>
-            <Button className="hidden md:inline lg:inline w-36 h-10 bg-[#0D6EFD] rounded-lg text-white mr-2 py-1 px-4 font-semibold text-[14px]">
+            <Button className="hidden md:inline lg:inline w-36 h-10 bg-[#0D6EFD] rounded-lg text-white py-1 px-4 font-semibold text-[14px]">
               Get Started
             </Button>
           </div>
@@ -49,7 +49,7 @@ export default function Home() {
             </div>
           </div>
           <div className="">
-            <Button className="md:hidden lg:hidden w-36 h-10 bg-[#0D6EFD] rounded-md text-white mr-2 py-2 px-4 font-semibold text-[14px]">
+            <Button className="md:hidden lg:hidden w-36 h-10 bg-[#0D6EFD] rounded-md text-white py-1 px-4 font-semibold text-[14px]">
               Get Started
             </Button>
           </div>
@@ -72,7 +72,7 @@ export default function Home() {
         </div>
         {/* third section */}
 
-        <h1 className="w-[90%] md:w-full lg:w-full text-center text-[27px] md:text-[45.3px] lg:text-[45.3px] font-bold mb-5 md:mb-20 lg:mb-20">
+        <h1 className="w-full md:w-full lg:w-full text-center text-[27px] md:text-[45.3px] lg:text-[45.3px] font-bold mb-5 md:mb-20 lg:mb-20 items-center">
           Explore our Smart Trading Tools
         </h1>
         {/* this is where the mapping will start from */}
@@ -123,7 +123,7 @@ export default function Home() {
               </Button>
               <Button
                 variant="outline"
-                className="w-[141px] h-[34px]md:w-44 md:h-10 lg:w-44 lg:h-10 bg-[#0B0F16] border-[#E7E7E7] border-2 rounded-md text-[#E7E7E7] py-2 px-4 font-normal md:font-medium lg:font-medium text-xs md:text-sm lg:text-sm"
+                className="w-[141px] h-[34px] md:w-44 md:h-10 lg:w-44 lg:h-10 bg-[#0B0F16] rounded-md text-white py-2 px-4 font-normal md:font-medium lg:font-medium text-xs md:text-sm lg:text-sm"
               >
                 Metabots Mobile
               </Button>
@@ -149,7 +149,7 @@ export default function Home() {
             <h2 className="text-[27px] md:text-[35.3px] lg:text-[35.3px] font-bold mb-5 text-center md:text-left lg:text-left">
               Copy-Trade Smart Wallet Addresses
             </h2>
-            <p className="font-normal text-xs md:text-[18px] lg:text-[18px] mb-10 text-center md:text-left lg:text-left leading-[18px] md:leading-[27px] lg:leading-[27px]">
+            <p className="font-normal text-xs md:text-[18px] lg:text-[18px] mb-10 text-center items-center w-full md:text-left lg:text-left leading-[18px] md:leading-[27px] lg:leading-[27px]">
               Discover smart wallets and copy the trades of most profitable
               wallets by analysing their historical on-chain activities in a few
               clicks.
@@ -238,7 +238,7 @@ export default function Home() {
             <h2 className="text-[27px] md:text-[35.3px] lg:text-[35.3px] font-bold mb-5 text-center md:text-left lg:text-left">
               Become A Metadapp Superuser
             </h2>
-            <p className="w-[95%] md:w-full lg:w-fullfont-normal text-xs md:text-[18px] lg:text-[18px] mb-3 md:mb-10 lg:mb-10 text-center md:text-left lg:text-left leading-[18px] md:leading-[27px] lg:leading-[27px]">
+            <p className="md:w-full lg:w-full font-normal text-[11px] md:text-[18px] lg:text-[18px] mb-3 md:mb-10 lg:mb-10 text-center md:text-left lg:text-left leading-[18px] md:leading-[27px] lg:leading-[27px]">
               Super Users have special privileges to access exclusive features,
               experiemental functionalities, Airdrops & whitelist spots that are
               not available to regular users.
