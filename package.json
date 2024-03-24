@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "prebuild": "cp -r public/static/charting_library node_modules",
+    "prebuild": "xcopy /E /I /Y public\\static\\charting_library node_modules\\charting_library",
     "start": "next start",
     "lint": "next lint"
   },

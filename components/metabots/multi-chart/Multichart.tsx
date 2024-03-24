@@ -32,7 +32,7 @@ const Multichart = () => {
     if (gaps) {
       localStorage.setItem("gaps", JSON.stringify(gaps));
     }
-  }, [columns, height, gaps]);
+  }, [columns, height, gaps]); // Include columns, height, and gaps in the dependency array
 
   useEffect(() => {
     if (columns) {
@@ -46,7 +46,7 @@ const Multichart = () => {
     if (gaps) {
       setGaps(JSON.parse(localStorage.getItem("gaps") ?? "3"));
     }
-  }, []);
+  }, []); // No dependencies here as it should run only once on component mount
 
   return (
     <div className="mx-auto p-4 flex flex-col w-full">
