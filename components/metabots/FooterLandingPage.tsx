@@ -21,11 +21,11 @@ const FooterLandingPage = () => {
       </div>
 
       <div className="hidden md:flex lg:flex w-full mt-36">
-        <div className="bg-[#121212] border-b w-full h-[70px] border-[#262626] pt-3 pb-7 px-4">
+        <div className="bg-[#121212] border-t-2 w-full h-[70px] rounded-md border-[#262626] pt-4 pb-8 px-4">
           <div className="flex justify-between items-center">
             <p className="text-[18px] font-medium">Blog</p>
-            <div className="bg-[#121212]text-center text-[#EBEBEB] text-xs font-normal">
-              © {new Date().getFullYear()} metadapp-All Rights Reserved.
+            <div className="text-center text-white text-md font-medium">
+              © {new Date().getFullYear()} Metadapp-All rights reserved.
             </div>
           </div>
         </div>

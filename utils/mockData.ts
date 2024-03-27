@@ -127,35 +127,110 @@ export const searchData = [
 
 export const landingPage = [
   {
-    heading: "  METABOTS",
-    sub: " Cross-Platform Automated Trading Tools.",
-    paragraph:
+    id: 1,
+    title: "METABOTS",
+    subTitle: "Cross-Platform Automated Trading Tools.",
+    description:
       "Seamlessly perform automated transactions via our Smart Trading Web interface or Telegram bot.",
     span: "Try it now!",
-    image: "/landing.png",
+    desktopImg: "/landing.png",
+    mobileImg: "",
+    direction: true,
+    button1: "Metabots Web",
+    button2: "Metabots Mobile",
+    link: "/metabots/1",
   },
 
   {
-    image: "/interface.png",
-    heading: "COPY TRADING & WALLET ANALYSIS",
-    sub: "Copy-Trade Smart Wallet Addresses.",
+    id: 2,
+    title: "COPY TRADING & WALLET ANALYSIS",
+    subTitle: "Copy-Trade Smart Wallet Addresses.",
+    description:
+      "Discover smart wallets and copy the trades of most profitable wallets by analyzing their historical on-chain activities in a few clicks.",
+    desktopImg: "/interface.png",
+    span: "",
+    mobileImg: "/copy1.png",
+    direction: false,
+    button1: "In Progress",
+    button2: "",
+    link: "/copytrade",
+  },
+  {
+    id: 3,
+    title: "METAPOINTS AND REWARDS",
+    subTitle: "Unlock Rewards with Our Referral Program!",
     paragraph:
-      " Discover smart wallets and copy the trades of most profitable wallets by analysing their historical on-chain activities in a few clicks.",
+      "We believe in the power of community, and we're excited to offer you a unique opportunity to earn rewards while spreading the word about Metadapp.",
+    desktopImg: "/rewards.png",
+    mobileImg: "/copy3.png",
+    direction: true,
+    span: "",
+    button1: "View Page",
+    button2: "",
+    link: "",
+  },
+  {
+    id: 4,
+    title: "Superuser!",
+    subTitle: "Become A Metadapp Superuser",
+    description:
+      "Super Users have special privileges to access exclusive features, experimental functionalities, Airdrops & whitelist spots that are not available to regular users.",
+    desktopImg: "/superuser.png",
+    mobileImg: "/copy2.png",
+    direction: false,
+    span: "",
+    button1: "",
+    button2: "",
+    link: "",
+  },
+];
+
+export const sideBar = [
+  {
+    id: 0,
+    img: "/metabots.png",
+    name: "Home",
+    alt: "metabots-img",
+    link: "/metabots/1",
   },
 
   {
-    heading: " METAPOINTS AND REWARDS",
-    sub: " Unlock Rewards with Our Referral Program!",
-    paragraph:
-      "We believe in the power of community, and we&apos;re excited tooffer you a unique opportunity to earn rewards while spreading the word about Metadapp.",
-    image: "/rewards.png",
+    id: 1,
+    img: "/metabots.png",
+    name: "Metabots",
+    alt: "metabots-img",
+    link: "/metabots/1",
   },
 
   {
-    image: "/superuser.png",
-    heading: " Superuser!",
-    sub: " Become A Metadapp Superuser",
-    paragraph:
-      "Super Users have special privileges to access exclusive features, experiemental functionalities, Airdrops & whitelist spots that are not available to regular users.",
+    id: 2,
+    img: "/sockettrade.png",
+    name: "Copy Trade & Wallet Analysis",
+    alt: "metabots-img",
+    link: "/copyTrade",
+  },
+
+  {
+    id: 3,
+    img: "/account-balance.png",
+    name: "My Wallet",
+    alt: "wallet-img",
+    link: "",
+  },
+
+  {
+    id: 4,
+    img: "/copytrade.png",
+    name: "Referrals and Rewards",
+    alt: "copy-img",
+    link: "",
+  },
+
+  {
+    id: 5,
+    img: "/message.png",
+    name: "",
+    alt: "referral-img",
+    link: "",
   },
 ];
