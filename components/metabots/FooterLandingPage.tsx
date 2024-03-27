@@ -3,7 +3,7 @@ import Image from "next/image";
 const FooterLandingPage = () => {
   return (
     <div>
-      <div className="md:hidden lg:hidden w-full">
+      <div className="md:hidden lg:hidden w-full justify-center items-center">
         <div className="bg-[#121212] border-b w-[407px] h-[120px] border-[#262626]">
           <h2 className="text-xs text-center text-[#EBEBEB] pt-8 pb-4">
             Join Our Community
@@ -15,7 +15,7 @@ const FooterLandingPage = () => {
             <Image src="/linkedln.png" width={20} height={20} alt="LinkedIn" />
           </div>
         </div>
-        <div className="bg-[#121212] w-[407px] border-white text-center text-[#EBEBEB] text-[9px] font-normal py-4">
+        <div className="bg-[#121212] w-[407px] border-white text-center items-center text-[#EBEBEB] text-[9px] font-normal py-4">
           © {new Date().getFullYear()} metadapp-All Rights Reserved.
         </div>
       </div>
