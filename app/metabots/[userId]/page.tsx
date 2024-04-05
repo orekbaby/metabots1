@@ -87,7 +87,7 @@ const Page: React.FC<PageProps> = (props) => {
             </h3>
             <Image
               className="rounded-[8px]"
-              src="/fraud.png"
+              src="/wallet.png"
               alt="fraud"
               width={346}
               height={50}
