@@ -159,7 +159,7 @@ export const landingPage = [
     id: 3,
     title: "METAPOINTS AND REWARDS",
     subTitle: "Unlock Rewards with Our Referral Program!",
-    paragraph:
+    description:
       "We believe in the power of community, and we're excited to offer you a unique opportunity to earn rewards while spreading the word about Metadapp.",
     desktopImg: "/rewards.png",
     mobileImg: "/copy3.png",
@@ -188,7 +188,7 @@ export const landingPage = [
 export const sideBar = [
   {
     id: 0,
-    img: "/metabots.png",
+    img: "/home.png",
     name: "Home",
     alt: "metabots-img",
     link: "/metabots/1",
@@ -232,5 +232,124 @@ export const sideBar = [
     name: "",
     alt: "referral-img",
     link: "",
+  },
+];
+
+export const walletPerformamcePositive = [
+  {
+    id: 1,
+    logo: "/kukoin.png",
+    name: "Kukoin",
+    token: "+456.789.07",
+    button: "Buy",
+  },
+
+  {
+    id: 2,
+    logo: "/kukoin.png",
+    name: "Kukoin",
+    token: "+456.789.07",
+    button: "Buy",
+  },
+
+  {
+    id: 3,
+    logo: "/kukoin.png",
+    name: "Kukoin",
+    token: "+456.789.07",
+    button: "Buy",
+  },
+
+  {
+    id: 4,
+    logo: "/kukoin.png",
+    name: "Kukoin",
+    token: "+456.789.07",
+    button: "Buy",
+  },
+
+  {
+    id: 5,
+    logo: "/kukoin.png",
+    name: "Kukoin",
+    token: "+456.789.07",
+    button: "Buy",
+  },
+];
+
+export const walletPerformamceNegative = [
+  {
+    id: 6,
+    logo: "/kukoin.png",
+    name: "Kukoin",
+    token: "-456.789.07",
+    button: "Buy",
+  },
+
+  {
+    id: 7,
+    logo: "/kukoin.png",
+    name: "Kukoin",
+    token: "-456.789.07",
+    button: "Buy",
+  },
+
+  {
+    id: 8,
+    logo: "/kukoin.png",
+    name: "Kukoin",
+    token: "-456.789.07",
+    button: "Buy",
+  },
+
+  {
+    id: 9,
+    logo: "/kukoin.png",
+    name: "Kukoin",
+    token: "-456.789.07",
+    button: "Buy",
+  },
+
+  {
+    id: 10,
+    logo: "/kukoin.png",
+    name: "Kukoin",
+    token: "-456.789.07",
+    button: "Buy",
+  },
+];
+
+export const tradeHistory = [
+  {
+    time: "30 seconds",
+    img: "/sol.png",
+    token: "MCap:$123K Vol:",
+    price: "BUY $0.0003476 ",
+    amount: "$ 1,678 4K SOL",
+    profit: "$1.4567",
+    loss: "------",
+    button: "Analyze Token",
+  },
+
+  {
+    time: "7 min",
+    img: "/sol.png",
+    token: " MCap:$123K Vol:",
+    price: "BUY $0.0003476 ",
+    amount: "$ 1,678 4K SOL",
+    profit: "$1.4567",
+    loss: "------",
+    button: "Analyze Token",
+  },
+
+  {
+    time: "15 min",
+    img: "/sol.png",
+    token: "MCap:$123K Vol:",
+    price: "BUY $0.0003476 ",
+    amount: "$ 1,678 4K SOL",
+    profit: "$1.4567",
+    loss: "------",
+    button: "Analyze Token",
   },
 ];

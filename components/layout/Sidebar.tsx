@@ -1,18 +1,68 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import { IoCloseSharp } from "react-icons/io5";
+
 import { FaHome } from "react-icons/fa";
-import { sideBar } from "@/utils/mockData"; // Assuming sideBar is correctly defined
+
 import Link from "next/link";
 
 export default function SideBar() {
   const [isHovered, setIsHovered] = useState(false);
 
+  const sideBar = [
+    {
+      id: 0,
+      img: FaHome,
+      name: "Home",
+      alt: "metabots-img",
+      link: "/metabots/1",
+    },
+
+    {
+      id: 1,
+      img: "/metabots.png",
+      name: "Metabots",
+      alt: "metabots-img",
+      link: "/metabots/1",
+    },
+
+    {
+      id: 2,
+      img: "/sockettrade.png",
+      name: "Copy Trade & Wallet Analysis",
+      alt: "metabots-img",
+      link: "/copyTrade",
+    },
+
+    {
+      id: 3,
+      img: "/account-balance.png",
+      name: "My Wallet",
+      alt: "wallet-img",
+      link: "",
+    },
+
+    {
+      id: 4,
+      img: "/copytrade.png",
+      name: "Referrals and Rewards",
+      alt: "copy-img",
+      link: "",
+    },
+
+    {
+      id: 5,
+      img: "/message.png",
+      name: "",
+      alt: "referral-img",
+      link: "",
+    },
+  ];
+
   return (
     <div className="z-50 hidden md:block lg:block fixed">
       <div
-        className={` absolute z-1 top-0 left-0 min-h-screen bg-[#0B0F16] py-3  transition-width duration-1000 px-4 bg shadow-md ${
+        className={`absolute z-1 top-0 left-0 min-h-screen bg-[#0B0F16] py-3 transition-width duration-1000 px-4 bg shadow-md ${
           isHovered ? "w-72" : "w-16"
         }`}
         onMouseEnter={() => setIsHovered(true)}
@@ -38,7 +88,6 @@ export default function SideBar() {
             />
           )}
         </div>
-
         <div
           className={`hidden md:flex lg:flex flex-col gap-10
          items-start border-[#101720] w-full `}
@@ -52,8 +101,7 @@ export default function SideBar() {
                 prefetch={false}
                 key={data.id}
               >
-                <Image src={data.img} alt={data.alt} width={20} height={20} />
-
+                <>{React.createElement(data.img, { size: "20" })}</>
                 <h2 className={`font-medium text-sm ${!isHovered && "hidden"}`}>
                   {data.name}
                 </h2>

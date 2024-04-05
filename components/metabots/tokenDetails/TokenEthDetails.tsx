@@ -4,6 +4,7 @@ import { MdOutlineContentCopy } from "react-icons/md";
 import { MdDeleteOutline } from "react-icons/md";
 import { BiPencil } from "react-icons/bi";
 import { Button } from "@/components/ui/button";
+
 import { FaTimes } from "react-icons/fa";
 
 const TokenEthDetails = () => {
