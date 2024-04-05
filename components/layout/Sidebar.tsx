@@ -1,20 +1,29 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
+import { FaHome } from "react-icons/fa"; // Import IconType from react-icons
+
 import Link from "next/link";
+
+interface SidebarItem {
+  id: number;
+  img: React.ElementType | string; // Change the type of img to React.ElementType | string
+  alt: string;
+  name: string;
+  link: string;
+}
 
 export default function SideBar() {
   const [isHovered, setIsHovered] = useState(false);
 
-  const sideBar = [
+  const sideBar: SidebarItem[] = [
     {
       id: 0,
-      img: "/home.png",
+      img: FaHome,
       name: "Home",
-      alt: "metabots-img",
+      alt: "Home icon",
       link: "/metabots",
     },
-
     {
       id: 1,
       img: "/metabots.png",
@@ -22,7 +31,6 @@ export default function SideBar() {
       alt: "metabots-img",
       link: "/metabots/1",
     },
-
     {
       id: 2,
       img: "/sockettrade.png",
@@ -30,7 +38,6 @@ export default function SideBar() {
       alt: "metabots-img",
       link: "/copyTrade",
     },
-
     {
       id: 3,
       img: "/account-balance.png",
@@ -38,7 +45,6 @@ export default function SideBar() {
       alt: "wallet-img",
       link: "",
     },
-
     {
       id: 4,
       img: "/copytrade.png",
@@ -46,7 +52,6 @@ export default function SideBar() {
       alt: "copy-img",
       link: "",
     },
-
     {
       id: 5,
       img: "/message.png",
@@ -98,7 +103,12 @@ export default function SideBar() {
                 prefetch={false}
                 key={data.id}
               >
-                <Image src={data.img} alt={data.alt} width={20} height={20} />
+                {/* Render the icon directly if it's a React icon */}
+                {typeof data.img !== "string" && <data.img size={20} />}
+                {/* Render image if it's a string */}
+                {typeof data.img === "string" && (
+                  <Image src={data.img} alt={data.alt} width={20} height={20} />
+                )}
                 <h2 className={`font-medium text-sm ${!isHovered && "hidden"}`}>
                   {data.name}
                 </h2>
@@ -122,8 +132,17 @@ export default function SideBar() {
                   prefetch={false}
                   key={data.id}
                 >
-                  <Image src={data.img} alt={data.alt} width={20} height={20} />
-
+                  {/* Render the icon directly if it's a React icon */}
+                  {typeof data.img !== "string" && <data.img size={20} />}
+                  {/* Render image if it's a string */}
+                  {typeof data.img === "string" && (
+                    <Image
+                      src={data.img}
+                      alt={data.alt}
+                      width={20}
+                      height={20}
+                    />
+                  )}
                   <h2
                     className={`font-medium text-sm ${!isHovered && "hidden"}`}
                   >
@@ -143,7 +162,17 @@ export default function SideBar() {
                   prefetch={false}
                   key={data.id}
                 >
-                  <Image src={data.img} alt={data.alt} width={20} height={20} />
+                  {/* Render the icon directly if it's a React icon */}
+                  {typeof data.img !== "string" && <data.img size={20} />}
+                  {/* Render image if it's a string */}
+                  {typeof data.img === "string" && (
+                    <Image
+                      src={data.img}
+                      alt={data.alt}
+                      width={20}
+                      height={20}
+                    />
+                  )}
                   <h2
                     className={`font-medium text-sm ${!isHovered && "hidden"}`}
                   >
