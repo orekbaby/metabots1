@@ -97,7 +97,7 @@ const SideTabs = () => {
               </h3>
 
               {React.createElement(row.img, {
-                size: row.img === "My Wallet Lists" ? "24" : "16",
+                size: row.name === "My Wallet Lists" ? "24" : "16",
               })}
             </div>
           ))}
