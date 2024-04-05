@@ -38,7 +38,7 @@ export default function Navigation() {
 
   return (
     <header
-      className=" px-2 md:pl-28 lg:pl-28 p-2  border-b-2 border-[#212E40] flex justify-between md:justify-end lg:justify-end fixed top-0 left-0 items-center 
+      className=" px-2 md:pl-28 lg:pl-28 p-3 border-b-2 border-[#212E40] flex justify-between md:justify-end lg:justify-end fixed top-0 left-0 items-center 
   md:p-5 lg:p-2 bg-red-[0B0F16] w-full z-40"
     >
       <Image
