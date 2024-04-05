@@ -2,6 +2,7 @@ import dynamic from "next/dynamic";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import FooterNav from "@/components/layout/FooterNav";
 
 const SideBar = dynamic(() => import("@/components/layout/Sidebar"), {
   ssr: false,
@@ -34,6 +35,7 @@ export default function RootLayout({
               {children}
             </div>
           </div>
+          <FooterNav />
         </div>
       </body>
     </html>

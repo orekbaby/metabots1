@@ -12,10 +12,10 @@ export default function SideBar() {
   const sideBar = [
     {
       id: 0,
-      img: FaHome,
+      img: "/home.png",
       name: "Home",
       alt: "metabots-img",
-      link: "/metabots/1",
+      link: "/metabots",
     },
 
     {
@@ -82,8 +82,8 @@ export default function SideBar() {
             <Image
               src="/Metadapplogo.png"
               alt="Default Logo"
-              width={24}
-              height={24}
+              width={28}
+              height={28}
               className="mb-10 items-center"
             />
           )}
@@ -101,7 +101,7 @@ export default function SideBar() {
                 prefetch={false}
                 key={data.id}
               >
-                <>{React.createElement(data.img, { size: "20" })}</>
+                <Image src={data.img} alt={data.alt} width={20} height={20} />
                 <h2 className={`font-medium text-sm ${!isHovered && "hidden"}`}>
                   {data.name}
                 </h2>
