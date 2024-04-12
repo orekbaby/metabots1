@@ -51,11 +51,11 @@ export default function Navigation() {
 
       <div className="flex justify-between md:justify-end lg:justify-end">
         <div className="flex items-center">
-          <Button className="md:inline lg:inline bg-[#0D6EFD] rounded-md text-white mr-2 py-2 px-6 md:py-2 md:px-7 lg:py-2 lg:px-7 font-semibold text-[10px]">
+          <Button className="md:inline lg:inline bg-[#0D6EFD] rounded-md text-white mr-2 py-2 px-6 md:py-2 md:px-7 lg:py-2 lg:px-8 font-semibold text-[10px]">
             Log in
           </Button>
           <Button
-            className="hidden md:inline lg:inline bg-[#0B0F16] rounded-md text-white mr-3 py-2 px-7 font-semibold text-[10px]"
+            className="hidden md:inline lg:inline bg-[#0B0F16] rounded-md text-white mr-3 py-2 px-8 font-semibold text-[10px]"
             variant="outline"
           >
             Sign Up
