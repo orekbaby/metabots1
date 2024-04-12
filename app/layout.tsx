@@ -28,12 +28,10 @@ export default function RootLayout({
       <body className={inter.className}>
         <div className="flex w-full h-auto">
           <SideBar />
-          <div className="flex-1 flex-col flex h-[100vh] overflow-y-auto overflow-x-hidden w-full">
+          <div className="h-auto w-full">
             <Navigation />
 
-            <div className="pl-0 md:pl-20 lg:pl-20 px-5 md:px-0 lg:px-0">
-              {children}
-            </div>
+            <div className="pl-0 md:pl-20 lg:pl-20 px-0">{children}</div>
           </div>
           <FooterNav />
         </div>

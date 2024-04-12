@@ -7,24 +7,24 @@ import TradingHistory from "@/components/metabots/copyTrades/TradingHistory";
 const page = () => {
   return (
     <>
-      <div className="mt-24 md:mt-20 lg:mt-20 h-[90vh] overflow-y-hidden">
-        <div className="mx-auto w-full px-5 md:px-2 lg:px-2">
-          <div className="flex justify-between items-start">
+      <div className="pt-24 md:pt-20 lg:pt-20 h-[100vh] overflow-hidden">
+        <div className="mx-auto w-full px-0 md:px-2 lg:px-2">
+          <div className="flex justify-between items-start pr-0 md:pr-5 lg:pr-5">
             <div className="flex justify-center gap-2 items-center">
-              <h1 className="font-bold text-[24px] text-center md:text-left lg:text-left">
+              <h1 className="font-bold text-xs md:text-[27px] lg:text-[27px] pl-3 md:pl-0 lg:pl-0 text-left">
                 Copy Trading & Wallet Analysis
               </h1>
               <BsFillExclamationCircleFill className="text-[#0D6EFD] text-base" />
             </div>
-            <div className="border-[1px] border-[#212E40] rounded-[8px] p-2">
-              <h3 className="font-bold text-xs md:text-base lg:text-base mb-2">
+            <div className="border-[1px] border-[#212E40] rounded-[8px] p-2 hidden md:block lg:block">
+              <h3 className="font-semibold md:font-bold lg:font-bold text-xs md:text-base lg:text-base">
                 Your Wallets
               </h3>
               <Image
                 className="rounded-[8px]"
                 src="/wallet.png"
                 alt="fraud"
-                width={346}
+                width={376}
                 height={50}
               />
             </div>

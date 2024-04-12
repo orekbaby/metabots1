@@ -353,3 +353,268 @@ export const tradeHistory = [
     button: "Analyze Token",
   },
 ];
+
+export const smartTradeButtons = [
+  {
+    name: "My Wallet List",
+  },
+
+  {
+    name: "7D Smart DEX Trader",
+  },
+
+  {
+    name: "Bananatournament",
+  },
+
+  {
+    name: "Uniswap Liquidity Provider",
+  },
+
+  {
+    name: "Godman Wallets",
+  },
+
+  {
+    name: "Godman Wallets",
+  },
+];
+
+export const smartTradesTable = [
+  {
+    time: "20 seconds",
+    text1: "BabyApe.ETH",
+    text2: "Bananatournament",
+    span1: "45% ",
+    span2: "+$1,500",
+    img: "/sol.png",
+    token: "MCap:$123K Vol:",
+    price: "BUY",
+    priceValue: "$0.0003476",
+    amount1: "$1,678",
+    amount2: "4k SOL",
+    button: "Copy Wallet",
+  },
+
+  {
+    time: "3 seconds",
+    text1: "0x9c8bB....6107D21",
+    text2: "Godmanwallets",
+    span1: "45% ",
+    span2: "+$1,500",
+    img: "/GRK.png",
+    token: "MCap:$123K Vol:",
+    price: "SELL",
+    priceValue: "$0.0003476",
+    amount1: "$13,978",
+    amount2: "4k GRK",
+    button: "Copy Wallet",
+  },
+
+  {
+    time: "3 seconds",
+    text1: "BabyApe.ETH",
+    text2: "Bananatournament",
+    span1: "45% ",
+    span2: "+$1,500",
+    img: "/INS.png",
+    token: "MCap:$123K Vol:",
+    price: "BUY",
+    priceValue: "$0.0003476",
+    amount1: "$10,738",
+    amount2: "4k INS",
+    button: "Copy Wallet",
+  },
+
+  {
+    time: "20seconds",
+    text1: "0x9c8bB....6107D21",
+    text2: "Gem Sporter",
+    span1: "45% ",
+    span2: "+$1,500",
+    img: "/sol.png",
+    token: "MCap:$123K Vol:",
+    price: "BUY",
+    priceValue: "$0.0003476",
+    amount1: "$1,678",
+    amount2: "4k SOL",
+    button: "Copy Wallet",
+  },
+
+  {
+    time: "3 seconds",
+    text1: "BabyApe.ETH",
+    text2: "Godmanwallets",
+    span1: "45% ",
+    span2: "+$1,500",
+    img: "/INS.png",
+    token: "MCap:$123K Vol:",
+    price: "SELL",
+    priceValue: "$0.0003476",
+    amount1: "$13,978",
+    amount2: "4k INS",
+    button: "Copy Wallet",
+  },
+
+  {
+    time: "3 seconds",
+    text1: "0x9c8bB....6107D21",
+    text2: "Godmanwallets",
+    span1: "45% ",
+    span2: "+$1,500",
+    img: "/GRK.png",
+    token: "MCap:$123K Vol:",
+    price: "SELL",
+    priceValue: "$0.0003476",
+    amount1: "$13,978",
+    amount2: "4k GRK",
+    button: "Copy Wallet",
+  },
+
+  {
+    time: "3 seconds",
+    text1: "BabyApe.ETH",
+    text2: "Godmanwallets",
+    span1: "45% ",
+    span2: "+$1,500",
+    img: "/sol.png",
+    token: "MCap:$123K Vol:",
+    price: "SELL",
+    priceValue: "$0.0003476",
+    amount1: "$13,978",
+    amount2: "4k SOL",
+    button: "Copy Wallet",
+  },
+
+  {
+    time: "3 seconds",
+    text1: "0x9c8bB....6107D21",
+    text2: "Godmanwallets",
+    span1: "45% ",
+    span2: "+$1,500",
+    img: "/INS.png",
+    token: "MCap:$123K Vol:",
+    price: "SELL",
+    priceValue: "$0.0003476",
+    amount1: "$13,978",
+    amount2: "4k INS",
+    button: "Copy Wallet",
+  },
+];
+
+export const explorer = [
+  {
+    address: "0x9c8bB....6107D21",
+    totalProfit: "$130,635",
+    winRate: "82.9%",
+    col1: "72",
+    col2: "21",
+    profit: "$13,635",
+    button: "Copy wallet",
+  },
+
+  {
+    address: "0x9c8bB....6107D21",
+    totalProfit: "$130,635",
+    winRate: "80%",
+    col1: "72",
+    col2: "21",
+    profit: "$13,635",
+    button: "Copy wallet",
+  },
+
+  {
+    address: "0x9c8bB....6107D21",
+    totalProfit: "$130,635",
+    winRate: "73.16%",
+    col1: "72",
+    col2: "21",
+    profit: "$13,635",
+    button: "Copy wallet",
+  },
+
+  {
+    address: "0x9c8bB....6107D21",
+    totalProfit: "$130,635",
+    winRate: "72.91%",
+    col1: "72",
+    col2: "21",
+    profit: "$13,635",
+    button: "Copy wallet",
+  },
+
+  {
+    address: "0x9c8bB....6107D21",
+    totalProfit: "$130,635",
+    winRate: "71.01%",
+    col1: "72",
+    col2: "21",
+    profit: "$13,635",
+    button: "Copy wallet",
+  },
+
+  {
+    address: "0x9c8bB....6107D21",
+    totalProfit: "$130,635",
+    winRate: "70.91%",
+    col1: "72",
+    col2: "21",
+    profit: "$13,635",
+    button: "Copy wallet",
+  },
+];
+export const explorer2 = [
+  {
+    address: "0x9c8bB....6107D21",
+    winRate: "82.9%",
+    col1: "72",
+    col2: "21",
+    profit: "$13,229",
+    button: "Copy wallet",
+  },
+
+  {
+    address: "0x9c8bB....6107D21",
+    winRate: "80%",
+    col1: "72",
+    col2: "21",
+    profit: "$13,229",
+    button: "Copy wallet",
+  },
+
+  {
+    address: "0x9c8bB....6107D21",
+    winRate: "73.16%",
+    col1: "72",
+    col2: "21",
+    profit: "$9,100",
+    button: "Copy wallet",
+  },
+
+  {
+    address: "0x9c8bB....6107D21",
+    winRate: "72.91%",
+    col1: "72",
+    col2: "21",
+    profit: "+$3,000",
+    button: "Copy wallet",
+  },
+
+  {
+    address: "0x9c8bB....6107D21",
+    winRate: "71.01%",
+    col1: "72",
+    col2: "21",
+    profit: "+$7,831",
+    button: "Copy wallet",
+  },
+
+  {
+    address: "0x9c8bB....6107D21",
+    winRate: "70.91%",
+    col1: "72",
+    col2: "21",
+    profit: "+$7,831",
+    button: "Copy wallet",
+  },
+];
