@@ -131,7 +131,7 @@ const Explorer = () => {
                       </TableCell>
                       <TableCell className="p-1">
                         <div className="w-[100px]">
-                          <Button className=" w-[63px] h-[24px] md:w-[81px] lg:w-[81px] text-center md:h-[27px] lg:h-[27px] bg-[#084298] text-[#fff] rounded-[4px] text-[9px] md:text-xs lg:text-xs font-semibold">
+                          <Button className=" w-[63px] h-[24px] md:w-[81px] lg:w-[81px] text-center md:h-[27px] lg:h-[27px] bg-[#084298] text-white rounded-[4px] text-[9px] md:text-xs lg:text-xs font-semibold">
                             {row.button}
                           </Button>
                         </div>
