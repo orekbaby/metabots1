@@ -8,7 +8,7 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 const WalletPerformanceTabs = () => {
   return (
     <>
-      <div className="w-full bg-[#0A1019] border-2 border-[#101720] py-1 rounded-lg">
+      <div className="w-full border-2 border-[#101720] py-1 rounded-lg">
         <div className="border-[1px] border-[#212E40] rounded-[8px] p-2 block md:hidden mb-4 lg:hidden mt-4">
           <h3 className="font-semibold md:font-bold lg:font-bold text-xs md:text-base lg:text-base mb-2">
             Your Wallets
@@ -35,7 +35,7 @@ const WalletPerformanceTabs = () => {
         <WalletDetails />
         <Tabs
           defaultValue="TradeAnalysis"
-          className="w-full px-1 pr-0 md:pr-4 lg:pr-4"
+          className="w-full px-1 md:px-0 lg:px-0 pr-0"
         >
           <TabsList className="w-full bg-[#0C141F] border-b-2 border-[#212E40] flex items-center justify-between  pl-2 h-[50px]">
             <div className="flex items-center w-fit">
@@ -65,15 +65,14 @@ const WalletPerformanceTabs = () => {
             </Dialog>
           </TabsList>
           <TabsContent
-            className="w-full h-[40vh] 
-            md:overflow-y-auto lg:overflow-y-auto scrollbar-hide overflow-x-hidden
-            "
+            className="w-full h-auto md:h-[40vh] lg:h-[40vh] 
+            md:overflow-y-auto lg:overflow-y-auto scrollbar-hide overflow-x-hidden"
             value="TradeAnalysis"
           >
             <WalletPerformance />
           </TabsContent>
           <TabsContent
-            className="w-[100%] h-[40vh] overflow-y-auto scrolbar-hide"
+            className="w-full h-auto md:h-[40vh] lg:h-[40vh] overflow-y-auto scrolbar-hide"
             value="TopRelatedAddress"
           >
             No data yet

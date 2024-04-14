@@ -39,7 +39,7 @@ const WalletDetails = () => {
             </div>
           </div>
 
-          <div className="flex mb-0 justify-center md:justify-start lg:justify-start gap-3 md:gap-3 lg:gap-3">
+          <div className=" items-center flex mb-0 justify-center md:justify-start lg:justify-start gap-3 md:gap-3 lg:gap-3">
             <Button
               variant="outline"
               className="flex items-center justify-center w-[98px] h-[22px] bg-[#0B0F16] border-[#FFC107] border-[1px] rounded-sm md:rounded-[8px] lg:rounded-[8px] text-[9px] md:text-sm lg:text-sm font-normal text-[#B3B5B8]md:hidden lg:hidden"

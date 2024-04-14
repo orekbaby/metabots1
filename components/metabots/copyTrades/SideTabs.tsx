@@ -76,8 +76,8 @@ const SideTabs = () => {
 
   return (
     <>
-      <div className="w-full h-full bg-[#0C141F] border-[#212E40] border-r-2 py-10 mb-5 mr-8 hidden md:block lg:block">
-        <div className="px-3">
+      <div className="w-full h-auto bg-[#0C141F] border-[#212E40] border-r-2 py-10 mb-5 hidden md:block lg:block">
+        <div className="px-3 w-full h-auto">
           <div className=" h-[65px] text-center items-center">
             <Button className=" w-[160px] h-[40px] rounded-lg variant=outline border-2 border-[#FFC107]">
               Add Wallet To Track

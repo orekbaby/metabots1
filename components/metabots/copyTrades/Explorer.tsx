@@ -21,15 +21,17 @@ import {
 const Explorer = () => {
   return (
     <>
-      {/* first table */}
-      <div className=" flex flex-col gap-16 w-full h-full overflow-y-auto scrollbar-hide">
-        <div className=" w-full h-auto flex items-center gap-16">
-          <div className="w-full md:w-1/2 lg:w-1/2 h-auto border-[rgb(33,46,64)] border-2 p-2 rounded-md">
-            <h3 className="font-bold text-[12px] md:text-base lg:text-base mb-5">
-              Curated Smart Trader Lists
-            </h3>
-            <hr className="border-b-1 mb-4 border-[#212E40]" />
-            <div className="bg-[#0A1019] w-full h-60 overflow-y-auto scrollbar-hide">
+      {/* first row */}
+      <div className="w-full overflow-y-auto scrollbar-hide overflow-x-hidden h-auto border-[rgb(33,46,64)] border-2 p-2 rounded-md">
+        <h3 className="font-bold text-[12px] md:text-base lg:text-base mb-5">
+          Curated Smart Trader Lists
+        </h3>
+        <hr className="border-b mb-4 border-[#212E40]" />
+        <div className="flex flex-col gap-10 md:gap-12 lg:gap-12 w-full h-full md:h-[50vh] lg:h-[50vh] md:overflow-y-auto lg:overflow-y-auto md:scrollbar-hide lg:scrollbar-hide mb-0 md:mb-24 lg:mb-24">
+          <div className=" flex-col md:flex-row lg:flex-row w-full h-auto flex items-center gap-5 md:gap-5 lg:gap-5  px-0 md:px-3 lg:px-3 ">
+            {/* first table */}
+
+            <div className="bg-[#0A1019] rounded-lg w-full h-60 overflow-y-auto overflow-x-hidden scrollbar-hide">
               <div className="flex justify-between px-4 items-center">
                 <div className="flex items-center gap-3">
                   <p className="font-semi-bold text-[9px] md:text-sm lg:text-sm">
@@ -55,16 +57,9 @@ const Explorer = () => {
               </div>
               <ExplorerTable />
             </div>
-          </div>
-
-          {/* 2nd table */}
-
-          <div className="w-full md:w-1/2 lg:w-1/2 h-auto border-[#212E40] border-2 p-2 rounded-md">
-            <h3 className="font-boldtext-[12px] md:text-base lg:text-base mb-5">
-              Curated Smart Trader Lists
-            </h3>
-            <hr className="border-b-1 mb-4 border-[#212E40]" />
-            <div className="bg-[#0A1019] w-full h-60 overflow-y-auto scrollbar-hide">
+            {/* 2nd table */}
+            <hr className="border-b mb-4 border-[#212E40]" />
+            <div className="bg-[#0A1019] rounded-lg w-full h-60 overflow-y-auto scrollbar-hide">
               <div className="flex justify-between px-4 items-center">
                 <div className="flex items-center gap-3">
                   <p className="font-semi-bold  text-[9px] md:text-sm lg:text-sm">
@@ -147,23 +142,24 @@ const Explorer = () => {
               </Table>
             </div>
           </div>
-        </div>
-        {/* third table */}
-        <div className="flex items-center gap-16 w-full h-auto">
-          <div className="w-1/2 h-72 border-[#212E40] border-2 p-2 rounded-md overflow-y-auto scrollbar-hide">
-            <h3 className="font-bold text-base mb-5">
-              Curated Smart Trader Lists
-            </h3>
-            <hr className="border-b-1 mb-4 border-[#212E40]" />
-            <div className="bg-[#0A1019]">
+
+          {/*Second row */}
+          <div className="flex-col md:flex-row lg:flex-row w-full h-auto flex items-center gap-5 mb-10 md:mb-16 lg:mb-16 lg:gap-5">
+            {/* third table */}
+            <div className="bg-[#0A1019] w-full h-60 overflow-y-auto scrollbar-hide rounded-lg">
               <div className="flex justify-between px-4 items-center">
                 <div className="flex items-center gap-3">
-                  <p className="font-semi-bold text-sm">100xers</p>
+                  <p className="font-semi-bold text-[9px] md:text-sm lg:text-sm">
+                    Most Profitable Wallets
+                  </p>
                   <div className="w-[12px] h-[12px] rounded-full bg-[#0D6EFD]"></div>
                 </div>
                 <Select>
                   <SelectTrigger className="w-fit bg-transparent gap-2 mb-3">
-                    <SelectValue placeholder="7Days" />
+                    <SelectValue
+                      className="text-[7px] font-medium md:text-[12px] lg:text-xs"
+                      placeholder="7Days"
+                    />
                   </SelectTrigger>
                   <SelectContent className="w-[9px] text-white hover:text-[#17212F]  border-none outline-none">
                     <SelectItem value="1">1M</SelectItem>
@@ -176,18 +172,16 @@ const Explorer = () => {
               </div>
               <ExplorerTable />
             </div>
-          </div>
 
-          {/* fourth table */}
-          <div className="w-1/2 h-72 border-[#212E40] border-2 p-2 rounded-md overflow-y-auto scrollbar-hide">
-            <h3 className="font-bold text-base mb-5">
-              Curated Smart Trader Lists
-            </h3>
-            <hr className="border-b-1 mb-4 border-[#212E40]" />
-            <div className="bg-[#0A1019]">
+            {/* fourth table */}
+
+            <hr className="border-b mb-4 border-[#212E40]" />
+            <div className="bg-[#0A1019] w-full h-60 rounded-lg overflow-y-auto scrollbar-hide">
               <div className="flex justify-between px-4 items-center">
                 <div className="flex items-center gap-3">
-                  <p className="font-semi-bold text-sm">50xers</p>
+                  <p className="font-semi-bold  text-[9px] md:text-sm lg:text-sm">
+                    Win Rates
+                  </p>
                   <div className="w-[12px] h-[12px] rounded-full bg-[#0D6EFD]"></div>
                 </div>
                 <Select>

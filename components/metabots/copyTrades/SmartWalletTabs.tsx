@@ -28,7 +28,10 @@ const SmartWalletTabs = () => {
         <TabsContent className="w-full h-auto" value="SmartTradeUpdates">
           <SmartTradeUpdates />
         </TabsContent>
-        <TabsContent className="w-full h-auto" value="Explorer">
+        <TabsContent
+          className="w-full h-[400px] md:h-auto lg:h-auto overflow-y-auto scrollbar-hide "
+          value="Explorer"
+        >
           <Explorer />
         </TabsContent>
       </Tabs>

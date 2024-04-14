@@ -26,7 +26,7 @@ import TradingHistory from "@/components/metabots/copyTrades/TradingHistory";
 export const WalletPerformance = () => {
   return (
     <>
-      <div className="border-2 bg-[#0C141F] border-[#212E40] pt-2 pr-0 md:pr-4 lg:pr-4 rounded-md">
+      <div className="bg-[#0C141F] h-auto md:h-[650px] lg:h-[650px] w-[100%] border-2 mb-5 md:mb-10 lg:mb-10 border-[#212E40] pt-2 pr-0 md:pr-4 rounded-md">
         <h2 className="font-bold text-[18px] mb-8 pt-2 px-3">
           Wallet Performance
         </h2>
@@ -44,8 +44,8 @@ export const WalletPerformance = () => {
             </SelectContent>
           </Select> */}
         </div>
-        <div className="border-2 border-[#212E40] p-3">
-          <div className="bg-[#17212F] p-3 rounded-[8px] w-[362px] md:w-[1020px] lg:w-[1020px]">
+        <div className="ml-0 md:ml-2 lg:ml-2 w-full h-auto md:h-[555px] lg:h-[555px] border-[#212E40] border-2 pt-3  px-3">
+          <div className="bg-[#17212F] py-3 px-3 rounded-[8px] w-full">
             <p className="font-normal text-[8px] md:text-sm lg:text-sm">
               Win Rate:
             </p>
@@ -86,7 +86,7 @@ export const WalletPerformance = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 text-center md:grid-cols-2 lg:grid-cols-2 md:gap-10 lg:gap-10">
+          <div className=" w-full grid grid-cols-1 text-center md:grid-cols-2 lg:grid-cols-2 md:gap-20 lg:gap-20 overflow-x-hidden">
             {/* Positive Trades */}
 
             <div className="w-full">
@@ -96,7 +96,7 @@ export const WalletPerformance = () => {
                 </h4>
               </div>
               <Accordion
-                className="my-4 w-[362px] md:w-[510px] lg:w-[510px]"
+                className="my-4 w-full md:w-[510px] lg:w-[510px]"
                 type="single"
                 collapsible
               >
@@ -143,7 +143,7 @@ export const WalletPerformance = () => {
                 </h4>
               </div>
               <Accordion
-                className="my-4 pr-0 md:pr-8 lg:pr-8 w-[362px] md:w-[520px] lg:w-[520px]"
+                className="my-4 pr-0 md:pr-8 lg:pr-8 w-full md:w-[510px] lg:w-[510px]"
                 type="single"
                 collapsible
               >
@@ -183,9 +183,9 @@ export const WalletPerformance = () => {
           </div>
         </div>
       </div>
-      <div className="mt-5">
+      <div className=" mb-10 md:mb-20 lg:mb-20">
         <h3 className="text-[18px] font-bold">Trade History</h3>
-        <div className=" w-full flex justify-end px-20  ">
+        <div className="w-full flex justify-end px-3 md:px-20 lg:px-20  ">
           <Select>
             <SelectTrigger className="w-fit bg-transparent gap-2 mb-3">
               <SelectValue placeholder="All" />
