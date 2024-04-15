@@ -20,7 +20,7 @@ const WalletDetails = () => {
         <div className="justify-between flex-col md:flex-row lg:flex-row items-start md:items-center lg:items-start pr-8 flex gap-4 md:gap-0 lg:gap-0">
           <div className="flex justify-center gap-4">
             <div className="flex items-center gap-2">
-              <h2 className="font-bold text-12 md:text-[24px] lg:text-[24px]">
+              <h2 className="font-bold text-xs md:text-[24px] lg:text-[24px]">
                 ETH.BEN
               </h2>
 

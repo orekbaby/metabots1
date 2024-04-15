@@ -27,7 +27,7 @@ export const WalletPerformance = () => {
   return (
     <>
       <div className="bg-[#0C141F] h-auto md:h-[650px] lg:h-[650px] w-[100%] border-2 mb-5 md:mb-10 lg:mb-10 border-[#212E40] pt-2 pr-0 md:pr-4 rounded-md">
-        <h2 className="font-bold text-[18px] mb-8 pt-2 px-3">
+        <h2 className="font-bold text-xs md:text-[18px] lg:text-[18px] mb-8 pt-2 px-3">
           Wallet Performance
         </h2>
         <div className="flex justify-end">
