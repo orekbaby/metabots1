@@ -86,7 +86,7 @@ const SmartTradeUpdates = () => {
         <hr className="border-[#212E40] p-1" />
         <div className="w-full h-[60vh] overflow-y-auto scrollbar-hide">
           <div className="flex justify-between border-2 rounded-lg border-[#212E40] mb-3 p-2">
-            <h3 className="font-bold text-xs md:text-base lg:text-base text-[#0D6EFD]">
+            <h3 className="font-bold text-xs md:text-[16px] lg:text-base text-[#0D6EFD]">
               All
             </h3>
             <Button className=" w-[57px] h-[19px] md:w-[77px] md:h-[28px] lg:w-[77px] lg:h-[28px] bg-[#0D6EFD] text-white font-bold text-[9px] md:text-sm lg:text-sm">
