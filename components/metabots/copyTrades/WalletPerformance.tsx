@@ -86,7 +86,10 @@ export const WalletPerformance = () => {
             </div>
           </div>
 
-          <div className=" w-full grid grid-cols-1 text-center md:grid-cols-2 lg:grid-cols-2 md:gap-20 lg:gap-20 overflow-x-hidden">
+          <div
+            className=" w-full grid grid-cols-1 text-center
+           md:grid-cols-2 lg:grid-cols-2 md:gap-32 lg:gap-32 overflow-x-hidden"
+          >
             {/* Positive Trades */}
 
             <div className="w-full">
@@ -184,7 +187,9 @@ export const WalletPerformance = () => {
         </div>
       </div>
       <div className=" mb-10 md:mb-20 lg:mb-20">
-        <h3 className="text-[18px] font-bold">Trade History</h3>
+        <h3 className=" text-xs md:text-[18px] lg:text-[18px] font-bold">
+          Trade History
+        </h3>
         <div className="w-full flex justify-end px-3 md:px-20 lg:px-20  ">
           <Select>
             <SelectTrigger className="w-fit bg-transparent gap-2 mb-3">

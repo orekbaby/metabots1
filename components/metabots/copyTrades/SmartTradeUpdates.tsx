@@ -16,9 +16,18 @@ import { smartTradesTable } from "@/utils/mockData";
 
 const SmartTradeUpdates = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [checkedIndexes, setCheckedIndexes] = useState(
+    new Array(smartTradeButtons.length).fill(true)
+  );
+
+  const handleButtonClick = (index: number) => {
+    setActiveIndex(index);
+  };
 
   const handleCheckboxClick = (index: number) => {
-    setActiveIndex(index);
+    const newCheckedIndexes = [...checkedIndexes];
+    newCheckedIndexes[index] = !newCheckedIndexes[index];
+    setCheckedIndexes(newCheckedIndexes);
   };
 
   return (
@@ -29,10 +38,12 @@ const SmartTradeUpdates = () => {
             <div key={index} className="flex items-center basis-[20%]">
               <Button
                 variant="outline"
-                className={`font-normal gap-2 py-0 px-2 md:py-2 md:px-4 lg:py-2 lg:px-4 hover:bg-[#063172] hover:text-[#fff] text-center text-[10px] md:text-base lg:text-base h-[28px] md:h-10 lg:h-10 rounded-[4px] md:rounded-md lg:rounded-md outline-none border-none ${
-                  index === activeIndex ? "bg-[#063172]" : "bg-[#17212F]"
+                className={`font-normal gap-2 py-0 px-2 md:py-2 md:px-4 lg:py-2 lg:px-4 text-center text-[10px] md:text-base lg:text-base h-[28px] md:h-10 lg:h-10 rounded-[4px] md:rounded-md lg:rounded-md outline-none border-none ${
+                  index === activeIndex
+                    ? "bg-[#084298] hover:bg-[#084298]"
+                    : "bg-[#17212F] hover:bg-[#084298]"
                 } text-white`}
-                onClick={() => handleCheckboxClick(index)}
+                onClick={() => handleButtonClick(index)}
               >
                 {row.name}
                 <div className="relative items-center">
@@ -43,14 +54,18 @@ const SmartTradeUpdates = () => {
                       index === activeIndex
                         ? "border-[#DBE9FF]"
                         : "border-[#084298]"
-                    } hover:border-[#DBE9FF]`}
-                    checked={index === activeIndex}
-                    onChange={() => {}}
-                    style={{ cursor: "pointer" }} // Add cursor pointer style
+                    }`}
+                    checked={checkedIndexes[index]}
+                    onChange={() => handleCheckboxClick(index)}
+                    style={{ cursor: "pointer" }}
                   />
-                  {index === activeIndex && (
+                  {checkedIndexes[index] && (
                     <svg
-                      className="absolute top-[40%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3 h-3 text-[#DBE9FF] pointer-events-none items-center"
+                      className={`absolute top-[40%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3 h-3 pointer-events-none items-center ${
+                        index === activeIndex
+                          ? "text-[#DBE9FF]"
+                          : "text-[#084298]"
+                      }`}
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"

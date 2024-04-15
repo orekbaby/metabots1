@@ -19,7 +19,7 @@ const ExplorerTable = () => {
             <TableHead className="w-[100px] font-bold md:font-bold lg:font-bold text-[9px] md:text-[12px] lg:text-xs">
               Address
             </TableHead>
-            <TableHead className="font-bold md:font-bold text-center items-center lg:font-bold  text-[9px] md:text-[12px] lg:text-xs">
+            <TableHead className="font-bold md:font-bold text-right items-center lg:font-bold  text-[9px] md:text-[12px] lg:text-xs">
               <div className="w-[100px] items-center">Total Profit</div>
             </TableHead>
             <TableHead className="text-center items-center font-bold md:font-bold lg:font-bold  text-[9px] md:text-[12px] lg:text-xs">
@@ -38,8 +38,8 @@ const ExplorerTable = () => {
               </TableCell>
 
               <TableCell
-                className="w-[200px] md:w-[100px] lg:w-[100px] text-center items-center text-[#05AC32] font-normal text-[9px]
-               md:text-sm lg:text-sm pt-2"
+                className="w-[200px] md:w-[100px] lg:w-[100px] text-right items-center text-[#05AC32] font-normal text-[9px]
+               md:text-sm lg:text-sm pt-4"
               >
                 {row.totalProfit}
               </TableCell>
