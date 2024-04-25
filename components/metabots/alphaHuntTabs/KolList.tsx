@@ -1,6 +1,6 @@
 import React from "react";
 import { IoIosArrowDown } from "react-icons/io";
-import { kolListMock } from "@/metabots1/utils/mockData";
+import { kolListMock } from "@/utils/mockData";
 import {
   Table,
   TableHeader,

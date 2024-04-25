@@ -1,5 +1,5 @@
 import React from "react";
-import { apeMode } from "@/metabots1/utils/mockData";
+import { apeMode } from "@/utils/mockData";
 import { Button } from "@/components/ui/button";
 import { triggerSnipes } from "@/utils/mockData";
 import { FaStar } from "react-icons/fa";

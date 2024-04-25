@@ -354,6 +354,241 @@ export const tradeHistory = [
   },
 ];
 
+export const apeMode = [
+  {
+    listen: "Listening",
+    tokenName: "WETH/XGF",
+    time: "6m, 11s ago",
+    price: "Price",
+    scamScore: "META SCAM SCORE",
+    number: "$0.042",
+    percent: "62%",
+    liquidity: "Liquidity",
+    figure: "$87K",
+    volume: "Volume",
+    fig1: "$1.4M",
+    txns: "TNXS",
+    fig: "3716",
+    fdv: "FDV",
+    fig2: "386k",
+  },
+
+  {
+    listen: "Listening",
+    tokenName: "WETH/XGF",
+    time: "6m, 11s ago",
+    price: "Price",
+    scamScore: "META SCAM SCORE",
+    number: "$0.042",
+    percent: "67%",
+    liquidity: "Liquidity",
+    figure: "$87K",
+    volume: "Volume",
+    fig1: "$1.4M",
+    txns: "TNXS",
+    fig: "3716",
+    fdv: "FDV",
+    fig2: "386k",
+  },
+
+  {
+    listen: "Listening",
+    tokenName: "WETH/XGF",
+    time: "6m, 11s ago",
+    price: "Price",
+    scamScore: "META SCAM SCORE",
+    number: "$0.042",
+    percent: "75%",
+    liquidity: "Liquidity",
+    figure: "$87K",
+    volume: "Volume",
+    fig1: "$1.4M",
+    txns: "TNXS",
+    fig: "3716",
+    fdv: "FDV",
+    fig2: "386k",
+  },
+
+  {
+    listen: "Listening",
+    tokenName: "WETH/XGF",
+    time: "6m, 11s ago",
+    price: "Price",
+    scamScore: "META SCAM SCORE",
+    number: "$0.042",
+    percent: "75%",
+    liquidity: "Liquidity",
+    figure: "$87K",
+    volume: "Volume",
+    fig1: "$1.4M",
+    txns: "TNXS",
+    fig: "3716",
+    fdv: "FDV",
+    fig2: "386k",
+  },
+  {
+    listen: "Listening",
+    tokenName: "WETH/XGF",
+    time: "6m, 11s ago",
+    price: "Price",
+    scamScore: "META SCAM SCORE",
+    number: "$0.042",
+    percent: "75%",
+    liquidity: "Liquidity",
+    figure: "$87K",
+    volume: "Volume",
+    fig1: "$1.4M",
+    txns: "TNXS",
+    fig: "3716",
+    fdv: "FDV",
+    fig2: "386k",
+  },
+
+  {
+    listen: "Listening",
+    tokenName: "WETH/XGF",
+    time: "6m, 11s ago",
+    price: "Price",
+    scamScore: "META SCAM SCORE",
+    number: "$0.042",
+    percent: "62%",
+    liquidity: "Liquidity",
+    figure: "$87K",
+    volume: "Volume",
+    fig1: "$1.4M",
+    txns: "TNXS",
+    fig: "3716",
+    fdv: "FDV",
+    fig2: "386k",
+  },
+
+  {
+    listen: "Listening",
+    tokenName: "WETH/XGF",
+    time: "6m, 11s ago",
+    price: "Price",
+    scamScore: "META SCAM SCORE",
+    number: "$0.042",
+    percent: "62%",
+    liquidity: "Liquidity",
+    figure: "$87K",
+    volume: "Volume",
+    fig1: "$1.4M",
+    txns: "TNXS",
+    fig: "3716",
+    fdv: "FDV",
+    fig2: "386k",
+  },
+
+  {
+    listen: "Listening",
+    tokenName: "WETH/XGF",
+    time: "6m, 11s ago",
+    price: "Price",
+    scamScore: "META SCAM SCORE",
+    number: "$0.042",
+    percent: "62%",
+    liquidity: "Liquidity",
+    figure: "$87K",
+    volume: "Volume",
+    fig1: "$1.4M",
+    txns: "TNXS",
+    fig: "3716",
+    fdv: "FDV",
+    fig2: "386k",
+  },
+
+  {
+    listen: "Listening",
+    tokenName: "WETH/XGF",
+    time: "6m, 11s ago",
+    price: "Price",
+    scamScore: "META SCAM SCORE",
+    number: "$0.042",
+    percent: "62%",
+    liquidity: "Liquidity",
+    figure: "$87K",
+    volume: "Volume",
+    fig1: "$1.4M",
+    txns: "TNXS",
+    fig: "3716",
+    fdv: "FDV",
+    fig2: "386k",
+  },
+
+  {
+    listen: "Listening",
+    tokenName: "WETH/XGF",
+    time: "6m, 11s ago",
+    price: "Price",
+    scamScore: "META SCAM SCORE",
+    number: "$0.042",
+    percent: "62%",
+    liquidity: "Liquidity",
+    figure: "$87K",
+    volume: "Volume",
+    fig1: "$1.4M",
+    txns: "TNXS",
+    fig: "3716",
+    fdv: "FDV",
+    fig2: "386k",
+  },
+
+  {
+    listen: "Listening",
+    tokenName: "WETH/XGF",
+    time: "6m, 11s ago",
+    price: "Price",
+    scamScore: "META SCAM SCORE",
+    number: "$0.042",
+    percent: "62%",
+    liquidity: "Liquidity",
+    figure: "$87K",
+    volume: "Volume",
+    fig1: "$1.4M",
+    txns: "TNXS",
+    fig: "3716",
+    fdv: "FDV",
+    fig2: "386k",
+  },
+
+  {
+    listen: "Listening",
+    tokenName: "WETH/XGF",
+    time: "6m, 11s ago",
+    price: "Price",
+    scamScore: "META SCAM SCORE",
+    number: "$0.042",
+    percent: "62%",
+    liquidity: "Liquidity",
+    figure: "$87K",
+    volume: "Volume",
+    fig1: "$1.4M",
+    txns: "TNXS",
+    fig: "3716",
+    fdv: "FDV",
+    fig2: "386k",
+  },
+
+  {
+    listen: "Listening",
+    tokenName: "WETH/XGF",
+    time: "6m, 11s ago",
+    price: "Price",
+    scamScore: "META SCAM SCORE",
+    number: "$0.042",
+    percent: "62%",
+    liquidity: "Liquidity",
+    figure: "$87K",
+    volume: "Volume",
+    fig1: "$1.4M",
+    txns: "TNXS",
+    fig: "3716",
+    fdv: "FDV",
+    fig2: "386k",
+  },
+];
+
 export const smartTradeButtons = [
   {
     name: "My Wallet List",
@@ -619,6 +854,116 @@ export const explorer2 = [
   },
 ];
 
+export const kolListMock = [
+  {
+    channel: "MACHI Calls",
+    calls: "118",
+    rate: "81",
+    hit: "87.8%",
+    winning: "100",
+    losing: "13",
+    num: "5",
+    rugPulls: "7.45%",
+    returns: "+25.6X",
+  },
+
+  {
+    channel: "MACHI Calls",
+    calls: "118",
+    rate: "81",
+    hit: "87.8%",
+    winning: "100",
+    losing: "13",
+    num: "5",
+    rugPulls: "7.45%",
+    returns: "+25.6X",
+  },
+
+  {
+    channel: "MACHI Calls",
+    calls: "118",
+    rate: "81",
+    hit: "87.8%",
+    winning: "100",
+    losing: "13",
+    num: "5",
+    rugPulls: "7.45%",
+    returns: "+25.6X",
+  },
+
+  {
+    channel: "MACHI Calls",
+    calls: "118",
+    rate: "81",
+    hit: "87.8%",
+    winning: "100",
+    losing: "13",
+    num: "5",
+    rugPulls: "7.45%",
+    returns: "+25.6X",
+  },
+
+  {
+    channel: "MACHI Calls",
+    calls: "118",
+    rate: "81",
+    hit: "87.8%",
+    winning: "100",
+    losing: "13",
+    num: "5",
+    rugPulls: "7.45%",
+    returns: "+25.6X",
+  },
+
+  {
+    channel: "MACHI Calls",
+    calls: "118",
+    rate: "81",
+    hit: "87.8%",
+    winning: "100",
+    losing: "13",
+    num: "5",
+    rugPulls: "7.45%",
+    returns: "+25.6X",
+  },
+
+  {
+    channel: "MACHI Calls",
+    calls: "118",
+    rate: "81",
+    hit: "87.8%",
+    winning: "100",
+    losing: "13",
+    num: "5",
+    rugPulls: "7.45%",
+    returns: "+25.6X",
+  },
+
+  {
+    channel: "MACHI Calls",
+    calls: "118",
+    rate: "81",
+    hit: "87.8%",
+    winning: "100",
+    losing: "13",
+    num: "5",
+    rugPulls: "7.45%",
+    returns: "+25.6X",
+  },
+
+  {
+    channel: "MACHI Calls",
+    calls: "118",
+    rate: "81",
+    hit: "87.8%",
+    winning: "100",
+    losing: "13",
+    num: "5",
+    rugPulls: "7.45%",
+    returns: "+25.6X",
+  },
+];
+
 export const triggerSnipes = [
   {
     img: "/Weth.png",
@@ -850,5 +1195,165 @@ export const kolCalls = [
     amount: "2d, 8h",
     scamScore: "67%",
     status: "Launched",
+  },
+];
+
+export const accumulatedTokens = [
+  {
+    token: "WETH",
+    img: "/Eth.png",
+    details: "View Details",
+    smartWallet: "5,678k",
+    netInflow: "$ 187,782,400.04",
+  },
+
+  {
+    token: "SUSHI",
+    img: "/sushi.png",
+    details: "View Details",
+    smartWallet: "5,678k",
+    netInflow: "$ 187,782,400.04",
+  },
+
+  {
+    token: "WETH",
+    img: "/Eth.png",
+    details: "View Details",
+    smartWallet: "5,678k",
+    netInflow: "$ 187,782,400.04",
+  },
+
+  {
+    token: "SUSHI",
+    img: "/sushi.png",
+    details: "View Details",
+    smartWallet: "5,678k",
+    netInflow: "$ 187,782,400.04",
+  },
+
+  {
+    token: "WETH",
+    img: "/Eth.png",
+    details: "View Details",
+    smartWallet: "5,678k",
+    netInflow: "$ 187,782,400.04",
+  },
+
+  {
+    token: "SUSHI",
+    img: "/sushi.png",
+    details: "View Details",
+    smartWallet: "5,678k",
+    netInflow: "$ 187,782,400.04",
+  },
+
+  {
+    token: "WETH",
+    img: "/Eth.png",
+    details: "View Details",
+    smartWallet: "5,678k",
+    netInflow: "$ 187,782,400.04",
+  },
+
+  {
+    token: "SUSHI",
+    img: "/sushi.png",
+    details: "View Details",
+    smartWallet: "5,678k",
+    netInflow: "$ 187,782,400.04",
+  },
+
+  {
+    token: "WETH",
+    img: "/sushi.png",
+    details: "View Details",
+    smartWallet: "5,678k",
+    netInflow: "$ 187,782,400.04",
+  },
+
+  {
+    token: "SUSHI",
+    img: "/sushi.png",
+    details: "View Details",
+    smartWallet: "5,678k",
+    netInflow: "$ 187,782,400.04",
+  },
+
+  {
+    token: "WETH",
+    img: "/sushi.png",
+    details: "View Details",
+    smartWallet: "5,678k",
+    netInflow: "$ 187,782,400.04",
+  },
+
+  {
+    token: "SUSHI",
+    img: "/sushi.png",
+    details: "View Details",
+    smartWallet: "5,678k",
+    netInflow: "$ 187,782,400.04",
+  },
+];
+
+export const smartWalletList = [
+  {
+    superboy: "Super boyyyy",
+    address: "0x9c8bB8355629A72EB506...",
+  },
+
+  {
+    superboy: "Ghost Lordddd",
+    address: "0x9c8bB8355629A72EB506...",
+  },
+
+  {
+    superboy: "Meme daddyyy",
+    address: "0x9c8bB8355629A72EB506...",
+  },
+
+  {
+    superboy: "Infra broo",
+    address: "0x9c8bB8355629A72EB506...",
+  },
+
+  {
+    superboy: "Angel trump",
+    address: "0x9c8bB8355629A72EB506...",
+  },
+
+  {
+    superboy: "Super boyyyy",
+    address: "0x9c8bB8355629A72EB506...",
+  },
+
+  {
+    superboy: "Meme daddyyyy",
+    address: "0x9c8bB8355629A72EB506...",
+  },
+
+  {
+    superboy: "Cruise Queen",
+    address: "0x9c8bB8355629A72EB506...",
+  },
+
+  {
+    superboy: "Super girlll",
+    address: "0x9c8bB8355629A72EB506...",
+  },
+
+  {
+    superboy: "Super boyyyy",
+    address: "0x9c8bB8355629A72EB506...",
+  },
+
+  {
+    superboy: "Super boyyyy",
+    address: "0x9c8bB8355629A72EB506...",
+  },
+
+  {
+    superboy: "Meme daddyyyy",
+    address: "0x9c8bB8355629A72EB506...",
   },
 ];

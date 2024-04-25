@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Chart from "@/components/metabots/alphaHuntTabs/lightChart/Chart";
-import { accumulatedTokens, smartWalletList } from "@/metabots1/utils/mockData";
+import { accumulatedTokens, smartWalletList } from "@/utils/mockData";
 import { TableRow, TableCell } from "@/components/ui/table";
 import Image from "next/image";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
