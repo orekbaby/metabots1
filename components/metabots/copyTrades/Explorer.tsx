@@ -28,7 +28,7 @@ const Explorer = () => {
         </h3>
         <hr className="border-b mb-4 border-[#212E40]" />
         <div className="flex flex-col gap-10 md:gap-12 lg:gap-12 w-full h-full md:h-[50vh] lg:h-[50vh] md:overflow-y-auto lg:overflow-y-auto md:scrollbar-hide lg:scrollbar-hide mb-0 md:mb-24 lg:mb-24">
-          <div className=" flex-col md:flex-row lg:flex-row w-full h-auto flex items-center gap-5 md:gap-5 lg:gap-5  px-0 md:px-3 lg:px-3 ">
+          <div className="flex-col md:flex-row lg:flex-row w-full h-auto flex items-center gap-5 md:gap-5 lg:gap-5  px-0 md:px-3 lg:px-3 ">
             {/* first table */}
 
             <div className="bg-[#0A1019] rounded-lg w-full h-60 overflow-y-auto overflow-x-hidden scrollbar-hide">
