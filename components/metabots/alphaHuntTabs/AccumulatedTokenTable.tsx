@@ -77,7 +77,7 @@ const AccumulatedTokenTable = () => {
             </div>
           </TableCell>
           <TableCell className="font-medium text-[9px] md:text-[18px] lg:text-[18px] text-[#05A660]">
-            <div className="w-[150px] md:w-[150px] lg:w-[150px] text-right pr-0 md:pr-2 lg:pr-2">
+            <div className="w-[150px] md:w-[20px] lg:w-[200px] text-right pr-0 md:pr-2 lg:pr-2">
               {row.netInflow}
             </div>
           </TableCell>

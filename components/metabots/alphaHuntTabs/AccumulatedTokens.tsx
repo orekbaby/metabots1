@@ -12,7 +12,7 @@ import {
 const AccumulatedTokens = () => {
   return (
     <>
-      <div className="mb-72 overflow-x-hidden overflow-y-auto scrollbar-hide h-[400px]">
+      <div className=" mb-24 md:mb-32 lg:mb-32 overflow-x-hidden overflow-y-auto scrollbar-hide h-[400px]">
         <Table className="w-full">
           <TableHeader>
             <TableRow className="border-none bg-[#0C141F]">
@@ -22,7 +22,7 @@ const AccumulatedTokens = () => {
               <TableHead className="w-[150px] font-normal md:font-bold lg:font-bold text-[9px] md:text-[16px] lg:text-[16px] text-center">
                 Number Of Smart Wallets Token
               </TableHead>
-              <TableHead className="w-[150px] font-normal md:font-bold lg:font-bold text-[9px] md:text-[16px] lg:text-[16px] text-right md:text-left lg:text-left pr-4 md:pr-4 lg:pr-4">
+              <TableHead className="w-[150px] font-normal md:font-bold lg:font-bold text-[9px] md:text-[16px] lg:text-[16px] text-right md:text-center lg:text-center pr-4 md:pr-32 lg:pr-32">
                 1D Net Inflow
               </TableHead>
             </TableRow>
