@@ -1,7 +1,7 @@
 import React from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import CopyTrading from "@/components/metabots/copyTrades/CopyTrading";
-import SmartWalletExplorer from "@/components/metabots/copyTrades/SmartWalletExplorer";
+
 import { BsFillExclamationCircleFill } from "react-icons/bs";
 import SmartWalletTabs from "./SmartWalletTabs";
 export default function Tab() {
@@ -14,7 +14,7 @@ export default function Tab() {
       >
         <TabsList className="flex mt-0 mb-0 items-center justify-start">
           <TabsTrigger
-            className=" w-1/3 md:w-fit lg:w-fit px-5 md:px-2 lg:px-2 md:font-bold lg:font-bold focus-visible:border-b-[2px]  data-[state=active]:border-b-[2px] data-[state=active]:text-[#0D6EFD] text-white text-[12px] md:text-base lg:text-base border-[#0D6EFD] gap-2 font-medium"
+            className=" w-1/2 md:w-fit lg:w-fit px-5 md:px-2 lg:px-2 md:font-bold lg:font-bold focus-visible:border-b-[2px]  data-[state=active]:border-b-[2px] data-[state=active]:text-[#0D6EFD] text-white text-[12px] md:text-base lg:text-base border-[#0D6EFD] gap-2 font-medium"
             value="CopyTrade"
           >
             {" "}
@@ -22,7 +22,7 @@ export default function Tab() {
             <BsFillExclamationCircleFill className="text-[#0D6EFD] text-base" />
           </TabsTrigger>
           <TabsTrigger
-            className="w-1/3 md:w-fit lg:w-fit px-5 md:px-5 lg:px-5 font-medium md:font-bold lg:font-bold focus-visible:border-b-[2px] data-[state=active]:border-b-[2px] data-[state=active]:text-[#0D6EFD] text-white text-[12px] 
+            className="w-1/2 md:w-fit lg:w-fit px-5 md:px-5 lg:px-5 font-medium md:font-bold lg:font-bold focus-visible:border-b-[2px] data-[state=active]:border-b-[2px] data-[state=active]:text-[#0D6EFD] text-white text-[12px] 
             md:text-base
              lg:text-base border-[#0D6EFD]"
             value="SmartWalletExplorer"

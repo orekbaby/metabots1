@@ -72,7 +72,7 @@ const Page: React.FC<PageProps> = (props) => {
               {/* Pass the props to the Chart component */}
               <Chart />
             </div>
-            <div className="hidden md:inline lg:inline flex-[59%] border-[1px] border-[#212E40] p-2 rounded-[8px] mt-4 md:mt-0 lg:mt-0">
+            <div className=" h-[350px] overflow-y-auto scrollbar-hide hidden md:inline lg:inline flex-[59%] border-[1px] border-[#212E40] p-2 rounded-[8px] mt-4 md:mt-0 lg:mt-0">
               <Tabs />
             </div>
           </div>

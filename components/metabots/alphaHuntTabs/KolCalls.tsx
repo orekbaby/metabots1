@@ -30,7 +30,10 @@ const KolCalls = () => {
         </div>
         <div className="items-center justify-between flex mb-5">
           <div className="hidden md:flex lg:flex justify-start gap-4 h-[35px] font-semibold text-[9px]md:text-xs lg:text-xs text-[#E7E7E7] border-2 rounded-[500px] border-[#212E40] pr-5 ">
-            <div className="w-full md:w-[117px] h-[27px] lg:w-[117px] bg-[#212E40] text-center items-center pt-1">
+            <div
+              className="w-full md:w-[117px] h-[27px] lg:w-[117px] bg-[#212E40] 
+            text-center items-center pt-1"
+            >
               <h3 className="text-center font-bold text-[9px]md:text-xs lg:text-xs">
                 Hot Contracts 🔥
               </h3>

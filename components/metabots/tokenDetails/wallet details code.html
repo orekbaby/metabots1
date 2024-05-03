@@ -1,0 +1,219 @@
+  <div className="gap-4 hidden md:flex lg:flex flex-row mb-4">
+        {/* First column */}
+        <div className="flex gap-4 flex-row">
+          <div className="flex items-center">
+            <Image
+              src="/etherum.png"
+              alt="eth"
+              width={48}
+              height={48}
+              className=""
+            />
+          </div>
+          <div className="flex flex-1 flex-col gap-[8px] p-1">
+            <div className="flex items-center gap-1">
+              <h2 className="font-bold text-sm md:text-[20px] lg:text-[20px]">
+                ETH
+              </h2>
+              <MdOutlineContentCopy className="text-base" />
+              <h2 className="text-sm md:text-[20px] lg:text-[20px]">/ USDT</h2>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="flex flex-col items-center">
+                <div className="flex gap-2 items-center">
+                  <h3 className="font-normal text-[18px]">Etherum</h3>
+                  <IoMdNotificationsOutline className="text-[#0D6EFD] text-[24px]" />
+                  <FaStar className="text-[#DBDBDC] text-[22px]" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Second column */}
+        <div className="col-span-1 flex flex-col gap-2 p-1">
+          <h2 className="font-normal text-[10px] md:text-sm lg:text-sm text-[#6C757D]">
+            Price (USD)
+          </h2>
+          <div className="flex items-center">
+            <div className="flex flex-col">
+              <div className="flex gap-1 items-center">
+                <p className="font-medium md:font-bold lg:font-bold text-[14px] md:text-[18px] lg:text-[18px]">
+                  $0.23
+                </p>
+                <span className=" font-semibold text-[10px] text-[#06C270]">
+                  +1.41%
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Third column */}
+        <div className="col-span-1 flex flex-col gap-2 p-1">
+          <h2 className="font-normal text-[10px] md:text-sm lg:text-sm text-[#6C757D]">
+            24H Volume (USD)
+          </h2>
+          <div className="flex items-center">
+            <div className="flex flex-col font-medium md:font-bold lg:font-bold text-[14px] md:text-[18px] lg:text-[18px]">
+              $61,234,872
+            </div>
+          </div>
+        </div>
+
+        {/* Fourth column */}
+        <div className="col-span-1 flex flex-col gap-2 p-1">
+          <h2 className="font-normal text-[10px] md:text-sm lg:text-sm text-[#6C757D]">
+            Total Liquidity
+          </h2>
+          <div className="flex items-center">
+            <div className="flex flex-col font-medium md:font-bold lg:font-bold text-[14px] md:text-[18px] lg:text-[18px]">
+              $86,789,172
+            </div>
+          </div>
+        </div>
+
+
+        "use client";
+import React, { useState } from "react";
+import Chart from "@/components/metabots/alphaHuntTabs/lightChart/Chart";
+import { accumulatedTokens, smartWalletList } from "@/utils/mockData";
+import { TableRow, TableCell } from "@/components/ui/table";
+import Image from "next/image";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { MdOutlineContentCopy } from "react-icons/md";
+import { Button } from "@/components/ui/button";
+import { IoIosNotificationsOutline } from "react-icons/io";
+import { FaRegStar } from "react-icons/fa6";
+
+const AccumulatedTokenTable = () => {
+  interface Item {
+    token: string;
+    img: string;
+  }
+  const [hoveredItem, setHoveredItem] = useState<number | null>(null);
+
+  const yourDataArray: Item[] = [
+    /* Your array of data */
+  ];
+  return (
+    <>
+      {accumulatedTokens?.map((row, index) => (
+        <TableRow key={index} className="border-[#212E40]">
+          <TableCell className="flex items-center font-normal text-[9px] md:text-sm lg:text-sm">
+            <div className="w-[150px] md:w-[100px] lg:w-[100px] flex gap-2 relative">
+              <div
+                className="relative"
+                onMouseEnter={() => setHoveredItem(index)}
+                onMouseLeave={() => setHoveredItem(null)}
+              >
+                <div className="flex gap-1">
+                  {hoveredItem === index && (
+                    <div className="absolute top-0 left-0 z-10">
+                      <div className=" w-full h-auto md:w-[500px] md:h-[800px] lg:w-[500px] lg:h-[800px] bg-[#0A1019] mb-3">
+                        <div className="flex gap-4 items-center justify-start text-center ml-6 md:ml-0 lg:ml-0 mr-12  mb-3 md:mb-5 lg:mb-5">
+                          <Image
+                            width={28}
+                            height={28}
+                            alt="eth"
+                            src="/Eth.png"
+                            className="w-[16px] h-[16px] md:w-[28px] md:h-[28px] lg:w-[28px] lg:h-[28px]"
+                          />
+                          <div className="flex gap-1 items-center">
+                            <h3 className="font-semibold text-xs md:text-[20px] lg:text-[20px]">
+                              WETH
+                            </h3>
+                            <MdOutlineContentCopy className="text-xs md:text-[14.5px] lg:text-[12.4px]" />
+                          </div>
+
+                          <Button
+                            variant="outline"
+                            className="flex items-center justify-center w-[82px] h-[22px] bg-[#0B0F16] border-[#0D6EFD] border-[1px] rounded-[8px] text-[10px] font-normal text-[#B3B5B8]"
+                          >
+                            <IoIosNotificationsOutline
+                              className="text-[24px] mr-1 text-[#B3B5B8]"
+                              style={{ width: "24px" }}
+                            />
+                            <span className="">Set Alerts</span>
+                          </Button>
+
+                          <Button
+                            variant="outline"
+                            className="flex items-center justify-center w-[118px] h-[22px] bg-[#0B0F16] border-[#0D6EFD] border-[1px] rounded-[8px] text-[10px] font-normal text-[#B3B5B8]"
+                          >
+                            <FaRegStar
+                              className="text-[24px] mr-1 text-[#B3B5B8]"
+                              style={{ width: "24px" }}
+                            />
+                            <span className="">Add to Watchlist</span>
+                          </Button>
+                        </div>
+                        <div className="flex gap-2 items-center ml-6 md:ml-0 lg:ml-0">
+                          <h3 className="text-xs md:font-bold md:text-[28px] lg:md:font-bold lg:text-[28px]">
+                            $2,374
+                          </h3>
+                          <p className="font-semibold text-base text-[#20C997]">
+                            +1.41%
+                          </p>
+                        </div>
+                        <div className="text-center flex items-center justify-center mr-60">
+                          <Chart />
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                  {row.token}
+                  <Image
+                    src={row.img}
+                    alt="img"
+                    width={20}
+                    height={20}
+                    className=""
+                  />
+                </div>
+              </div>
+            </div>
+          </TableCell>
+          <TableCell className="font-normal text-[9px] md:text-[18px] lg:text-[18px] text-center md:text-right lg:text-right">
+            <div className="w-[200px] md:w-[350px] lg:w-[350px]">
+              <p className="">
+                {row.smartWallet} {""}
+                <Dialog>
+                  <DialogTrigger>
+                    <span className="text-[9px] md:text-base lg:text-base font-normal text-[#FFC107] border-b-2 border-[#FFC107]">
+                      {row.details}
+                    </span>
+                  </DialogTrigger>
+                  <DialogContent className="w-[70%] md:w-full lg:w-full bg-[#0C141F] border-none rounded-lg">
+                    <div className=" w-full md:w-full lg:w-full  h-[200px] overflow-y-auto scrollbar-hide overflow-x-hidden">
+                      {smartWalletList?.map((row, index) => (
+                        <div
+                          key={index}
+                          className="flex flex-col mb-3 border-b-2 border-[#212E40]"
+                        >
+                          <p className="font-bold text-sm md:text-base lg:text-base">
+                            {row.superboy}
+                          </p>
+                          <span className="font-normal text-xs md:text-sm lg:text-sm text-[#E7E7E7]">
+                            {row.address}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </DialogContent>
+                </Dialog>
+              </p>
+            </div>
+          </TableCell>
+          <TableCell className="font-medium text-[9px] md:text-[18px] lg:text-[18px] text-[#05A660]">
+            <div className="w-[150px] md:w-[20px] lg:w-[200px] text-right pr-0 md:pr-2 lg:pr-2">
+              {row.netInflow}
+            </div>
+          </TableCell>
+        </TableRow>
+      ))}
+    </>
+  );
+};
+
+export default AccumulatedTokenTable;

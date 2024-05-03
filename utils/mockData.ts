@@ -184,6 +184,57 @@ export const landingPage = [
     link: "",
   },
 ];
+export const marqueeDetails = [
+  {
+    name: "ETH.BADDO",
+  },
+
+  {
+    name: "ETH.BOT",
+  },
+  {
+    name: "ETH.LORD",
+  },
+
+  {
+    name: "TOKEN.BULL",
+  },
+
+  {
+    name: "COIN.EXP",
+  },
+
+  {
+    name: "PROF FX",
+  },
+
+  {
+    name: "ETH.BOT",
+  },
+];
+
+export const marqueeTokens = [
+  {
+    name: "ETH.BEN",
+  },
+
+  {
+    name: "MACHI BIG BROTHER",
+  },
+
+  {
+    name: "PEPE COIN DEPLOYER",
+  },
+
+  {
+    name: "PROFITABLE MEME COIN TRADER",
+  },
+
+  {
+    img: "",
+    name: "JUSTIN SUN",
+  },
+];
 
 export const sideBar = [
   {
@@ -1296,6 +1347,98 @@ export const accumulatedTokens = [
   },
 ];
 
+export const accordionData = [
+  {
+    trigger: "What is a Market making bot?What is a Market making bot?",
+    content:
+      "A market making bot is a software program that automatically places buy and sell orders on Decentralized exchanges. The goal of a market making bot is to provide liquidity and volume for a token",
+    value: "1",
+  },
+
+  {
+    trigger: "What Platforms are supported?",
+    content:
+      "A market making bot is a software program that automatically places buy and sell orders on Decentralized exchanges. The goal of a market making bot is to provide liquidity and volume for a token",
+    value: "2",
+  },
+
+  {
+    trigger: "Are there any hidden fees?",
+    content:
+      "A market making bot is a software program that automatically places buy and sell orders on Decentralized exchanges. The goal of a market making bot is to provide liquidity and volume for a token",
+    value: "3",
+  },
+
+  {
+    trigger: "Is the Trade Volume I can perform on my token Unlimited?",
+    content:
+      "A market making bot is a software program that automatically places buy and sell orders on Decentralized exchanges. The goal of a market making bot is to provide liquidity and volume for a token",
+    value: "4",
+  },
+
+  {
+    trigger: "Who pays for gas fees?",
+    content:
+      "A market making bot is a software program that automatically places buy and sell orders on Decentralized exchanges. The goal of a market making bot is to provide liquidity and volume for a token",
+    value: "5",
+  },
+
+  {
+    trigger: "Will you have Web version of the Market making bot?",
+    content:
+      "A market making bot is a software program that automatically places buy and sell orders on Decentralized exchanges. The goal of a market making bot is to provide liquidity and volume for a token",
+    value: "6",
+  },
+];
+export const tokenDetails = [
+  {
+    name: "Price (USD)",
+    token: " $0.23",
+    span: "+1.41%",
+  },
+
+  {
+    name: "24H Volume (USD)",
+    token: "$61,234,872",
+    span: "",
+  },
+
+  {
+    name: "Total Liquidity",
+    token: "$86,789,172",
+    span: "",
+  },
+  {
+    name: "Market Cap",
+    token: "$3,157,783,174",
+    span: "",
+  },
+  {
+    name: "Token Holders",
+    token: " 2145",
+    span: "",
+  },
+];
+
+export const freshWallet = [
+  {
+    name: "Price (USD)",
+    token: " $0.23",
+    span: "+1.41%",
+  },
+
+  {
+    name: "Number of fresh wallets",
+    token: "78k",
+    span: "View Details",
+  },
+
+  {
+    name: "1D Net fresh inflows",
+    token: "$ 187,782,400.04",
+    span: "",
+  },
+];
 export const smartWalletList = [
   {
     superboy: "Super boyyyy",

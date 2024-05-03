@@ -112,7 +112,7 @@ const SmartTradeUpdates = () => {
                 <TableHead className=" w-[100px] font-semibold p-2 md:font-bold lg:font-bold text-[10px] md:text-xs lg:text-xs">
                   Amount/USD
                 </TableHead>
-                <TableHead className="w-[100px] font-semibold md:font-bold lg:font-boldtext-[10px] md:text-xs lg:text-xs">
+                <TableHead className="w-[100px] font-semibold md:font-bold lg:font-boldtext-[10px] md:text-xs lg:text-xs pl-12">
                   Action
                 </TableHead>
               </TableRow>

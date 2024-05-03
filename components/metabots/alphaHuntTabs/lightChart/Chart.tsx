@@ -1,6 +1,6 @@
 "use client";
 import { useEffect } from "react";
-import { createChart, ColorType } from "lightweight-charts";
+import { createChart } from "lightweight-charts";
 
 const Chart = () => {
   useEffect(() => {
@@ -12,7 +12,15 @@ const Chart = () => {
       height: chartHeight,
       layout: {
         textColor: "white",
-        background: { type: "solid" as ColorType, color: "#0A1019" },
+        background: { color: "transparent" },
+      },
+      grid: {
+        vertLines: {
+          color: "transparent",
+        },
+        horzLines: {
+          color: "transparent",
+        },
       },
     });
 

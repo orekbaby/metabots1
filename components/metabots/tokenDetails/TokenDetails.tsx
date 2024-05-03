@@ -3,7 +3,7 @@ import { MdOutlineContentCopy } from "react-icons/md";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { FaStar } from "react-icons/fa";
 import Image from "next/image";
-
+import { tokenDetails } from "@/utils/mockData";
 const TokenDetails = () => {
   return (
     <>
@@ -38,74 +38,28 @@ const TokenDetails = () => {
             </div>
           </div>
         </div>
-
-        {/* Second column */}
-        <div className="col-span-1 flex flex-col gap-2 p-1">
-          <h2 className="font-normal text-[10px] md:text-sm lg:text-sm text-[#6C757D]">
-            Price (USD)
-          </h2>
-          <div className="flex items-center">
-            <div className="flex flex-col">
-              <div className="flex gap-1 items-center">
-                <p className="font-medium md:font-bold lg:font-bold text-[14px] md:text-[18px] lg:text-[18px]">
-                  $0.23
-                </p>
-                <span className=" font-semibold text-[10px] text-[#06C270]">
-                  +1.41%
-                </span>
+        {tokenDetails?.map((row, index) => (
+          <div key={index} className="">
+            {/* Second column */}
+            <div className="col-span-1 flex flex-col gap-2 p-1">
+              <h2 className="font-normal text-[10px] md:text-sm lg:text-sm text-[#6C757D]">
+                {row.name}
+              </h2>
+              <div className="flex items-center">
+                <div className="flex flex-col">
+                  <div className="flex gap-1 items-center">
+                    <p className="font-medium md:font-bold lg:font-bold text-[14px] md:text-[18px] lg:text-[18px]">
+                      {row.token}
+                    </p>
+                    <span className=" font-semibold text-[10px] text-[#06C270]">
+                      {row.span}
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-
-        {/* Third column */}
-        <div className="col-span-1 flex flex-col gap-2 p-1">
-          <h2 className="font-normal text-[10px] md:text-sm lg:text-sm text-[#6C757D]">
-            24H Volume (USD)
-          </h2>
-          <div className="flex items-center">
-            <div className="flex flex-col font-medium md:font-bold lg:font-bold text-[14px] md:text-[18px] lg:text-[18px]">
-              $61,234,872
-            </div>
-          </div>
-        </div>
-
-        {/* Fourth column */}
-        <div className="col-span-1 flex flex-col gap-2 p-1">
-          <h2 className="font-normal text-[10px] md:text-sm lg:text-sm text-[#6C757D]">
-            Total Liquidity
-          </h2>
-          <div className="flex items-center">
-            <div className="flex flex-col font-medium md:font-bold lg:font-bold text-[14px] md:text-[18px] lg:text-[18px]">
-              $86,789,172
-            </div>
-          </div>
-        </div>
-
-        {/* Fifth column */}
-        <div className="col-span-1 flex flex-col gap-2 p-1">
-          <h2 className="font-normal text-[10px] md:text-sm lg:text-sm text-[#6C757D]">
-            Market Cap
-          </h2>
-          <div className="flex items-center">
-            <div className="flex flex-col font-medium md:font-bold lg:font-bold text-[14px] md:text-[18px] lg:text-[18px]">
-              $3,157,783,174
-            </div>
-          </div>
-        </div>
-
-        {/* Sixth column */}
-        <div className="col-span-1 flex flex-col gap-2 p-1">
-          <h2 className="font-normal text-[10px] md:text-sm lg:text-sm text-[#6C757D]">
-            Token Holders
-          </h2>
-          <div className="flex items-center">
-            <div className="font-medium md:font-bold lg:font-bold text-[14px] md:text-[18px] lg:text-[18px] flex flex-col">
-              2145
-            </div>
-          </div>
-        </div>
-
+        ))}
         {/* Image (Fraud) */}
         <Image
           src="/scam-sc.png "

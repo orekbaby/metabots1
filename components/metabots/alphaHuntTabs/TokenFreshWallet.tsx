@@ -1,5 +1,6 @@
 import React from "react";
 import AccumulatedTokenTable from "@/components/metabots/alphaHuntTabs/AccumulatedTokenTable";
+
 import {
   Table,
   TableHeader,
@@ -7,8 +8,6 @@ import {
   TableBody,
   TableRow,
 } from "@/components/ui/table";
-
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 
 const AccumulatedTokens = () => {
   return (

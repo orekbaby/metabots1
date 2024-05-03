@@ -13,6 +13,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
+import { accordionData } from "@/utils/mockData";
 
 const Metabots = () => {
   return (
@@ -288,74 +289,20 @@ const Metabots = () => {
             Everything you need to know about our market making bot service.
           </p>
           <div className="mx-auto max-w-screen-lg w-full md:w-[70%] lg:w-[70%]">
-            <Accordion className="" type="single" collapsible>
-              <AccordionItem className="border-none" value="item-1">
-                <AccordionTrigger className="font-semibold text-[18px] border-b-[1px] border-[#212E40] text-left">
-                  What is a Market making bot?What is a Market making bot?
-                </AccordionTrigger>
-                <AccordionContent className="font-normal text-base mt-3">
-                  A market making bot is a software program that automatically
-                  places buy and sell orders on Decentralized exchanges. The
-                  goal of a market making bot is to provide liquidity and volume
-                  for a token
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem className="border-none" value="item-2">
-                <AccordionTrigger className="font-semibold text-[18px] border-b-[1px] border-[#212E40] text-left">
-                  What Platforms are supported?
-                </AccordionTrigger>
-                <AccordionContent className="font-normal text-base">
-                  A market making bot is a software program that automatically
-                  places buy and sell orders on Decentralized exchanges. The
-                  goal of a market making bot is to provide liquidity and volume
-                  for a token
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem className="border-none" value="item-3">
-                <AccordionTrigger className="font-semibold text-[18px] border-b-[1px] border-[#212E40] text-left">
-                  Are there any hidden fees?
-                </AccordionTrigger>
-                <AccordionContent className="font-normal text-base">
-                  A market making bot is a software program that automatically
-                  places buy and sell orders on Decentralized exchanges. The
-                  goal of a market making bot is to provide liquidity and volume
-                  for a token
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem className="border-none" value="item-4">
-                <AccordionTrigger className="border-b-[1px] border-[#212E40] font-semibold text-[18px] text-left">
-                  Is the Trade Volume I can perform on my token Unlimited?
-                </AccordionTrigger>
-                <AccordionContent className="font-normal text-base">
-                  A market making bot is a software program that automatically
-                  places buy and sell orders on Decentralized exchanges. The
-                  goal of a market making bot is to provide liquidity and volume
-                  for a token
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem className="border-none" value="item-5">
-                <AccordionTrigger className="font-semibold text-[18px] border-b-[1px] border-[#212E40]">
-                  Who pays for gas fees?
-                </AccordionTrigger>
-                <AccordionContent className="font-normal text-base">
-                  A market making bot is a software program that automatically
-                  places buy and sell orders on Decentralized exchanges. The
-                  goal of a market making bot is to provide liquidity and volume
-                  for a token
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem className="border-none" value="item-6">
-                <AccordionTrigger className="font-semibold text-[18px] border-b-[1px] border-[#212E40] text-left">
-                  Will you have Web version of the Market making bot?
-                </AccordionTrigger>
-                <AccordionContent className="font-normal text-base">
-                  A market making bot is a software program that automatically
-                  places buy and sell orders on Decentralized exchanges. The
-                  goal of a market making bot is to provide liquidity and volume
-                  for a token
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
+            {accordionData?.map((row, index) => (
+              <div key={index} className="">
+                <Accordion className="" type="single" collapsible>
+                  <AccordionItem className="border-none" value={row.value}>
+                    <AccordionTrigger className="font-semibold text-[18px] border-b-[1px] border-[#212E40] text-left">
+                      {row.trigger}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-left font-normal text-base mt-3">
+                      {row.content}
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
+              </div>
+            ))}
           </div>
         </div>
         <div className=" mb-30 w-full md:w-[60%] lg:w-[60%] mx-auto bg-[#212E40] p-[15px] rounded-[8px]">

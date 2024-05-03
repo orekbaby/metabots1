@@ -104,7 +104,7 @@ const Explorer = () => {
                         {row.address}
                       </TableCell>
 
-                      <TableCell className="p-1 text-center">
+                      <TableCell className="pl-3 text-center">
                         <div className="w-[100px]">
                           <p className="items-center justify-center pl-3 text-[#FFC107] font-bold text-[9px] md:text-sm lg:text-sm">
                             {row.winRate}

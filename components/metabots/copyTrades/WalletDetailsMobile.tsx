@@ -7,19 +7,20 @@ import { CiSettings } from "react-icons/ci";
 const WalletDetailsMobile = () => {
   return (
     <>
-      <div className="justify-between flex-col items-center pr-8 flex md:hidden lg:hidden">
-        <div className="flex justify-center gap-4">
-          <div className="flex items-center gap-2">
+      <div className="justify-between flex-col  pr-8 flex md:hidden lg:hidden">
+        <div className="flex gap-4 mb-5">
+          <div className="flex items-center gap-1">
             <h2 className="font-bold text-12 md:text-[24px] lg:text-[24px]">
               ETH.BEN
             </h2>
 
             <MdOutlineContentCopy className=" md:text-[24px] lg:text-[24px]" />
           </div>
-          <div className="flex justify-center items-center gap-3">
+          <div className="flex justify-center items-center">
             <h3 className="font-normal text-[9px] md:text-sm lg:text-sm">
-              Wallet Balance:{" "}
+              Wallet Balance:
             </h3>{" "}
+            {""}
             <span className="font-bold text-base md:text-[27px] lg:text-[27px] text-[#FFC107]">
               $141,160,817.62
             </span>
@@ -29,26 +30,28 @@ const WalletDetailsMobile = () => {
           </div>
         </div>
 
-        <div className="flex mb-0 justify-start items-start">
-          <Button
-            variant="outline"
-            className="flex items-center justify-center w-[98px] h-[22px] bg-[#0B0F16] border-[#FFC107] border-[1px] rounded-sm md:rounded-[8px] lg:rounded-[8px] text-[9px] md:text-sm lg:text-sm font-normal text-[#B3B5B8]md:hidden lg:hidden"
-          >
-            Add wallet to Track
-          </Button>
+        <div className="flex justify-between mb-5">
+          <div className="flex gap-4 justify-start">
+            <Button
+              variant="outline"
+              className="flex items-center justify-center w-[98px] h-[22px] bg-[#0B0F16] border-[#FFC107] border-[1px] rounded-sm md:rounded-[8px] lg:rounded-[8px] text-[9px] md:text-sm lg:text-sm font-normal text-[#B3B5B8]md:hidden lg:hidden"
+            >
+              Add wallet to Track
+            </Button>
 
-          <Button
-            variant="outline"
-            className=" w-[59px] h-[22px] md:w-[112px] lg:w-[112px] md:h-[35px] lg:h-[35px] bg-[#0D6EFD] border-none text-[white] font-normal text-[9px] md:text-sm lg:text-sm rounded-[4px] md:rounded-lg lg:rounded-lg"
-          >
-            Copy Wallet
-          </Button>
+            <Button
+              variant="outline"
+              className=" w-[59px] h-[22px] md:w-[112px] lg:w-[112px] md:h-[35px] lg:h-[35px] bg-[#0D6EFD] border-none text-[white] font-normal text-[9px] md:text-sm lg:text-sm rounded-[4px] md:rounded-lg lg:rounded-lg"
+            >
+              Copy Wallet
+            </Button>
+          </div>
 
-          <div className="flex md:hidden lg:hidden">
-            <div className="w-[20px] h-[20px] border-2 border-[#B5B6B6] rounded-[4px] justify-center items-center">
+          <div className="flex md:hidden lg:hidden justify-end gap-3">
+            <div className="flex w-[20px] h-[20px] border-2 border-[#B5B6B6] rounded-[4px] justify-center items-center">
               <IoIosNotificationsOutline className="text-xs" />
             </div>
-            <div className="w-[20px] h-[20px] border-2 border-[#B5B6B6] rounded-[4px] justify-center items-center top-10">
+            <div className="w-[20px] h-[20px] flex border-2 border-[#B5B6B6] rounded-[4px] justify-center items-center top-10">
               <CiSettings className="text-xs" />
             </div>
           </div>
