@@ -6,7 +6,7 @@ import TradingHistory from "@/components/metabots/copyTrades/TradingHistory";
 import YourWallet from "@/components/metabots/Dashboard/YourWallet";
 import WalletPerformance from "@/components/metabots/copyTrades/WalletPerformance";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import WalletDetails from "@/metabots1/components/metabots/copyTrades/WalletDetails";
+import WalletDetails from "@/components/metabots/copyTrades/WalletDetails";
 import WalletDetailsMobile from "@/components/metabots/copyTrades/WalletDetailsMobile";
 import { marqueeTokens } from "@/utils/mockData";
 import { marqueeDetails } from "@/utils/mockData";
