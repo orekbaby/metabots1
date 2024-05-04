@@ -38,7 +38,7 @@ const AccumulatedTokenTable = () => {
                 <div className="flex gap-1">
                   {hoveredItem === index && (
                     <div className="absolute top-0 left-0 z-10">
-                      <div className="w-full h-auto md:w-4/5 md:h-[800px] lg:w-4/5 lg:h-[800px] bg-[#0A1019] mb-3 px-2">
+                      <div className="w-full h-auto md:w-[90%] md:h-auto lg:w-[90%] lg:h-auto bg-[#0A1019] mb-3 px-2">
                         <div className="flex flex-row mb-2 md:mb-4 lg:mb-4">
                           <div className="flex items-center gap-2">
                             <Image

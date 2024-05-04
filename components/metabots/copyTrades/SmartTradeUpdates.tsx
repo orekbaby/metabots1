@@ -41,7 +41,7 @@ const SmartTradeUpdates = () => {
                 className={`font-normal gap-2 py-0 px-2 md:py-2 md:px-4 lg:py-2 lg:px-4 text-center text-[10px] md:text-base lg:text-base h-[28px] md:h-10 lg:h-10 rounded-[4px] md:rounded-md lg:rounded-md outline-none border-none ${
                   index === activeIndex
                     ? "bg-[#084298] hover:bg-[#084298]"
-                    : "bg-[#17212F] hover:bg-[#084298]"
+                    : "bg-[#17212F] hover:bg-[#084298] hover:text-white"
                 } text-white`}
                 onClick={() => handleButtonClick(index)}
               >
@@ -52,7 +52,7 @@ const SmartTradeUpdates = () => {
                     id={`checkbox-${index}`}
                     className={`appearance-none w-4 h-4 border-2 rounded items-center ${
                       index === activeIndex
-                        ? "border-[#DBE9FF]"
+                        ? "border-[#DBE9FF] hover:text-white"
                         : "border-[#084298]"
                     }`}
                     checked={checkedIndexes[index]}
@@ -61,9 +61,9 @@ const SmartTradeUpdates = () => {
                   />
                   {checkedIndexes[index] && (
                     <svg
-                      className={`absolute top-[40%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3 h-3 pointer-events-none items-center ${
+                      className={`absolute top-[40%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3  h-3 pointer-events-none items-center ${
                         index === activeIndex
-                          ? "text-[#DBE9FF]"
+                          ? "text-[#DBE9FF] hover:text-white"
                           : "text-[#084298]"
                       }`}
                       viewBox="0 0 24 24"
@@ -100,16 +100,16 @@ const SmartTradeUpdates = () => {
                 <TableHead className="w-[150px] font-bold text-[10px] md:text-xs lg:text-xs">
                   Time
                 </TableHead>
-                <TableHead className=" w-[100px] font-semibold md:font-bold lg:font-bold text-[10px] md:text-xs lg:text-xs">
+                <TableHead className="w-[100px] font-semibold md:font-bold lg:font-bold text-[10px] md:text-xs lg:text-xs">
                   Trader
                 </TableHead>
                 <TableHead className="w-[150px] font-semibold md:font-bold lg:font-bold text-[10px] md:text-xs lg:text-xs">
                   Token
                 </TableHead>
-                <TableHead className=" w-[150px] font-semibold md:font-bold lg:font-bold text-[10px] md:text-xs lg:text-xs">
+                <TableHead className="text-center md:text-left lg:text-left w-[150px] font-semibold md:font-bold lg:font-bold text-[10px] md:text-xs lg:text-xs">
                   Type/Price
                 </TableHead>
-                <TableHead className=" w-[100px] font-semibold p-2 md:font-bold lg:font-bold text-[10px] md:text-xs lg:text-xs">
+                <TableHead className="text-center md:text-left lg:text-left w-[100px] font-semibold p-2 md:font-bold lg:font-bold text-[10px] md:text-xs lg:text-xs">
                   Amount/USD
                 </TableHead>
                 <TableHead className="w-[100px] font-semibold md:font-bold lg:font-boldtext-[10px] md:text-xs lg:text-xs pl-12">
@@ -192,7 +192,7 @@ const SmartTradeUpdates = () => {
                       </p>
                     </div>
                   </TableCell>
-                  <TableCell className="w-[100px] flex flex-col pt-6 font-normal text-[7.59px] md:text-sm lg:text-sm">
+                  <TableCell className="w-[100px] text-center md:text-left lg:text-left flex flex-col pt-6 font-normal text-[7.59px] md:text-sm lg:text-sm">
                     {row.price.includes("BUY") ? (
                       <>
                         <span
@@ -223,7 +223,7 @@ const SmartTradeUpdates = () => {
                     {row.priceValue}
                   </TableCell>
 
-                  <TableCell className="font-normal  text-[6.5px] md:text-sm lg:text-sm">
+                  <TableCell className="font-normal text-center md:text-left lg:text-left text-[6.5px] md:text-sm lg:text-sm">
                     <div className="w-[150px] md:w-[100px] lg:w-[100px]">
                       <p className="font-bold text-[10px] md:text-sm lg:text-sm">
                         {row.amount1}

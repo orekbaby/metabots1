@@ -26,7 +26,7 @@ export const WalletPerformance = () => {
             </SelectContent>
           </Select> */}
         </div>
-        <div className="ml-0 md:ml-2 lg:ml-2 w-full h-auto md:h-[555px] lg:h-[555px] border-[#212E40] border-2 pt-3">
+        <div className="ml-0 md:ml-2 lg:ml-2 w-full h-auto md:h-[555px] lg:h-[555px] border-[#212E40] border-2 pt-3 px-2">
           <div className="bg-[#17212F] py-3 px-3 rounded-[8px] w-full">
             <p className="font-normal text-[8px] md:text-sm lg:text-sm">
               Win Rate:

@@ -10,6 +10,7 @@ import WalletDetails from "@/components/metabots/copyTrades/WalletDetails";
 import WalletDetailsMobile from "@/components/metabots/copyTrades/WalletDetailsMobile";
 import { marqueeTokens } from "@/utils/mockData";
 import { marqueeDetails } from "@/utils/mockData";
+import TradeHistory from "./TradeHistory";
 
 const WalletPerformanceTabs = () => {
   const [selectedOption, setSelectedOption] = useState("trending");
@@ -89,6 +90,13 @@ const WalletPerformanceTabs = () => {
               </TabsTrigger>
 
               <TabsTrigger
+                className=" hidden md:block lg:block w-full border-b-2 border-transparent pb-1 md:font-medium lg:font-medium data-[state=active]:border-b-[#FFC107] text-[#E7E7E7] text-[12px] font-normal md:text-[18px] lg:text-[18px]"
+                value="TopRelatedAddress"
+              >
+                Top Related Address
+              </TabsTrigger>
+
+              <TabsTrigger
                 className="w-fit nline md:hidden lg:hidden border-b-2 border-transparent pb-1 font-medium data-[state=active]:border-b-[#FFC107] text-[#E7E7E7] text-[12px] md:text-[18px] lg:text-[18px]"
                 value="TradeHistory"
               >
@@ -113,6 +121,13 @@ const WalletPerformanceTabs = () => {
             value="TradeAnalysis"
           >
             <WalletPerformance />
+          </TabsContent>
+          <TabsContent
+            className="hidden md:flex lg:flex w-full h-auto md:h-[40vh] lg:h-[40vh] 
+            md:overflow-y-auto lg:overflow-y-auto scrollbar-hide overflow-x-hidden"
+            value="TopRelatedAddress"
+          >
+            No data yet
           </TabsContent>
 
           <TabsContent

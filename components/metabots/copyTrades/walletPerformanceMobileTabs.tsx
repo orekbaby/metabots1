@@ -28,13 +28,13 @@ const walletPerformanceMobileTabs = () => {
         </TabsList>
         <TabsContent
           className="w-full h-auto md:h-[40vh] lg:h-[40vh] 
-            md:overflow-y-auto lg:overflow-y-auto scrollbar-hide overflow-x-hidden"
+            md:overflow-y-auto lg:overflow-y-auto scrollbar-hide overflow-x-hidden px-1 "
           value="MostProfitableTrades"
         >
           <ProfitableTrades />
         </TabsContent>
         <TabsContent
-          className="w-full h-auto md:h-[40vh] lg:h-[40vh] overflow-y-auto scrolbar-hide"
+          className="w-full h-auto md:h-[40vh] lg:h-[40vh] overflow-y-auto scrolbar-hide px-1"
           value="BiggestLosses"
         >
           <BiggestLosses />
