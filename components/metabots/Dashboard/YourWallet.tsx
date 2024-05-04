@@ -30,7 +30,7 @@ const YourWallet = () => {
           {/* First and Second Column */}
           <div className="flex flex-wrap justify-between">
             {/* First column */}
-            <div className="flex flex-col gap-3 pr-24 md:pr-28 lg:pr-28 p-1">
+            <div className="flex flex-col gap-3 pr-16 md:pr-28 lg:pr-28 p-1">
               <p className="font-normal text-xs">0x9c8bB....6107D21</p>
               <div className="flex items-center">
                 <div className="flex flex-col">
