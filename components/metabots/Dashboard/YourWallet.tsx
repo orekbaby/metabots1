@@ -30,7 +30,7 @@ const YourWallet = () => {
           {/* First and Second Column */}
           <div className="flex flex-wrap justify-between">
             {/* First column */}
-            <div className="flex flex-col gap-3 pr-0 md:pl-0 lg:pl-0 md:pr-28 lg:pr-28  p-1">
+            <div className="flex flex-col gap-3 pr-12 md:pl-0 lg:pl-0 md:pr-28 lg:pr-28  p-1">
               <p className="font-normal text-xs">0x9c8bB....6107D21</p>
               <div className="flex items-center">
                 <div className="flex flex-col">
@@ -40,7 +40,7 @@ const YourWallet = () => {
             </div>
 
             {/* Second column */}
-            <div className="flex flex-col justify-end gap-3 pl-8 md:pl-0 lg:pl-0 p-1">
+            <div className="flex flex-col justify-end gap-3  p-1">
               <div className="flex gap-2 items-center">
                 <FaRegCopy className="text-sm text-white" />
                 <FaGlobe className="text-sm text-white" />
