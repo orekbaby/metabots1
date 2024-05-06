@@ -40,7 +40,7 @@ const YourWallet = () => {
             </div>
 
             {/* Second column */}
-            <div className="flex flex-col justify-end gap-3 p-1">
+            <div className="flex flex-col justify-end gap-3 pl-8 md:pl-0 lg:pl-0 p-1">
               <div className="flex gap-2 items-center">
                 <FaRegCopy className="text-sm text-white" />
                 <FaGlobe className="text-sm text-white" />
