@@ -34,7 +34,7 @@ const YourWallet = () => {
               <p className="font-normal text-xs">0x9c8bB....6107D21</p>
               <div className="flex items-center">
                 <div className="flex flex-col">
-                  <p className="font-normal text-xs">0.000 ETH</p>
+                  <p className="font-normal text-[12px]">0.000 ETH</p>
                 </div>
               </div>
             </div>
