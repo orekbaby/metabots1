@@ -7,7 +7,7 @@ import ChartDetails from "@/components/metabots/alphaHuntTabs/ChartDetails";
 const AlphaHuntTabs = () => {
   return (
     <>
-      <Tabs defaultValue="SniperScreener" className="w-full">
+      <Tabs defaultValue="SniperScreener" className="w-full overflow-x-hidden">
         <TabsList className="w-fit flex items-center justify-between bg-[#0C141F] px-1">
           <TabsTrigger
             className="w-1/3 md:w-fit lg:w-fit px-5 md:px-8 lg:px-8 font-bold text-[10px] md:text-base lg:text-base ring-offset-[#084298] focus-visible:bg-[#084298] data-[state=active]:bg-[#084298] data-[state=active]:text-[#E7E7E7] text-[#E7E7E7]"
@@ -39,7 +39,11 @@ const AlphaHuntTabs = () => {
             Top Traders
           </TabsTrigger>
         </TabsList>
-        <TabsContent className="w-full" value="SniperScreener">
+        <TabsContent
+          className="w-full h-auto md:h-[50vh] lg:h-full 
+            md:overflow-y-auto lg:overflow-y-auto scrollbar-hide overflow-x-hiddenl"
+          value="SniperScreener"
+        >
           <SniperScreenerTabs />
         </TabsContent>
         <TabsContent
@@ -49,10 +53,18 @@ const AlphaHuntTabs = () => {
         >
           <SmartMoneyTabs />
         </TabsContent>
-        <TabsContent className="w-full" value="MultiChart">
+        <TabsContent
+          className="w-full h-auto md:h-[50vh] lg:h-full 
+            md:overflow-y-auto lg:overflow-y-auto scrollbar-hide overflow-x-hidden"
+          value="MultiChart"
+        >
           <Multichart />
         </TabsContent>
-        <TabsContent className="w-full" value="TopTraders">
+        <TabsContent
+          className="w-full h-auto md:h-[50vh] lg:h-full 
+            md:overflow-y-auto lg:overflow-y-auto scrollbar-hide overflow-x-hidden"
+          value="TopTraders"
+        >
           <ChartDetails />
         </TabsContent>
       </Tabs>
