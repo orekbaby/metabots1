@@ -28,7 +28,7 @@ const YourWallet = () => {
           </div>
 
           {/* First and Second Column */}
-          <div className="flex gap-[100px]">
+          <div className="flex gap-[96px]">
             {/* First column */}
             <div className="flex flex-col gap-3 p-1">
               <p className="font-normal text-xs">0x9c8bB....6107D21</p>
