@@ -21,10 +21,15 @@ const ApeModeSniping = () => {
           <div className=" w-full md:w-1/2 lg:w-1/2 parent-1 bg-[#0C141F] border-2 border-[#212E40] rounded-lg px-3 overflow-y-auto overflow-x-hidden scrollbar-hide h-auto md:h-[400px] lg:h-[400px]">
             <div className="flex justify-between mb-5 py-3 border-b-2 border-[#212E40]">
               <div className="flex gap-1 items-center">
-                <h2 className="font-bold text-base">New Token Feed</h2>
+                <h2 className="font-bold text-xs md:text-base lg:text-base">
+                  New Token Feed
+                </h2>
                 <div className="bg-[#989898] w-2 h-2 rounded-full"></div>
               </div>
-              <Button className="bg-[#0D6EFD] text-white rounded-l font-bold text-xs w-[126px] h-[28px]">
+              <Button
+                className="bg-[#0D6EFD] text-white rounded-l 
+              font-bold text-[10px] md:text-xs lg:text-xs w-[115px] md:w-[126px] lg:w-[126px] h-[28px]"
+              >
                 Ape Mode Settings
               </Button>
             </div>
@@ -48,10 +53,10 @@ const ApeModeSniping = () => {
                   </div>
                   <div className="flex justify-center md:justify-between lg:justify-between ">
                     <div className="flex flex-col justify-start">
-                      <div className="flex gap-4 justify-start">
+                      <div className="flex gap-4 justify-start mb-2 md:mb-0 lg:mb-0">
                         <div className="flex gap-1 items-center">
-                          <FaStar />
-                          <div className="font-bold text-xs md:text-base lg:text-base">
+                          <FaStar className="text-xs" />
+                          <div className="font-bold text-[10px] md:text-base lg:text-base">
                             {row.tokenName}
                           </div>
                         </div>
@@ -59,16 +64,16 @@ const ApeModeSniping = () => {
                           {row.time}
                         </p>
                       </div>
-                      <div className="flex gap-[77px] md:gap-[86px] lg:gap-[86px] ">
+                      <div className="flex gap-[62px] md:gap-[86px] lg:gap-[86px] mb-0 md:mb-1 lg:mb-1 ">
                         {" "}
                         <p className="font-normal text-[10px] md:text-sm lg:text-sm text-[#6C757D]">
                           {row.price}
                         </p>
-                        <p className="font-normal text-[10px] md:text-sm lg:text-sm text-[#6C757D]">
+                        <p className="font-normal w-[80px] md:w-full lg:w-full text-[10px] md:text-sm lg:text-sm text-[#6C757D]">
                           {row.scamScore}
                         </p>
                       </div>
-                      <div className="flex gap-[62px] md:gap-[56px] lg:gap-[56px]">
+                      <div className="flex gap-[48px] md:gap-[56px] lg:gap-[56px]">
                         <p className="font-semibold  text-xs md:text-[20px] lg:text-[20px] text-[#E7E7E7]">
                           {row.number}
                         </p>

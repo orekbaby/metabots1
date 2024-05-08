@@ -48,7 +48,7 @@ const KolList = () => {
               </p>
             </div>
             <div className="flex w-[125px] h-[25px] rounded-lg bg-[#17212F] border-2 text-center justify-center border-[#212E40] items-center">
-              <p className="text-[#B5B6B6]text-[9px] md:text-xs lg:text-xs font-normal  text-center">
+              <p className="text-[#B5B6B6] text-[9px] md:text-xs lg:text-xs font-normal  text-center">
                 Rug pulls
               </p>
             </div>

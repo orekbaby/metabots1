@@ -23,7 +23,7 @@ const WalletPerformanceTabs = () => {
   return (
     <>
       <div className="w-full border-2 border-[#101720] py-1 rounded-lg">
-        <div className="block md:hidden lg:hidden">
+        <div className="block md:hidden lg:hidden text-center">
           <YourWallet />
         </div>
         {/* trending wallet mobile  */}

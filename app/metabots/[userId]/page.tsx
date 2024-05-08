@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 import Image from "next/image";
 import Multichart from "@/components/metabots/multi-chart/Multichart";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import YourWallet from "@/components/metabots/Dashboard/YourWallet";
 
 const Tabs = dynamic(() => import("@/components/metabots/Dashboard/Tabs"), {
   ssr: false,
@@ -80,19 +81,8 @@ const Page: React.FC<PageProps> = (props) => {
             <PriceTabs />
           </div>
         </div>
-        <div className="hidden md:inline lg:inline flex-[25%]">
-          <div className="border-[1px] border-[#212E40] rounded-[8px] p-2">
-            <h3 className="font-bold text-xs md:text-base lg:text-base mb-2">
-              Your Wallets
-            </h3>
-            <Image
-              className="rounded-[8px]"
-              src="/wallet.png"
-              alt="fraud"
-              width={346}
-              height={50}
-            />
-          </div>
+        <div className="hidden md:inline lg:inline flex-[25%] w-full">
+          <YourWallet />
           <div className="border-[1px] border-[#212E40] rounded-[8px] p-2 mt-3">
             <TradeTabs />
           </div>

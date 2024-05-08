@@ -29,85 +29,85 @@ const KolCalls = () => {
           </p>
         </div>
         <div className="items-center justify-between flex mb-5">
-          <div className="hidden md:flex lg:flex justify-start gap-4 h-[35px] font-semibold text-[9px]md:text-xs lg:text-xs text-[#E7E7E7] border-2 rounded-[500px] border-[#212E40] pr-5 ">
+          <div className="hidden md:flex lg:flex justify-start gap-4 h-[35px] font-semibold text-[9px] md:text-xs lg:text-xs text-[#E7E7E7] border-2 rounded-[500px] border-[#212E40] pr-5 ">
             <div
               className="w-full md:w-[117px] h-[27px] lg:w-[117px] bg-[#212E40] 
             text-center items-center pt-1"
             >
-              <h3 className="text-center font-bold text-[9px]md:text-xs lg:text-xs">
+              <h3 className="text-center font-bold text-[9px] md:text-xs lg:text-xs">
                 Hot Contracts 🔥
               </h3>
             </div>
             <div className="flex justify-center gap-1 items-center">
-              <p className="font-semibold text-[9px]md:text-xs lg:text-xs">
+              <p className="font-semibold text-[9px] md:text-xs lg:text-xs">
                 #1 PEPE
               </p>
               <IoMdArrowDropup />
             </div>
             <div className="flex gap-1 items-center">
-              <p className="font-semibold text-[9px]md:text-xs lg:text-xs">
+              <p className="font-semibold text-[9px] md:text-xs lg:text-xs">
                 #1 PEPE
               </p>
               <IoMdArrowDropdown />
             </div>
             <div className="flex gap-1 items-center">
-              <p className="font-semibold text-[9px]md:text-xs lg:text-xs">
+              <p className="font-semibold text-[9px] md:text-xs lg:text-xs">
                 #3 LAYI
               </p>
               <IoMdArrowDropup />
             </div>
             <div className="flex gap-1 items-center">
-              <p className="font-semibold text-[9px]md:text-xs lg:text-xs">
+              <p className="font-semibold text-[9px] md:text-xs lg:text-xs">
                 #4 BSCS
               </p>
               <IoMdArrowDropup />
             </div>
             <div className="flex gap-1 items-center">
-              <p className="font-semibold text-[9px]md:text-xs lg:text-xs">
+              <p className="font-semibold text-[9px] md:text-xs lg:text-xs">
                 #5 VISION
               </p>
               <IoMdArrowDropup />
             </div>
             <div className="flex gap-1 items-center">
-              <p className="font-semibold text-[9px]md:text-xs lg:text-xs">
+              <p className="font-semibold text-[9px] md:text-xs lg:text-xs">
                 #6 GRAM
               </p>
               <IoMdArrowDropup />
             </div>
             <div className="flex gap-1 items-center">
-              <p className="font-semibold text-[9px]md:text-xs lg:text-xs">
+              <p className="font-semibold text-[9px] md:text-xs lg:text-xs">
                 #7 HORIZON{" "}
               </p>
               <IoMdArrowDropup />
             </div>
             <div className="flex gap-1 items-center">
-              <p className="font-semibold text-[9px]md:text-xs lg:text-xs">
+              <p className="font-semibold text-[9px] md:text-xs lg:text-xs">
                 #8 DEFA
               </p>
               <IoMdArrowDropdown />
             </div>
             <div className="flex gap-1 items-center">
-              <p className="font-semibold text-[9px]md:text-xs lg:text-xs">
+              <p className="font-semibold text-[9px] md:text-xs lg:text-xs">
                 #9 DEXL{" "}
               </p>
               <IoMdArrowDropup />
             </div>
             <div className="flex gap-1 items-center">
-              <p className="font-semibold text-[9px]md:text-xs lg:text-xs">
+              <p className="font-semibold text-[9px] md:text-xs lg:text-xs">
                 {" "}
                 #10 MIKY{" "}
               </p>
               <IoMdArrowDropdown />
             </div>
             <div className="flex gap-1 items-center">
-              <p className="font-semibold text-[9px]md:text-xs lg:text-xs">
+              <p className="font-semibold text-[9px] md:text-xs lg:text-xs">
                 {" "}
                 #11 EXFIL
               </p>
               <IoMdArrowDropdown />
             </div>
             <div className="flex gap-1 items-center">
-              <p className="font-semibold text-[9px]md:text-xs lg:text-xs">
+              <p className="font-semibold text-[9px] md:text-xs lg:text-xs">
                 {" "}
                 #11 EXFIL
               </p>
@@ -122,11 +122,11 @@ const KolCalls = () => {
         </div>
         <div className="hidden md:flex lg:flex justify-between mb-5">
           <div className="flex justify-start gap-4 items-center">
-            <p className="font-semibold text-[9px]md:text-xs lg:text-xs text-[#E7E7E7]">
+            <p className="font-semibold text-[9px] md:text-xs lg:text-xs text-[#E7E7E7]">
               Sort by:
             </p>
             <div className="flex gap-10 py-2 px-2 w-[170px] h-[25px] bg-[#17212F] border-2 border-[#212E40] items-center">
-              <p className="font-semibold text-xs text-[#E7E7E7]">
+              <p className="font-semibold text-[9px] md:text-xs lg:text-xs text-[#E7E7E7]">
                 Number of Calls
               </p>
               <IoIosArrowDown />
@@ -135,26 +135,30 @@ const KolCalls = () => {
           {/* second part */}
           <div className="flex justify-end gap-3">
             <div className="justify-between flex w-[143px] bg-[#17212F] border-2 border-[#212E40] h-[25px] px-3 rounded-lg items-center py-1">
-              <p className="font-semibold text-xs">Status</p>
+              <p className="font-semibold text-[9px] md:text-xs lg:text-xs">
+                Status
+              </p>
               <div className="flex justify-end gap-4 items-center">
                 <div className="flex w-[13px] h-[18px] rounded-l items-center justify-center">
-                  <span className="font-semibold text-sm">3</span>
+                  <span className="font-semibold text-[10px] md:text-sm lg:text-sm">
+                    3
+                  </span>
                 </div>
                 <IoIosArrowDown />
               </div>
             </div>
             <div className="flex w-[125px] h-[25px] rounded-lg bg-[#17212F] border-2 text-center justify-center border-[#212E40] items-center">
-              <p className="text-[#B5B6B6] text-xs font-normal text-center">
+              <p className="text-[#B5B6B6] text-[9px] md:text-xs lg:text-xs font-normal text-center">
                 Liquidity Range
               </p>
             </div>
             <div className="flex w-[125px] h-[25px] rounded-lg bg-[#17212F] border-2 text-center justify-center border-[#212E40] items-center">
-              <p className="text-[#B5B6B6] text-xs font-normal text-center">
+              <p className="text-[#B5B6B6] text-[9px] md:text-xs lg:text-xs font-normal text-center">
                 Market-cap Range
               </p>
             </div>
             <div className="flex w-[125px] h-[25px] rounded-lg bg-[#17212F] border-2 text-center justify-center border-[#212E40] items-center">
-              <p className="text-[#B5B6B6] text-xs font-normal text-center">
+              <p className="text-[#B5B6B6] text-[9px] md:text-xs lg:text-xs font-normal text-center">
                 Channels
               </p>
             </div>
@@ -162,11 +166,19 @@ const KolCalls = () => {
         </div>
         <div className="w-[322px] h-[35px] rounded-[500px] border-[#212E40] gap-3 border-2 flex items-center mb-8">
           <div className="items-center bg-[#212E40] flex w-[68px] h-[35px] text-center rounded-l-[50px] px-2">
-            <p className="font-bold text-xs">Filtered:</p>
+            <p className="font-bold text-[9px] md:text-xs lg:text-xs">
+              Filtered:
+            </p>
           </div>
-          <p className="font-medium text-xs">Launched</p>
-          <p className="font-medium text-xs">Not Launched</p>
-          <p className="font-medium text-xs">Rug-pills</p>
+          <p className="font-medium text-[9px] md:text-xs lg:text-xs">
+            Launched
+          </p>
+          <p className="font-medium text-[9px] md:text-xs lg:text-xs">
+            Not Launched
+          </p>
+          <p className="font-medium text-[9px] md:text-xs lg:text-xs">
+            Rug-pills
+          </p>
         </div>
 
         {/* table */}
@@ -263,11 +275,11 @@ const KolCalls = () => {
                       </p>
                     </div>
                   </TableCell>
-                  <TableCell className="w-[150px] font-semibold text-[8px] md:text-sm lg:text-sm text-center">
+                  <TableCell className="w-[150px] font-semibold text-[8px] md:text-xs lg:text-xs text-center">
                     {row.pool}
                     <div className=" justify-center flex gap-1 items-center">
                       <LuClock className=" text-[9px] md:text-sm lg:text-sm" />{" "}
-                      <p className="font-medium text-[9px] md:text-sm lg:text-sm">
+                      <p className="font-medium text-[9px] md:text-xs lg:text-xs">
                         {row.amount}
                       </p>
                     </div>
@@ -288,8 +300,8 @@ const KolCalls = () => {
                       <div className="flex justify-center items-center w-[24px] h-[24px] rounded-full bg-white">
                         <FaTelegramPlane className="text-center w-[15px] text-black" />
                       </div>
-                      <div className="flex justify-center items-center w-[24px] h-[24px] rounded-full bg-white">
-                        <FaXTwitter className="text-center w-[15px] text-black" />
+                      <div className="flex justify-center items-center w-[16px] md:w-[24px] lg:w-[24px] h-[24px] rounded-full bg-white">
+                        <FaXTwitter className="text-center w-[12px] md:w-[15px] lg:w-[15px] text-black" />
                       </div>
                     </div>
                   </TableCell>

@@ -12,14 +12,14 @@ const SniperScreener = () => {
       >
         <TabsList className="flex mt-0 mb-0 items-center justify-start">
           <TabsTrigger
-            className=" w-1/3 md:w-fit lg:w-fit px-5 md:px-2 lg:px-2 md:font-bold lg:font-bold focus-visible:border-b-[2px]  data-[state=active]:border-b-[2px] data-[state=active]:text-[#0D6EFD] text-white text-[12px] md:text-base lg:text-base border-[#0D6EFD] gap-2 font-medium"
+            className=" w-1/3 md:w-fit lg:w-fit px-5 md:px-2 lg:px-2 md:font-bold lg:font-bold focus-visible:border-b-[2px]  data-[state=active]:border-b-[2px] data-[state=active]:text-[#0D6EFD] text-white text-[10px] md:text-base lg:text-base border-[#0D6EFD] gap-2 font-medium"
             value="ApeModeSniping"
           >
             {" "}
             Ape Mode Sniping
           </TabsTrigger>
           <TabsTrigger
-            className="w-1/3 md:w-fit lg:w-fit px-5 md:px-5 lg:px-5 font-medium md:font-bold lg:font-bold focus-visible:border-b-[2px] data-[state=active]:border-b-[2px] data-[state=active]:text-[#0D6EFD] text-white text-[12px] 
+            className="w-1/3 md:w-fit lg:w-fit px-5 md:px-5 lg:px-5 font-medium md:font-bold lg:font-bold focus-visible:border-b-[2px] data-[state=active]:border-b-[2px] data-[state=active]:text-[#0D6EFD] text-white text-[10px] 
             md:text-base
              lg:text-base border-[#0D6EFD]"
             value="KOLCallsSniping"

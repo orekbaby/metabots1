@@ -3,12 +3,12 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Multichart from "../multi-chart/Multichart";
 import SmartMoneyTabs from "@/components/metabots/alphaHuntTabs/SmartMoneyTabs";
 import SniperScreenerTabs from "@/components/metabots/alphaHuntTabs/SniperScreenerTabs";
-import Chart from "@/components/metabots/alphaHuntTabs/lightChart/Chart";
+import ChartDetails from "@/components/metabots/alphaHuntTabs/ChartDetails";
 const AlphaHuntTabs = () => {
   return (
     <>
       <Tabs defaultValue="SniperScreener" className="w-full">
-        <TabsList className="w-fit flex items-center justify-between bg-[#0C141F]">
+        <TabsList className="w-fit flex items-center justify-between bg-[#0C141F] px-1">
           <TabsTrigger
             className="w-1/3 md:w-fit lg:w-fit px-5 md:px-8 lg:px-8 font-bold text-[10px] md:text-base lg:text-base ring-offset-[#084298] focus-visible:bg-[#084298] data-[state=active]:bg-[#084298] data-[state=active]:text-[#E7E7E7] text-[#E7E7E7]"
             value="SniperScreener"
@@ -53,7 +53,7 @@ const AlphaHuntTabs = () => {
           <Multichart />
         </TabsContent>
         <TabsContent className="w-full" value="TopTraders">
-          <Chart />
+          <ChartDetails />
         </TabsContent>
       </Tabs>
     </>

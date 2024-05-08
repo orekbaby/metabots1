@@ -17,6 +17,7 @@ import { IoMdNotificationsOutline } from "react-icons/io";
 import { FaStar } from "react-icons/fa";
 import Image from "next/image";
 import { tokenInfo } from "@/utils/mockData";
+import YourWallet from "../Dashboard/YourWallet";
 
 const PriceTabs = dynamic(
   () => import("@/components/metabots/Dashboard/latestTrades/PriceTabs"),
@@ -44,7 +45,7 @@ const TokenDetailsMobile = () => {
   return (
     <>
       {/* visible to the screen show this contents */}
-      <div className="mb-4 flex justify-between items-center md:hidden lg:hidden">
+      <div className="mb-4 flex justify-between items-center md:hidden lg:hidden px-2">
         <div
           className="flex md:hidden lg:hidden gap-2 items-center"
           onClick={toggleTokenDetails}
@@ -142,20 +143,8 @@ const TokenDetailsMobile = () => {
       {/* your wallet section and the trigger to hide and show the remaining contents */}
 
       <div className="flex-[25%] md:hidden lg:hidden">
-        <div
-          className="border-[1px] border-[#212E40] rounded-[8px] p-2"
-          onClick={toggleYourWallet}
-        >
-          <h3 className="font-bold text-xs md:text-base lg:text-base mb-2">
-            Your Wallets
-          </h3>
-          <Image
-            className="rounded-[8px]"
-            src="/wallet.png"
-            alt="fraud"
-            width={346}
-            height={50}
-          />
+        <div className="px-2" onClick={toggleYourWallet}>
+          <YourWallet />
         </div>
         {/* tradetabs */}
         {showOtherContents && (
