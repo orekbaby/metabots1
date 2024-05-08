@@ -35,7 +35,7 @@ const AccumulatedTokenTable = () => {
                       />
                     </div>
                   </TooltipTrigger>
-                  <TooltipContent className="w-[650px] h-[400px] bg-transparent border-none hidden md:block lg:block">
+                  <TooltipContent className="w-[700px] h-[400px] bg-transparent border-none hidden md:block lg:block">
                     <div className="">
                       <ChartDetails />
                     </div>

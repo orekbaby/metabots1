@@ -1017,7 +1017,7 @@ export const kolListMock = [
 
 export const triggerSnipes = [
   {
-    img: "/Weth.png",
+    img: "/weth.png",
     token: "WETH/XGF",
     price: "$0.042",
     scamScore: "75%",
@@ -1025,7 +1025,7 @@ export const triggerSnipes = [
   },
 
   {
-    img: "/Weth.png",
+    img: "/weth.png",
     token: "WETH/XGF",
     price: "$0.042",
     scamScore: "72%",
@@ -1033,7 +1033,7 @@ export const triggerSnipes = [
   },
 
   {
-    img: "/Weth.png",
+    img: "/weth.png",
     token: "WETH/XGF",
     price: "$0.042",
     scamScore: "78%",
@@ -1041,7 +1041,7 @@ export const triggerSnipes = [
   },
 
   {
-    img: "/Weth.png",
+    img: "/weth.png",
     token: "WETH/XGF",
     price: "$0.042",
     scamScore: "50%",
@@ -1049,7 +1049,7 @@ export const triggerSnipes = [
   },
 
   {
-    img: "/Weth.png",
+    img: "/weth.png",
     token: "WETH/XGF",
     price: "$0.042",
     scamScore: "65%",
@@ -1057,7 +1057,7 @@ export const triggerSnipes = [
   },
 
   {
-    img: "/Weth.png",
+    img: "/weth.png",
     token: "WETH/XGF",
     price: "$0.042",
     scamScore: "80%",
@@ -1065,7 +1065,7 @@ export const triggerSnipes = [
   },
 
   {
-    img: "/Weth.png",
+    img: "/weth.png",
     token: "WETH/XGF",
     price: "$0.042",
     scamScore: "45%",
@@ -1073,7 +1073,7 @@ export const triggerSnipes = [
   },
 
   {
-    img: "/Weth.png",
+    img: "/weth.png",
     token: "WETH/XGF",
     price: "$0.042",
     scamScore: "63%",
@@ -1081,7 +1081,7 @@ export const triggerSnipes = [
   },
 
   {
-    img: "/Weth.png",
+    img: "/weth.png",
     token: "WETH/XGF",
     price: "$0.042",
     scamScore: "68%",
@@ -1089,7 +1089,7 @@ export const triggerSnipes = [
   },
 
   {
-    img: "/Weth.png",
+    img: "/weth.png",
     token: "WETH/XGF",
     price: "$0.042",
     scamScore: "43%",

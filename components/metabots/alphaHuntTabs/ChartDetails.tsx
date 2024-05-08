@@ -7,7 +7,7 @@ import Image from "next/image";
 const chartDetails = () => {
   return (
     <>
-      <div className=" hidden md:block lg:block bg-[#0A1019] mb-3 px-2 w-full h-full  text-[#6C757D]">
+      <div className=" hidden md:block lg:block bg-[#0A1019] px-2 w-full h-full  text-[#6C757D]">
         <div className="flex flex-row mb-2 md:mb-4 lg:mb-4">
           <div className="flex items-center gap-2">
             <Image
