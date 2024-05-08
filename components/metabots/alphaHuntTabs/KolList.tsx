@@ -60,7 +60,7 @@ const KolList = () => {
           </div>
         </div>
         {/* filter */}
-        <div className=" w-fit md:w-[500px] lg:w-[5000px] h-[25px] md:h-[35px] lg:h-[35px] rounded-[500px] border-[#212E40] gap-2 md:gap-4 lg:gap-4 border-2 flex items-center mb-8 pr-4 md:pr-0 lg:pr-0 ">
+        <div className=" w-fit md:w-[500px] lg:w-[500px] h-[25px] md:h-[35px] lg:h-[35px] rounded-[500px] border-[#212E40] gap-2 md:gap-4 lg:gap-4 border-2 flex items-center mb-8 pr-4 md:pr-0 lg:pr-0 ">
           <div className="items-center bg-[#212E40] flex w-[48px] md:w-[68px] lg:w-[68px] h-[25px] md:h-[35px] lg:h-[35px] text-center rounded-l-[50px] px-2">
             <p className="font-bold text-[9px] md:text-xs lg:tet-xs">
               Filtered:
