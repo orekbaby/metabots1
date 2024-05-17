@@ -1,46 +1,13 @@
 // Import necessary modules and components
 import React from "react";
 import dynamic from "next/dynamic";
-import Image from "next/image";
-import Multichart from "@/components/metabots/multi-chart/Multichart";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import YourWallet from "@/components/metabots/Dashboard/YourWallet";
-
-const Tabs = dynamic(() => import("@/components/metabots/Dashboard/Tabs"), {
-  ssr: false,
-});
-
-const Chart = dynamic(() => import("@/components/metabots/charts/Chart"), {
-  ssr: false,
-});
-
-const TradeTabs = dynamic(
-  () => import("@/components/metabots/Dashboard/tradeTabs/TradeTabs"),
-  {
-    ssr: false,
-  }
-);
-
-const PriceTabs = dynamic(
-  () => import("@/components/metabots/Dashboard/latestTrades/PriceTabs"),
-  {
-    ssr: false,
-  }
-);
-
-const TokenDetails = dynamic(
-  () => import("@/components/metabots/tokenDetails/TokenDetails"),
-  {
-    ssr: false,
-  }
-);
-
-const TokenDetailsMobile = dynamic(
-  () => import("@/components/metabots/tokenDetails/TokenDetailsMobile"),
-  {
-    ssr: false,
-  }
-);
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import Metabots from "@/components/metabots/Metabots";
+import AlphaHuntTabs from "@/components/metabots/alphaHuntTabs/AlphaHuntTabs";
+import Terminal from "@/components/metabots/terminal/Terminal";
+// const Tabs = dynamic(() => import("@/components/metabots/Dashboard/Tabs"), {
+//   ssr: false,
+// });
 
 // Define the Page component
 interface PageProps {
@@ -51,42 +18,41 @@ const Page: React.FC<PageProps> = (props) => {
 
   return (
     <>
-      <TokenDetailsMobile />
-      <div className="hidden md:flex lg:flex items-center">
-        <TokenDetails />
-      </div>
-      <div className="flex w-full gap-2">
-        <div className="flex-[72%] flex flex-col gap-2">
-          <div className="flex gap-2">
-            <div className=" hidden md:inlin lg:inline flex-[39%] mr-4">
-              <Dialog>
-                <DialogTrigger>
-                  <h2 className="font-semibold text-sm  w-fit text-[#FFC107] my-2 border-b-[1px] border-[#FFC107]">
-                    Multi-Chart
-                  </h2>
-                </DialogTrigger>
-                <DialogContent className="max-w-[95vw] max-h-[95vh] h-[95vh] w-[95vw] bg-[#0A1019] border border-slate-800 left-1/2 top-1/2 overflow-y-auto">
-                  <Multichart />
-                </DialogContent>
-              </Dialog>
+      <div className="w-full flex pl-0 md:pl-2 lg:pl-2 mt-20 mb-5 items-center gap-3 p-3 bg-transparent border-t border-[#212E40]">
+        <Tabs defaultValue="SmartTradingTerminal" className="w-full">
+          <TabsList className="flex justify-between mt-0 mb-0 items-center md:justify-start lg:justify-start">
+            <TabsTrigger
+              className="w-1/3 md:w-fit lg:w-fit px-5 md:px-5 lg:px-5 font-semibold focus-visible:border-b-[2px] data-[state=active]:border-b-[2px] data-[state=active]:text-[#0D6EFD]
+             text-white text-[10px] md:text-sm lg:text-sm border-[#0D6EFD]"
+              value="AboutMetabots"
+            >
+              {" "}
+              About Metabots
+            </TabsTrigger>
+            <TabsTrigger
+              className="w-1/3 md:w-fit lg:w-fit px-5 md:px-5 lg:px-5 font-semibold focus-visible:border-b-[2px]  data-[state=active]:border-b-[2px] data-[state=active]:text-[#0D6EFD] text-white text-[10px] md:text-sm lg:text-sm border-[#0D6EFD]"
+              value="SmartTradingTerminal"
+            >
+              Smart Trading Terminal
+            </TabsTrigger>
+            <TabsTrigger
+              className="w-1/3 md:w-fit lg:w-fit px-5 md:px-5 lg:px-5 font-semibold focus-visible:border-b-[2px] data-[state=active]:border-b-[2px] data-[state=active]:text-[#0D6EFD] text-white text-[10px] md:text-sm lg:text-sm border-[#0D6EFD]"
+              value="AlphaHunt"
+            >
+              Alpha Hunt
+            </TabsTrigger>
+          </TabsList>
+          <TabsContent value="AboutMetabots">
+            <Metabots />
+          </TabsContent>
 
-              {/* Pass the props to the Chart component */}
-              <Chart />
-            </div>
-            <div className=" h-[350px] overflow-y-auto scrollbar-hide hidden md:inline lg:inline flex-[59%] border-[1px] border-[#212E40] p-2 rounded-[8px] mt-4 md:mt-0 lg:mt-0">
-              <Tabs />
-            </div>
-          </div>
-          <div className="hidden md:inline lg:inline w-full border-[1px] border-[#212E40] p-2 rounded-[8px] mt-6">
-            <PriceTabs />
-          </div>
-        </div>
-        <div className="hidden md:inline lg:inline flex-[25%] w-full">
-          <YourWallet />
-          <div className="border-[1px] border-[#212E40] rounded-[8px] p-2 mt-3">
-            <TradeTabs />
-          </div>
-        </div>
+          <TabsContent value="SmartTradingTerminal">
+            <Terminal />
+          </TabsContent>
+          <TabsContent value="AlphaHunt">
+            <AlphaHuntTabs />
+          </TabsContent>
+        </Tabs>
       </div>
     </>
   );

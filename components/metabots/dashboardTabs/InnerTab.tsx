@@ -28,7 +28,7 @@ export default function InnerTabs() {
           value="All"
         >
           {" "}
-          All
+          Buy
         </TabsTrigger>
         <TabsTrigger
           className="text-center w-1/4 md:w-[100px] lg:w-[70px] font-medium focus-visible:border  focus-visible:border-b-yellow-600 data-[state=active]:border-b-yellow-600  data-[state=active]:text-yellow-600 text-[#E7E7E7] text-[10px] md:text-sm lg:text-sm"
@@ -40,7 +40,7 @@ export default function InnerTabs() {
           className="text-right w-1/4 md:w-[100px] lg:w-[70px] font-medium focus-visible:border  focus-visible:border-b-yellow-600 data-[state=active]:border-b-yellow-600  data-[state=active]:text-yellow-600 text-[#E7E7E7] text-[10px] md:text-sm lg:text-sm"
           value="CopyTrades"
         >
-          Copy Trades
+          Ape Mode
         </TabsTrigger>
       </TabsList>
       <TabsContent value="All">

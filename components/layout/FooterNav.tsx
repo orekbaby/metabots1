@@ -7,7 +7,7 @@ const FooterNav = () => {
     <>
       <div className="bg-[#0B0F16] w-full h-[70px] fixed bottom-0 left-0 block md:hidden lg:hidden">
         <div className="flex justify-between p-6 items-center">
-          <Link href="/metabots/1">
+          <Link href="/">
             <FaHome className="text-[24px]" />
           </Link>
 

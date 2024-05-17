@@ -34,7 +34,7 @@ const TVChartContainer = dynamic(
 export default function Chart() {
   const [isScriptReady, setIsScriptReady] = useState(false);
   return (
-    <div className=" h-[90%] w-full">
+    <div className=" h-full w-full">
       <Script
         src="/static/datafeeds/udf/dist/bundle.js"
         strategy="lazyOnload"

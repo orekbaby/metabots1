@@ -8,22 +8,22 @@ const AlphaHuntTabs = () => {
   return (
     <>
       <Tabs defaultValue="SniperScreener" className="w-full overflow-x-hidden">
-        <TabsList className="w-fit flex items-center justify-between bg-[#0C141F] px-1">
+        <TabsList className="w-full flex items-center justify-between md:justify-start lg:justify-start bg-[rgb(12,20,31)] px-1">
           <TabsTrigger
-            className="w-1/3 md:w-fit lg:w-fit px-5 md:px-8 lg:px-8 font-bold text-[10px] md:text-base lg:text-base ring-offset-[#084298] focus-visible:bg-[#084298] data-[state=active]:bg-[#084298] data-[state=active]:text-[#E7E7E7] text-[#E7E7E7]"
+            className="w-full md:w-fit lg:w-fit px-5 md:px-8 lg:px-8 font-semibold text-[10px] md:text-sm lg:text-sm ring-offset-[#084298] focus-visible:bg-[#084298] data-[state=active]:bg-[#084298] data-[state=active]:text-[#E7E7E7] text-[#6C757D]"
             value="SniperScreener"
           >
             Sniper Screener
           </TabsTrigger>
           <TabsTrigger
-            className="w-1/3 md:w-fit lg:w-fit px-5 md:px-8 lg:px-8 font-bold text-[10px] md:text-base lg:text-base ring-offset-[#084298] focus-visible:bg-[#084298] data-[state=active]:bg-[#084298] data-[state=active]:text-[#E7E7E7] text-[#E7E7E7]"
+            className="w-full md:w-fit lg:w-fit px-5 md:px-8 lg:px-8 font-semibold text-[10px] md:text-sm lg:text-sm ring-offset-[#084298] focus-visible:bg-[#084298] data-[state=active]:bg-[#084298] data-[state=active]:text-[#E7E7E7] text-[#6C757D]"
             value="SmartMoneyTokenPlays"
           >
             {" "}
             Smart Money Token Plays
           </TabsTrigger>
 
-          <TabsTrigger
+          {/* <TabsTrigger
             className="w-1/3 md:w-fit lg:w-fit px-5 md:px-8 lg:px-8 font-bold text-[10px] md:text-base lg:text-base ring-offset-[#084298] focus-visible:bg-[#084298] data-[state=active]:bg-[#084298] data-[state=active]:text-[#E7E7E7] text-[#E7E7E7]"
             value={""}
           >
@@ -37,14 +37,15 @@ const AlphaHuntTabs = () => {
           >
             {" "}
             Top Traders
-          </TabsTrigger>
+          </TabsTrigger> */}
         </TabsList>
         <TabsContent
           className="w-full h-auto md:h-[50vh] lg:h-full 
-            md:overflow-y-auto lg:overflow-y-auto scrollbar-hide overflow-x-hiddenl"
+            md:overflow-y-auto lg:overflow-y-auto scrollbar-hide overflow-x-hidden"
           value="SniperScreener"
         >
-          <SniperScreenerTabs />
+          {/* <SniperScreenerTabs /> */}
+          Sniper screener content here
         </TabsContent>
         <TabsContent
           className="w-full h-auto md:h-[50vh] lg:h-full 

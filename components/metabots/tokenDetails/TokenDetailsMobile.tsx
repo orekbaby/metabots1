@@ -32,15 +32,14 @@ const Tabs = dynamic(() => import("@/components/metabots/Dashboard/Tabs"), {
 
 const TokenDetailsMobile = () => {
   const [showTokenDetails, setShowTokenDetails] = useState(false);
-  const [showOtherContents, setShowOtherContents] = useState(false);
 
   const toggleTokenDetails = () => {
     setShowTokenDetails((prev) => !prev);
   };
 
-  const toggleYourWallet = () => {
-    setShowOtherContents(!showOtherContents);
-  };
+  // const toggleYourWallet = () => {
+  //   setShowOtherContents(!showOtherContents);
+  // };
 
   return (
     <>
@@ -143,27 +142,26 @@ const TokenDetailsMobile = () => {
       {/* your wallet section and the trigger to hide and show the remaining contents */}
 
       <div className="flex-[25%] md:hidden lg:hidden">
-        <div className="px-2" onClick={toggleYourWallet}>
+        <div className="px-2">
           <YourWallet />
         </div>
         {/* tradetabs */}
-        {showOtherContents && (
-          <div className="border-[1px] border-[#212E40] rounded-[8px] p-2 mt-8">
-            <TradeTabs />
-          </div>
-        )}
+
+        <div className="border-[1px] border-[#212E40] rounded-[8px] p-2 mt-8">
+          <TradeTabs />
+        </div>
+
         {/* tabs */}
-        {showOtherContents && (
-          <div className="flex-[59%] border-[1px] border-[#212E40] p-2 rounded-[8px] mt-4 md:mt-0 lg:mt-0">
-            <Tabs />
-          </div>
-        )}
+
+        <div className="flex-[59%] border-[1px] h-[200px] overflow-x-auto scrollbar-hide border-[#212E40] p-2 rounded-[8px] mt-4 md:mt-0 lg:mt-0">
+          <Tabs />
+        </div>
+
         {/* pricetabs */}
-        {showOtherContents && (
-          <div className="w-full border-[1px] border-[#212E40] p-2 rounded-[8px] mt-2">
-            <PriceTabs />
-          </div>
-        )}
+
+        <div className="w-full border-[1px] border-[#212E40] p-2 rounded-[8px] mt-2">
+          <PriceTabs />
+        </div>
       </div>
     </>
   );

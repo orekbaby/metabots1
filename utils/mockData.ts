@@ -134,7 +134,7 @@ export const landingPage = [
       "Seamlessly perform automated transactions via our Smart Trading Web interface or Telegram bot.",
     span: "Try it now!",
     desktopImg: "/landing.png",
-    mobileImg: "",
+    mobileImg: "/landing.png",
     direction: true,
     button1: "Metabots Web",
     button2: "Metabots Mobile",
@@ -179,7 +179,7 @@ export const landingPage = [
     mobileImg: "/copy2.png",
     direction: false,
     span: "",
-    button1: "",
+    button1: "View Page",
     button2: "",
     link: "",
   },
@@ -1349,45 +1349,68 @@ export const accumulatedTokens = [
 
 export const accordionData = [
   {
-    trigger: "What is a Market making bot?What is a Market making bot?",
+    trigger: "What are MetaBots on Metadapp?",
     content:
-      "A market making bot is a software program that automatically places buy and sell orders on Decentralized exchanges. The goal of a market making bot is to provide liquidity and volume for a token",
+      "MetaBots are Metadapp's automated trading tools that enable users to execute ultra-fast and data backed transactions on decentralized exchanges. They are designed to provide a competitive edge in on-chain trading through advanced automation and analytics.",
     value: "1",
   },
 
   {
-    trigger: "What Platforms are supported?",
+    trigger: "How are MetaBots cross-platform accessible?",
     content:
-      "A market making bot is a software program that automatically places buy and sell orders on Decentralized exchanges. The goal of a market making bot is to provide liquidity and volume for a token",
+      "MetaBots can be accessed both via a web interface and through our Telegram bot. This allows users to log into their same account and manage their trades on whichever platform is most convenient for them, ensuring seamless trading experiences.",
     value: "2",
   },
 
   {
-    trigger: "Are there any hidden fees?",
+    trigger:
+      "Can I switch between using MetaBots on Telegram and the web interface?",
     content:
-      "A market making bot is a software program that automatically places buy and sell orders on Decentralized exchanges. The goal of a market making bot is to provide liquidity and volume for a token",
+      "Absolutely. You can freely switch between the Telegram bot and the web interface as you please. Your account and settings are synchronized, so you'll pick up right where you left off.",
     value: "3",
   },
 
   {
-    trigger: "Is the Trade Volume I can perform on my token Unlimited?",
+    trigger:
+      "What's the difference between MetaBots on Telegram and the web interface?",
     content:
-      "A market making bot is a software program that automatically places buy and sell orders on Decentralized exchanges. The goal of a market making bot is to provide liquidity and volume for a token",
+      "MetaBots on Telegram is optimized for quick access and ease of use, making it ideal for traders who prefer to trade on the go. The web interface, on the other hand, offers a more comprehensive set of tools and detailed analytics for a deeper trading experience.",
     value: "4",
   },
 
   {
-    trigger: "Who pays for gas fees?",
+    trigger: "Is MetaBots on Telegram less powerful than the web interface?",
     content:
-      "A market making bot is a software program that automatically places buy and sell orders on Decentralized exchanges. The goal of a market making bot is to provide liquidity and volume for a token",
+      "Not at all. Both platforms run the same powerful MetaBots engine. The primary difference lies in the user interface and the presentation of data, with the web interface providing a more detailed and visual trading environment.",
     value: "5",
   },
 
   {
-    trigger: "Will you have Web version of the Market making bot?",
+    trigger: "Which is better, MetaBots on Telegram or the web interface?",
     content:
-      "A market making bot is a software program that automatically places buy and sell orders on Decentralized exchanges. The goal of a market making bot is to provide liquidity and volume for a token",
+      "'Better' is subjective and depends on your trading style and needs. If you prioritize mobility and simplicity, Telegram might be your preferred choice. If you want full access to analytics and a more robust user interface, the web version could be more suitable. Both offer the same quality trading tools, so you don't compromise on functionality.",
     value: "6",
+  },
+
+  {
+    trigger: "Can I use MetaBots on Telegram for complex trading strategies?",
+    content:
+      "Yes, you can. While the Telegram bot interface is streamlined for ease of use, it still supports complex trading strategies that you can set up and execute directly within the chat.",
+    value: "7",
+  },
+
+  {
+    trigger: "How secure are MetaBots, especially when used on Telegram?",
+    content:
+      "Security is a top priority for Metadapp, regardless of the platform. MetaBots on Telegram and the web interface both use state-of-the-art encryption and security protocols to ensure your trading and personal information are always protected.",
+    value: "8",
+  },
+
+  {
+    trigger: "Do I need to be technically savvy to use MetaBots on Metadapp?",
+    content:
+      "While having some technical knowledge can be beneficial, it's not a requirement. MetaBots are designed with a user-friendly interface, and we provide ample resources and support to help you get started and make the most of your trading bot.",
+    value: "9",
   },
 ];
 export const tokenDetails = [
@@ -1442,61 +1465,61 @@ export const freshWallet = [
 export const smartWalletList = [
   {
     superboy: "Super boyyyy",
-    address: "0x9c8bB8355629A72EB506...",
+    address: "0x9c8bB8355629A72EB506c8bB8355629A72EB...",
   },
 
   {
     superboy: "Ghost Lordddd",
-    address: "0x9c8bB8355629A72EB506...",
+    address: "0x9c8bB8355629A72EB506c8bB8355629A72EB...",
   },
 
   {
     superboy: "Meme daddyyy",
-    address: "0x9c8bB8355629A72EB506...",
+    address: "0x9c8bB8355629A72EB506c8bB8355629A72EB...",
   },
 
   {
     superboy: "Infra broo",
-    address: "0x9c8bB8355629A72EB506...",
+    address: "0x9c8bB8355629A72EB506c8bB8355629A72EB...",
   },
 
   {
     superboy: "Angel trump",
-    address: "0x9c8bB8355629A72EB506...",
+    address: "0x9c8bB8355629A72EB506c8bB8355629A72EB...",
   },
 
   {
     superboy: "Super boyyyy",
-    address: "0x9c8bB8355629A72EB506...",
+    address: "0x9c8bB8355629A72EB506c8bB8355629A72EB...",
   },
 
   {
     superboy: "Meme daddyyyy",
-    address: "0x9c8bB8355629A72EB506...",
+    address: "0x9c8bB8355629A72EB506c8bB8355629A72EB...",
   },
 
   {
     superboy: "Cruise Queen",
-    address: "0x9c8bB8355629A72EB506...",
+    address: "0x9c8bB8355629A72EB506c8bB8355629A72EB...",
   },
 
   {
     superboy: "Super girlll",
-    address: "0x9c8bB8355629A72EB506...",
+    address: "0x9c8bB8355629A72EB506c8bB8355629A72EB...",
   },
 
   {
     superboy: "Super boyyyy",
-    address: "0x9c8bB8355629A72EB506...",
+    address: "0x9c8bB8355629A72EB506c8bB8355629A72EB...",
   },
 
   {
     superboy: "Super boyyyy",
-    address: "0x9c8bB8355629A72EB506...",
+    address: "0x9c8bB8355629A72EB506c8bB8355629A72EB...",
   },
 
   {
     superboy: "Meme daddyyyy",
-    address: "0x9c8bB8355629A72EB506...",
+    address: "0x9c8bB8355629A72EB506c8bB8355629A72EB...",
   },
 ];

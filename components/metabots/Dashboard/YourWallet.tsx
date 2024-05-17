@@ -28,9 +28,13 @@ const YourWallet = () => {
           </div>
 
           {/* First and Second Column */}
-          <div className="flex gap-[96px]">
+          <div className="flex w-full">
+            {" "}
+            {/* Removed gap-[96px] */}
             {/* First column */}
-            <div className="flex flex-col gap-3 p-1">
+            <div className="flex flex-col gap-3 p-1 flex-grow">
+              {" "}
+              {/* Added flex-grow here */}
               <p className="font-normal text-xs">0x9c8bB....6107D21</p>
               <div className="flex items-center">
                 <div className="flex flex-col">
@@ -38,7 +42,6 @@ const YourWallet = () => {
                 </div>
               </div>
             </div>
-
             {/* Second column */}
             <div className="flex flex-col justify-end gap-3  p-1">
               <div className="flex gap-2 items-center">

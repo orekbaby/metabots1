@@ -27,7 +27,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "components/metabots/MetabotsNav.tsx"
+    "components/metabots/MetabotsNav.tsx",
+    "components/metabots/Dashboard/Tabs.1tsx"
   ],
   "exclude": ["node_modules"]
 }

@@ -17,27 +17,41 @@ const PriceAlert = dynamic(
 export default function Tab() {
   return (
     <>
-      <Tabs defaultValue="LatestTrades" className="w-full ">
+      <Tabs defaultValue="TopTraders" className="w-full ">
         <TabsList className="flex justify-start mb-4 items-center md:justify-start lg:justify-start border-b-[1px] border-[#212E40]">
           <TabsTrigger
-            className=" w-1/3 md:w-fit lg:w-fit px-5 md:px-5 lg:px-5 font-bold focus-visible:border-b-[2px]  data-[state=active]:border-b-[2px] data-[state=active]:text-[#0D6EFD] text-white text-[10px] md:text-sm lg:text-sm border-[#0D6EFD]"
-            value="LatestTrades"
+            className=" w-1/3 md:w-fit lg:w-fit px-5 md:px-5 lg:px-5 font-bold focus-visible:border-b-[2px] data-[state=active]:border-b-[2px] data-[state=active]:text-[white] text-[#6C757D] text-[10px] md:text-sm lg:text-sm border-[#0D6EFD]"
+            value="TopTraders"
+          >
+            Top Traders
+          </TabsTrigger>
+          <TabsTrigger
+            className=" w-1/3 md:w-fit lg:w-fit px-5 md:px-5 lg:px-5 font-bold focus-visible:border-b-[2px] data-[state=active]:border-b-[2px] data-[state=active]:text-[white] text-[#6C757D] text-[10px] md:text-sm lg:text-sm border-[#0D6EFD]"
+            value="MarketTrades"
           >
             {" "}
-            Latest Trades
+            Market Trades
           </TabsTrigger>
 
-          <TabsTrigger
-            className=" w-1/3 md:w-fit lg:w-fit px-5 md:px-5 lg:px-5 font-bold focus-visible:border-b-[2px]  data-[state=active]:border-b-[2px] data-[state=active]:text-[#0D6EFD] text-white text-[10px] md:text-sm lg:text-sm border-[#0D6EFD]"
-            value="PriceAlert"
+          {/* <TabsTrigger
+            className=" w-1/3 md:w-fit lg:w-fit px-5 md:px-5 lg:px-5 font-bold focus-visible:border-b-[2px] data-[state=active]:border-b-[2px] data-[state=active]:text-[white] text-[#6C757D] text-[10px] md:text-sm lg:text-sm border-[#0D6EFD]"
+            value="Watchlist"
           >
-            Price Alert
-          </TabsTrigger>
+            <div className="absolute top-0 right-5 flex items-center text-center justify-center w-[12px] h-[12px] py-[1.8px] rounded-full px-1 bg-[#FFC107]">
+              <p className="text-[10px] font-bold text-[#0A1019] text-center">
+                2
+              </p>
+            </div>
+            Watchlist
+          </TabsTrigger> */}
         </TabsList>
-        <TabsContent value="PriceAlert">
+        <TabsContent value="MarketTrades">
           <PriceAlert />
         </TabsContent>
-        <TabsContent value="LatestTrades">
+        <TabsContent value="TopTraders">
+          <LatestTrades />
+        </TabsContent>
+        <TabsContent value="Watchlist">
           <LatestTrades />
         </TabsContent>
       </Tabs>

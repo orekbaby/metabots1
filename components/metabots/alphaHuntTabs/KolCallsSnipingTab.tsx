@@ -22,10 +22,12 @@ const KolCallsSnipingTabs = () => {
           </TabsTrigger>
         </TabsList>
         <TabsContent className="w-full h-full" value="KolCalls">
-          <KolCalls />
+          {/* <KolCalls /> */}
+          No data yet
         </TabsContent>
         <TabsContent className="w-full h-full" value="kolList">
-          <KolList />
+          {/* <KolList /> */}
+          no data yet
         </TabsContent>
       </Tabs>
     </>

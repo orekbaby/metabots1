@@ -1,8 +1,9 @@
 "use client";
-
+import { CiCirclePlus, CiCircleMinus } from "react-icons/ci";
 import * as React from "react";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import { ChevronDown } from "lucide-react";
+// copy
 
 import { cn } from "@/lib/utils";
 
@@ -40,6 +41,44 @@ const AccordionTrigger = React.forwardRef<
 ));
 AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName;
 
+// 2nd accordion trigger content
+const AccordionTrigger1 = React.forwardRef<
+  React.ElementRef<typeof AccordionPrimitive.Trigger>,
+  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>
+>((props, ref) => {
+  const [isOpen, setIsOpen] = React.useState(false);
+
+  const toggleAccordion = () => {
+    setIsOpen((prevIsOpen) => !prevIsOpen);
+  };
+
+  const { className, children, ...restProps } = props;
+
+  return (
+    <AccordionPrimitive.Header className="flex">
+      <AccordionPrimitive.Trigger
+        ref={ref}
+        className={cn(
+          "flex flex-1 items-center justify-between py-4 font-medium transition-all",
+          { "[&[data-state=open]>svg]:rotate-180": isOpen },
+          className
+        )}
+        onClick={toggleAccordion}
+        {...restProps}
+      >
+        {children}
+        {isOpen ? (
+          <CiCircleMinus className="h-4 w-4 shrink-0 transition-transform duration-200 bg-transparent rounded-full text-[#0A53BE]" />
+        ) : (
+          <CiCirclePlus className="h-4 w-4 shrink-0 transition-transform duration-200 bg-transparent rounded-full text-[#0A53BE]" />
+        )}
+      </AccordionPrimitive.Trigger>
+    </AccordionPrimitive.Header>
+  );
+});
+
+AccordionTrigger1.displayName = AccordionPrimitive.Trigger.displayName;
+
 const AccordionContent = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>
@@ -55,4 +94,4 @@ const AccordionContent = React.forwardRef<
 
 AccordionContent.displayName = AccordionPrimitive.Content.displayName;
 
-export { Accordion, AccordionItem, AccordionTrigger, AccordionContent };
+export { Accordion, AccordionItem, AccordionTrigger1, AccordionContent };

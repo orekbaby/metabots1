@@ -12,17 +12,17 @@ import {
 const AccumulatedTokens = () => {
   return (
     <>
-      <div className=" mb-24 md:mb-32 lg:mb-32 overflow-x-hidden overflow-y-auto scrollbar-hide h-[400px]">
-        <Table className="w-full">
+      <div className="mb-24 md:mb-32 lg:mb-32 border-transparent outline-0 overflow-x-hidden">
+        <Table className="w-full overflow-x-hidden ">
           <TableHeader>
-            <TableRow className="border-none bg-[#0C141F]">
-              <TableHead className="w-[100px] font-bold text-[9px] md:text-[16px] lg:text-[16px] text-[#E7E7E7]">
+            <TableRow className="border-none bg-[#0C141F] border-b-transparent outline-0">
+              <TableHead className="w-[100px] font-normal text-[9px] md:text-[16px] lg:text-[16px] text-[#E7E7E7]">
                 Token
               </TableHead>
-              <TableHead className="w-[150px] font-normal md:font-bold lg:font-bold text-[9px] md:text-[16px] lg:text-[16px] text-center">
-                Number Of Smart Wallets Token
+              <TableHead className="w-[100px] md:w-[150px] lg:w-[150px] font-normal  text-[9px] md:text-[16px] lg:text-[16px] text-center">
+                Number Of Wallets
               </TableHead>
-              <TableHead className="w-[150px] font-normal md:font-bold lg:font-bold text-[9px] md:text-[16px] lg:text-[16px] text-right md:text-center lg:text-center pr-4 md:pr-32 lg:pr-32">
+              <TableHead className="w-[100px] md:w-[150px] lg:w-[150px] font-normal  text-[9px] md:text-[16px] lg:text-[16px] text-left md:text-center lg:text-center pr-4 md:pr-32 lg:pr-32">
                 1D Net Inflow
               </TableHead>
             </TableRow>
