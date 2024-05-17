@@ -30,7 +30,7 @@ const Page: React.FC<PageProps> = (props) => {
               About Metabots
             </TabsTrigger>
             <TabsTrigger
-              className="w-1/3 md:w-fit lg:w-fit px-5 md:px-5 lg:px-5 font-semibold focus-visible:border-b-[2px]  data-[state=active]:border-b-[2px] data-[state=active]:text-[#0D6EFD] text-white text-[10px] md:text-sm lg:text-sm border-[#0D6EFD]"
+              className="w-1/3 md:w-fit lg:w-fit px-5 md:px-5 lg:px-5 font-semibold focus-visible:border-b-[2px]  data-[state=active]:border-b-[2px] data-[state=active]:text-[#0D6EFD] text-white text-[10px] md:text-sm lg:text-[14px] border-[#0D6EFD]"
               value="SmartTradingTerminal"
             >
               Smart Trading Terminal
