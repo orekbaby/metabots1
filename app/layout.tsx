@@ -28,7 +28,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <div className="flex w-full h-auto">
           <SideBar />
-          <div className="relative h-auto w-full overflow-x-hidden">
+          <div className="relative h-auto w-full overflow-x-hidden scrollbar-hide overflow-y-auto">
             <Navigation />
             <div className=" pl-0 md:pl-20 lg:pl-20 px-0">{children}</div>
             <FooterNav />

@@ -12,7 +12,7 @@ import {
 const AccumulatedTokens = () => {
   return (
     <>
-      <div className="border-b-transparent">
+      <div className="border-b-transparent overflow-hidden">
         <Table className="overflow-x-hidden w-full">
           <TableHeader>
             <TableRow className="border-none bg-[#0C141F] border-b-transparent outline-0">

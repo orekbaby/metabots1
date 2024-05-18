@@ -15,7 +15,7 @@ const Watchlist = () => {
       </div>
       {watchList?.map((row, index) => (
         <>
-          <div key={index} className="flex justify-between">
+          <div key={index} className="flex justify-between px-4">
             <div className="flex justify-start gap-2 items-center">
               <FaStar className="text-[#FFC107] text-xs md:text-base lg:text-base" />
               <Image
@@ -47,7 +47,7 @@ const Watchlist = () => {
               </p>
             </div>
           </div>
-          <div className="flex justify-end">
+          <div className="flex justify-end px-4">
             <p className="font-normal text-[10px] text-[#A52A27]">
               {row.subvalue}
             </p>

@@ -18,7 +18,7 @@ const AccumulatedTokenTable = () => {
   return (
     <>
       {accumulatedTokens?.map((row, index) => (
-        <TableRow key={index} className="border-[#212E40]">
+        <TableRow key={index} className="border-[#212E40] overflow-x-hidden">
           <TableCell className="flex items-center font-normal text-[9px] md:text-sm lg:text-sm">
             <div className="w-[100px] md:w-[100px] lg:w-[100px] flex gap-2 relative">
               {/* tooltip content */}
