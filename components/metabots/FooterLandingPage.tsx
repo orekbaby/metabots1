@@ -3,7 +3,7 @@ import Image from "next/image";
 const FooterLandingPage = () => {
   return (
     <div>
-      <div className=" block md:hidden lg:hidden  w-full justify-center items-center absolute">
+      <div className=" block md:hidden lg:hidden w-full justify-center items-center absolute px-6">
         <div className="bg-[rgb(18,18,18)] border-b-2 w-[407px] h-[120px] border-[#262626] mb-28 md:mb-0 lg:mb-0">
           <h2 className="text-xs font-normal text-center text-[#EBEBEB] pt-8 pb-4">
             Join Our Community

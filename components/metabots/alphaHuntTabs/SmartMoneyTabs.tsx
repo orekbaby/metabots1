@@ -7,7 +7,7 @@ const SmartMoneyTabs = () => {
     <>
       <Tabs
         defaultValue="MostAccumulatedTokens"
-        className="w-full border-b-2 bg-[#0C141F] md:bg-transparent
+        className="w-full  bg-[#0C141F] md:bg-transparent
          lg:bg-transparent rounded-lg pl-2 pr-3 md:pl-0 lg:pl-0 mt-5 md:mt-0 lg:mt-0"
       >
         <TabsList className="flex mt-0 mb-0 items-center justify-between md:justify-start lg:justify-start gap-0 md:gap-2 lg:gap-2 px-2 md:px-0 lg:px-0">

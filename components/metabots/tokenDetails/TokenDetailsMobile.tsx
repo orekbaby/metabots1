@@ -66,7 +66,7 @@ const TokenDetailsMobile = () => {
 
       {/* eth/usdt contents */}
       {showTokenDetails && (
-        <div className="flex justify-between items-center gap-10">
+        <div className="flex justify-between items-center gap-10 px-3">
           {/* ETH/USDT content */}
           <div className="flex gap-4 flex-row">
             <div className="flex items-center">
@@ -114,7 +114,7 @@ const TokenDetailsMobile = () => {
 
       {/* mapping contents */}
       {showTokenDetails && (
-        <div className="grid grid-cols-3 w-full md:hidden lg:hidden mt-2 gap-3 mb-5">
+        <div className="grid grid-cols-3 w-full md:hidden lg:hidden mt-2 gap-3 mb-5 px-3">
           {tokenInfo?.map((row, index) => (
             <div key={index} className="">
               <h2 className="font-normal text-[10px] md:text-sm lg:text-sm text-[#6C757D]">
@@ -153,13 +153,13 @@ const TokenDetailsMobile = () => {
 
         {/* tabs */}
 
-        <div className="flex-[59%] border-[1px] h-[200px] overflow-x-auto scrollbar-hide border-[#212E40] p-2 rounded-[8px] mt-4 md:mt-0 lg:mt-0">
+        <div className="flex-[59%] border-[1px] h-[300px] overflow-x-auto scrollbar-hide border-[#212E40] p-2 rounded-[8px] mt-4 md:mt-0 lg:mt-0">
           <Tabs />
         </div>
 
         {/* pricetabs */}
 
-        <div className="w-full border-[1px] border-[#212E40] p-2 rounded-[8px] mt-2">
+        <div className="w-full border-[1px] border-[#212E40] p-2 rounded-[8px] mt-8 md:mt-2 lg:mt-2 h-[600px] overflow-x-auto scrollbar-hide">
           <PriceTabs />
         </div>
       </div>

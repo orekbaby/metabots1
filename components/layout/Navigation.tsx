@@ -39,7 +39,7 @@ export default function Navigation() {
   return (
     <header className="px-2 md:pl-28 lg:pl-28 p-3 border-b-2 border-[#212E40] flex justify-between fixed top-0 left-0 items-center md:p-2 lg:p-2 bg-[#0B0F16] w-full z-40">
       {/* Left */}
-      <div className="flex items-center">
+      <div className="flex">
         <Image
           src="/Metadapplogo.png"
           alt="Default Logo"
@@ -47,6 +47,9 @@ export default function Navigation() {
           height={32}
           className="items-center block md:hidden lg:hidden"
         />
+        <div className="bg-[#4CA244] md:hidden lg:hidden flex items-center justify-center rounded-[2.19px] p-[5.47px] w-[34.94px] h-[13.13px]">
+          <p className="font-bold text-[7.66px] leading-[13.02px] ">BETA</p>
+        </div>
         <div className="hidden md:flex lg:flex items-center gap-8 justify-start">
           <Link href="/superUser" className="">
             <h3 className="text-base font-normal hover:underline hover:underline-offset-4">

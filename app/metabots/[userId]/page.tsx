@@ -18,7 +18,7 @@ const Page: React.FC<PageProps> = (props) => {
 
   return (
     <>
-      <div className="w-full flex pl-0 md:pl-2 lg:pl-2 mt-20 mb-5 items-center gap-3 p-3 bg-transparent border-t border-[#212E40]">
+      <div className="w-full flex pl-0 md:pl-2 lg:pl-2 mt-20 mb-5 s items-center gap-3 p-3 bg-transparent border-t border-[#212E40]">
         <Tabs defaultValue="SmartTradingTerminal" className="w-full">
           <TabsList className="flex justify-between mt-0 mb-0 items-center md:justify-start lg:justify-start">
             <TabsTrigger

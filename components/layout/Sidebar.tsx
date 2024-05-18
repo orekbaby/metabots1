@@ -73,21 +73,35 @@ export default function SideBar() {
         {/* Logo */}
         <div>
           {isHovered ? (
-            <Image
-              src="/hoverlogo.png"
-              alt="Hover Logo"
-              width={150}
-              height={43}
-              className="mb-10"
-            />
+            <div className="flex">
+              <Image
+                src="/hoverlogo.png"
+                alt="Hover Logo"
+                width={150}
+                height={43}
+                className="mb-10"
+              />
+              <div className="bg-[#4CA244] flex items-center justify-center rounded-[2.19px] p-[5.47px] w-[34.94px] h-[13.13px]">
+                <p className="font-bold text-[7.66px] leading-[13.02px] ">
+                  BETA
+                </p>
+              </div>
+            </div>
           ) : (
-            <Image
-              src="/Metadapplogo.png"
-              alt="Default Logo"
-              width={28}
-              height={28}
-              className="mb-10 items-center"
-            />
+            <div className="flex">
+              <Image
+                src="/Metadapplogo.png"
+                alt="Default Logo"
+                width={28}
+                height={28}
+                className="mb-10 items-center"
+              />
+              <div className="bg-[#4CA244]  flex items-center justify-center rounded-[2.19px] p-[5.47px] w-[34.94px] h-[13.13px]">
+                <p className="font-bold text-[7.66px] leading-[13.02px] ">
+                  BETA
+                </p>
+              </div>
+            </div>
           )}
         </div>
         <div

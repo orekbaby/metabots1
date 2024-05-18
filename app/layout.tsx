@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="flex w-full h-auto">
+        <div className="flex w-full h-auto overflow-x-hidden">
           <SideBar />
           <div className="relative h-auto w-full">
             <Navigation />

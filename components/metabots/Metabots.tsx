@@ -21,7 +21,7 @@ import { accordionData } from "@/utils/mockData";
 
 const Metabots = () => {
   return (
-    <div className="pl-[8px] h-auto ">
+    <div className="pl-[8px] h-auto mt-5 md:mt-0 lg:mt-0">
       <div className=" w-full mb-20 md:mb-36 lg:mb-36">
         {" "}
         <div className="flex flex-col md:flex-row lg:flex-row justify-center px-2 md:px-0 lg:px-0">
@@ -73,8 +73,8 @@ const Metabots = () => {
         </p>
       </div>
 
-      <div className="flex flex-col md:flex-row pr-0 md:pr-10 lg:pr-10 lg:flex-row justify-between gap-8 md:gap-10 lg:gap-10 w-full h-auto mb-10 md:mb-36 lg:">
-        <div className="w-full md:w-[60%] lg:w-[60%] h-auto md:h-[1200px] lg:h-[1200px]  flex flex-col gap-8 md:gap-10 lg:gap-10 justify-between items-center">
+      <div className="flex flex-col md:flex-row pr-0 md:pr-10 lg:pr-10 lg:flex-row justify-between gap-10 md:gap-10 lg:gap-10 w-full h-auto mb-10 md:mb-36 lg:mb-36 px-4 md:px-0 lg:px-0">
+        <div className="w-full md:w-[60%] lg:w-[60%] h-auto md:h-[1200px] lg:h-[1100px]  flex flex-col gap-10 md:gap-10 lg:gap-10 justify-between items-center">
           <div className="bg-[#17212F] w-full h-auto md:h-[750px] lg:h-[750px] md:px-9 lg:px-9 pt-6 md:pt-10 lg:pt-10 pb-0 rounded-lg">
             <h3 className="font-bold text-left text-[24px] md:text-[36px] lg:text-[36px] text-[#0D6EFD] mb-8 md:mb-5 lg:mb-5 px-4 md:px-0 lg:px-0">
               Cross-Platform Access
@@ -93,7 +93,7 @@ const Metabots = () => {
             />
           </div>
 
-          <div className="flex flex-col md:flex-row lg:flex-row justify-between w-full h-auto gap-8 md:gap-10 lg:gap-10 px-2 md:px-0 lg:px-0">
+          <div className="flex flex-col md:flex-row lg:flex-row justify-between w-full h-auto gap-10 md:gap-10 lg:gap-10 px-2 md:px-0 lg:px-0">
             <div className=" bg-[#05A660] w-full md:w-1/2 lg:w-1/2 h-auto md:h-[450px] lg:h-[400px] pt-[25px] md:pt-[40px] lg:pt-[50px] pb-[30px] md:pb-[110px] lg:pb-[90px] px-5 md:px-0 lg:px-4 rounded-lg">
               <h3 className="font-bold text-[24px] md:text-[32.3px] lg:text-[35px] mb-7 md:mb-5 lg:mb-5">
                 Fail-Safe Protection:{" "}
@@ -119,8 +119,8 @@ const Metabots = () => {
           </div>
         </div>
 
-        <div className="w-full md:w-[40%] lg:w-[40%] h-auto md:h-[1000px] lg:h-[1200px] flex flex-col gap-8 md:gap-10 lg:gap-10justify-between items-center">
-          <div className="w-full h-auto md:h-[300px] lg:h-[250px] rounded-lg px-6 pt-4 md:pt-8 lg:pt-8 pb-4 md:pb-8 lg:pb-8 bg-[#0D6EFD]">
+        <div className="w-full md:w-[40%] lg:w-[40%] h-auto md:h-[1000px] lg:h-[1200px] flex flex-col gap-10 md:gap-10 lg:gap-10justify-between items-center">
+          <div className="w-full h-auto md:h-[300px] lg:h-[280px] rounded-lg px-6 pt-4 md:pt-8 lg:pt-8 pb-4 md:pb-8 lg:pb-8 bg-[#0D6EFD]">
             <h3 className=" text-[24px] md:text-[32.3px] lg:text-[32.3px] font-bold leading-[45.89px] mb-5">
               Private Transactions:
             </h3>
@@ -130,31 +130,32 @@ const Metabots = () => {
             </p>
           </div>
 
-          <div className="w-full relative h-auto md:h-[800px] lg:h-[950px] rounded-lg px-6 pt-6 bg-[#FFC107] mt-0 overflow-hidden">
-            <h3 className="font-bold text-[24px] md:text-[32.5px] lg:text-[32.5px] leading-[35px] md:leading-[40px] lg:leading-[40px] mb-7">
-              Limit orders, Apemode sniping & More:
-            </h3>
-            <p className="font-normal md:font-medium lg:font-medium text-[20px] lg:text-[22px] leading-[1.7rem] md:leading-[2rem] lg:leading-[2rem] md:mt-0 lg:mt-0 mb-10 md:mb-5 lg:mb-5">
-              Powerful tools to give you the competitive edge across devices
-            </p>
+          <div className=" flex flex-col w-full relative h-auto md:h-[800px] lg:h-[810px] rounded-lg justify-between pt-6 bg-[#FFC107] mt-0 overflow-hidden">
+            <div className="px-5">
+              <h3 className="font-bold text-[24px] md:text-[32.5px] lg:text-[32.5px] leading-[35px] md:leading-[40px] lg:leading-[40px] mb-7">
+                Limit orders, Apemode sniping & More:
+              </h3>
+              <p className="font-normal md:font-medium lg:font-medium text-[20px] lg:text-[22px] leading-[1.75rem] md:leading-[2rem] lg:leading-[2rem] md:mt-0 lg:mt-0 mb-10 md:mb-5 lg:mb-5">
+                Powerful tools to give you the competitive edge across devices
+              </p>
+            </div>
+            <div className="">
+              <Image
+                className="hidden md:block lg:block"
+                src="/image-slant.png"
+                alt="iphone"
+                width={580}
+                height={580}
+              />
 
-            <Image
-              className="hidden md:block lg:block
-              absolute bottom-50 left-0
-             max-w-[100%] object-fit z-20"
-              src="/image-slant.png"
-              alt="iphone"
-              width={580}
-              height={1000}
-            />
-
-            <Image
-              className="block md:hidden lg:hidden "
-              src="/iphoneMobile.png"
-              alt="iphone"
-              width={387.34}
-              height={764.04}
-            />
+              <Image
+                className="block md:hidden lg:hidden "
+                src="/iphoneMobile.png"
+                alt="iphone"
+                width={387.34}
+                height={764.04}
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -220,10 +221,10 @@ const Metabots = () => {
         <p className="font-medium px-8 md:font-semibold text-center w-full text-[27px] md:text-[32px] lg:text-[32px] mb-3">
           What people think about us
         </p>
-        <span className="leading-[1.7rem] px-2 font-normal text-[18px] md:text-[20px] lg:text-[20px] mb-4 md:mb-12 lg:mb-12 text-[#B4D2FE]">
+        <span className="leading-[1.75rem] px-2 font-normal text-[18px] md:text-[20px] lg:text-[20px] mb-4 md:mb-12 lg:mb-12 text-[#B4D2FE]">
           Here&apos;s what people have to say about their experience with us.
         </span>
-        <div className="flex flex-col md:flex-row lg:flex-row justify-center gap-4 md:gap-10 lg:gap-10 px-6 md:px-0 lg:px-0 mt-20">
+        <div className="flex flex-col md:flex-row lg:flex-row justify-center gap-4 md:gap-10 lg:gap-10 px-6 md:px-0 lg:px-0 mt-10 md:mt-20 lg:mt-20">
           <div
             className="flex flex-col text-center items-center
            justify-between bg-white w-full md:w-[300.81px] h-[250.85px] rounded-[10.11px] px-1 py-[20.22px] mb-0 md:mb-12 lg:mb-12"
@@ -293,10 +294,13 @@ const Metabots = () => {
         </div>
 
         <div className=" mb-16 md:mb-36 lg:mb-48 px-2 md:px-0 lg:px-0">
-          <h5 className="font-black text-[27px] md:text-[40px] lg:text-[40px] text-[#0A53BE] mt-10 md:mt-20 lg:mt-20 text-center">
+          <h5 className="font-black text-[27px] md:text-[40px] lg:text-[40px] text-[#0A53BE] mt-10 md:mt-20 lg:mt-20 text-center leading-[40px] md:leading-[45px] lg:leading-[45px]">
             Frequently asked questions
           </h5>
-          <p className="font-normal text-[20px] mt-4 text-center mb-10 text-[#B4D2FE] md:text-[#EFEDED] lg:text-[#EFEDED]">
+          <p
+            className="font-normal text-[20px] mt-4 text-center mb-10 text-[#B4D2FE]
+           md:text-[#EFEDED] lg:text-[#EFEDED]"
+          >
             Everything you need to know about our market making bot service.
           </p>
           <div className="mx-auto max-w-screen-lg w-full md:w-[70%] lg:w-[70%]">

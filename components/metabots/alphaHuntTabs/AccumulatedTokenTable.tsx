@@ -18,7 +18,7 @@ const AccumulatedTokenTable = () => {
   return (
     <>
       {accumulatedTokens?.map((row, index) => (
-        <TableRow key={index} className="border-[#212E40] overflow-x-hidden">
+        <TableRow key={index} className="border-[#212E40]">
           <TableCell className="flex items-center font-normal text-[9px] md:text-sm lg:text-sm">
             <div className="w-[100px] md:w-[100px] lg:w-[100px] flex gap-2 relative">
               {/* tooltip content */}
@@ -63,10 +63,7 @@ const AccumulatedTokenTable = () => {
                     className="max-w-auto w-full px-8 md:w-full lg:w-full
                    bg-[#0C141F] border-none rounded-lg"
                   >
-                    <div
-                      className=" w-full md:w-full lg:w-full h-[400px] md:h-[300px] lg:h-[300px]
-                    overflow-y-auto scrollbar-hide overflow-x-hidden"
-                    >
+                    <div className=" w-full md:w-full lg:w-full h-[400px] md:h-[400px] lg:h-[400px] overflow-y-auto scrollbar-hide border-b-transparent outline-0">
                       <div
                         className="w-full bg-[#0A1019]
                        border-b-[#212E40] mb-5 py-2 h-[45px] px-2"
