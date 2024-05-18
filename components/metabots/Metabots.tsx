@@ -6,7 +6,9 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger1,
+  AccordionTrigger,
 } from "@/components/ui/accordion";
+
 const FooterLandingPage = dynamic(
   () => import("@/components/metabots/FooterLandingPage"),
   {
@@ -204,8 +206,8 @@ const Metabots = () => {
               />
             </div>
             <p className="text-base md:text-[18px] lg:text-[18px] font-normal leading-[1.75rem]">
-              You'll also earn a 20% cash bonus from the fees we make from your
-              friends whenever they use Metabots to trade on our platform.
+              You&apos;ll also earn a 20% cash bonus from the fees we make from
+              your friends whenever they use Metabots to trade on our platform.
             </p>
           </div>
         </div>

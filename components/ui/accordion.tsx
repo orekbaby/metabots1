@@ -94,4 +94,10 @@ const AccordionContent = React.forwardRef<
 
 AccordionContent.displayName = AccordionPrimitive.Content.displayName;
 
-export { Accordion, AccordionItem, AccordionTrigger1, AccordionContent };
+export {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger1,
+  AccordionTrigger,
+  AccordionContent,
+};
