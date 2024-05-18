@@ -8,7 +8,7 @@ const SmartMoneyTabs = () => {
       <Tabs
         defaultValue="MostAccumulatedTokens"
         className="w-full  bg-[#0C141F] md:bg-transparent
-         lg:bg-transparent rounded-lg pl-2 pr-3 md:pl-0 lg:pl-0 mt-5 md:mt-0 lg:mt-0"
+         lg:bg-transparent rounded-lg pl-2 pr-3 md:pl-0 lg:pl-0 mt-5 md:mt-0 lg:mt-0 overflow-x-hidden"
       >
         <TabsList className="flex mt-0 mb-0 items-center justify-between md:justify-start lg:justify-start gap-0 md:gap-2 lg:gap-2 px-2 md:px-0 lg:px-0">
           <TabsTrigger
@@ -28,14 +28,14 @@ const SmartMoneyTabs = () => {
           </TabsTrigger>
         </TabsList>
         <TabsContent
-          className="w-full h-full pt-5"
+          className="w-full h-full pt-5 overflow-x-hidden"
           value="MostAccumulatedTokens"
         >
           <AccumulatedTokens />
         </TabsContent>
 
         <TabsContent
-          className="w-full h-full"
+          className="w-full h-full overflow-x-hidden"
           value="MostAccumulatedTokenFreshWallet"
         >
           <TokenFreshWallet />
