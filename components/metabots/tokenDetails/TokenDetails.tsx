@@ -61,13 +61,7 @@ const TokenDetails = () => {
           </div>
         ))}
         {/* Image (Fraud) */}
-        <Image
-          src="/details-img.png "
-          alt=""
-          width={169}
-          height={54}
-          className=""
-        />
+        <Image src="/scam.png " alt="" width={169} height={54} className="" />
       </div>
     </>
   );
