@@ -71,7 +71,7 @@ const Terminal = () => {
               <Tabs />
             </div>
           </div>
-          <div className="hidden md:inline lg:inline h-[250px]  md:h-[340px] lg:h-[340px] overflow-x-hidden overflow-y-auto scrollbar-hide w-full border-[1px] border-[#212E40] rounded-[8px] mt-6">
+          <div className="hidden md:inline lg:inline h-[250px] md:h-[340px] lg:h-[340px] overflow-x-hidden overflow-y-auto scrollbar-hide w-full border-[1px] border-[#212E40] rounded-[8px] mt-4">
             <PriceTabs />
           </div>
         </div>

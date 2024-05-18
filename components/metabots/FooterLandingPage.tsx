@@ -24,7 +24,7 @@ const FooterLandingPage = () => {
       </div>
 
       <div className="hidden md:flex lg:flex w-full absolute">
-        <div className="bg-[#121212] border-t-2 w-full h-[155px] rounded-l border-[#262626] pt-4 pb-16 pr-4">
+        <div className="bg-[#121212] border-t-2 w-full h-[105px] rounded-l border-[#262626] pt-4 pb-8 pr-4">
           <div className="flex justify-start items-center">
             <p className="text-[18px] font-medium pl-12">Blog</p>
           </div>

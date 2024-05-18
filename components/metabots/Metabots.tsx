@@ -26,7 +26,7 @@ const Metabots = () => {
         {" "}
         <div className="flex flex-col md:flex-row lg:flex-row justify-center px-2 md:px-0 lg:px-0">
           <div className="">
-            <h1 className="font-black text-2xl md:text-[45.3px] lg:text-[45px] w-full text-left md:text-left lg:text-left mb-4 leading-normal md:[40px] lg:[62px]">
+            <h1 className="font-bold md:fnt-black lg:font-black text-2xl md:text-[45.3px] lg:text-[45px] w-full text-left md:text-left lg:text-left mb-4 leading-[40px] md:leading-[40px] lg:leading-[62px]">
               Ultra-fast Automation tools to Supercharge your DEX trading
               Activities.
             </h1>
