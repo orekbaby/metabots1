@@ -74,7 +74,7 @@ const Metabots = () => {
       </div>
 
       <div className="flex flex-col md:flex-row pr-0 md:pr-10 lg:pr-10 lg:flex-row justify-between gap-10  md:gap-10 lg:gap-10 w-full h-auto mb-10 md:mb-36 lg:mb-36  md:px-0 lg:px-0">
-        <div className="w-full md:w-[60%] lg:w-[60%] px-4 h-auto md:h-[1200px] lg:h-[1100px]  flex flex-col gap-10 md:gap-10 lg:gap-10 justify-between items-center">
+        <div className="w-full md:w-[60%] lg:w-[60%] px-3 h-auto md:h-[1200px] lg:h-[1100px]  flex flex-col gap-10 md:gap-10 lg:gap-10 justify-between items-center">
           <div className="bg-[#17212F] w-full h-auto md:h-[750px] lg:h-[750px] md:px-9 lg:px-9 pt-6 md:pt-10 lg:pt-10 pb-0 rounded-lg">
             <h3 className="font-bold text-left text-[24px] md:text-[36px] lg:text-[36px] text-[#0D6EFD] mb-8 md:mb-5 lg:mb-5 px-4 md:px-0 lg:px-0">
               Cross-Platform Access
@@ -119,7 +119,7 @@ const Metabots = () => {
           </div>
         </div>
 
-        <div className="w-full md:w-[40%] lg:w-[40%] h-auto md:h-[1000px] lg:h-[1200px] flex flex-col gap-10 md:gap-10 lg:gap-10justify-between items-center px-4 md:px-0 lg:x-0">
+        <div className="w-full md:w-[40%] lg:w-[40%] h-auto md:h-[1000px] lg:h-[1200px] flex flex-col gap-10 md:gap-10 lg:gap-10justify-between items-center px-3 md:px-0 lg:x-0">
           <div className="w-full h-auto md:h-[300px] lg:h-[280px] rounded-lg px-6 pt-4 md:pt-8 lg:pt-8 pb-4 md:pb-8 lg:pb-8 bg-[#0D6EFD]">
             <h3 className=" text-[24px] md:text-[32.3px] lg:text-[32.3px] font-bold leading-[45.89px] mb-5">
               Private Transactions:
