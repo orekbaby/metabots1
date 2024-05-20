@@ -15,7 +15,7 @@ const AccumulatedTokens = () => {
       <div className="border-b-transparent overflow-hidden">
         <Table className="overflow-x-hidden w-full">
           <TableHeader>
-            <TableRow className="border-none bg-[#0C141F] border-b-transparent outline-0">
+            <TableRow className="border-none bg-[#0C141F] border-b-transparent outline-0 overflow-x-hidden">
               <TableHead className="w-[100px] font-normal text-[9px] md:text-[16px] lg:text-[16px] text-[#E7E7E7]">
                 Token
               </TableHead>
