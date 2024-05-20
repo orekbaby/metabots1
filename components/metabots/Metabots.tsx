@@ -320,7 +320,7 @@ const Metabots = () => {
             ))}
           </div>
         </div>
-        <div className="w-full max-w-[100%] bg-[#212E40] py-8 rounded-2xl mb-24 md:mb-28 lg:mb-28">
+        <div className="w-full  bg-[#212E40] px-4 md:px-0 lg:px-0 py-8 rounded-2xl mb-24 md:mb-28 lg:mb-28">
           <h5 className=" font-medium md:font-semi-bold lg:font-semibold text-base md:text-[20px] lg:text-[20px] text-[#E7F1FF] text-center">
             Still have questions?
           </h5>
