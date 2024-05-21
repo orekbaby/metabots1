@@ -74,7 +74,7 @@ export const WalletPerformance = () => {
           </div>
           <div
             className=" hidden md:grid lg:grid w-full grid-cols-1 text-center
-           md:grid-cols-2 lg:grid-cols-2 md:gap-32 lg:gap-32 overflow-x-hidden"
+           md:grid-cols-2 lg:grid-cols-2 md:gap-32 lg:gap-12 overflow-x-hidden"
           >
             {/* Positive Trades */}
 

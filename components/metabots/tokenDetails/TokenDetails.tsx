@@ -7,7 +7,7 @@ import { tokenDetails } from "@/utils/mockData";
 const TokenDetails = () => {
   return (
     <>
-      <div className="gap-4 hidden md:flex lg:flex flex-row mb-4 border-2 border-[#212E40] p-2 rounded-lg">
+      <div className=" w-full  hidden md:flex lg:flex justify-between flex-row mb-4 border-2 border-[#212E40] p-2 rounded-lg">
         {/* First column */}
         <div className="flex gap-4 flex-row">
           <div className="flex items-center">
@@ -61,7 +61,13 @@ const TokenDetails = () => {
           </div>
         ))}
         {/* Image (Fraud) */}
-        {/* <Image src="/scam.png " alt="" width={169} height={54} className="" /> */}
+        <Image
+          src="/scam.png "
+          alt="scam-score "
+          width={169}
+          height={54}
+          className=""
+        />
       </div>
     </>
   );

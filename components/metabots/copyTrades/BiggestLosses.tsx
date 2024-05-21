@@ -14,14 +14,15 @@ const BiggestLosses = () => {
   return (
     <>
       <Accordion
-        className="pr-0 md:pr-8 lg:pr-8 w-full md:w-[510px] lg:w-[510px]"
+        className="pr-0  w-full md:w-[510px] lg:w-[510px]"
         type="single"
         collapsible
       >
         {walletPerformamceNegative.map((row) => (
           <AccordionItem
             key={row.id}
-            className="w-full border-none mb-3 md:mb-5 lg:mb-5 bg-[#161F2C] rounded-[8px] px-3"
+            className="w-full border-none mb-3 md:mb-5 lg:mb-5
+             bg-[#161F2C] rounded-[8px] px-3"
             value={`item-${row.id}`}
           >
             <AccordionTrigger className="flex items-center gap-6 pr-[10%]">

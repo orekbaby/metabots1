@@ -132,7 +132,7 @@ const SmartTradeUpdates = () => {
                         <MdOutlineContentCopy className=" text-[6.5px] md:text-xs lg:text-xs" />
                       </div>
                       <span
-                        className="font-medium text-[6.5px] md:text-xs lg:text-xs rounded-md bg-[#8B85DF] pr-4"
+                        className="font-medium text-[6.5px] md:text-xs lg:text-xs rounded-md bg-[#8B85DF] px-2"
                         style={{
                           backgroundColor:
                             index === 0 || index === 3 || index === 6

@@ -20,7 +20,7 @@ export default function Tab() {
       <Tabs defaultValue="TopTraders" className="w-full ">
         <TabsList className="flex justify-start mb-4 items-center md:justify-start lg:justify-start border-b-[1px] border-[#212E40]">
           <TabsTrigger
-            className=" w-1/3 md:w-fit lg:w-fit px-5 md:px-5 lg:px-5 font-bold focus-visible:border-b-[2px] data-[state=active]:border-b-[2px] data-[state=active]:text-[white] text-[#6C757D] text-[10px] md:text-sm lg:text-sm border-[#0D6EFD]"
+            className="w-1/3 md:w-fit lg:w-fit px-5 md:px-5 lg:px-5 font-bold focus-visible:border-b-[2px] data-[state=active]:border-b-[2px] data-[state=active]:text-[white] text-[#6C757D] text-[10px] md:text-sm lg:text-sm border-[#0D6EFD]"
             value="TopTraders"
           >
             Top Traders
@@ -45,13 +45,22 @@ export default function Tab() {
             Watchlist
           </TabsTrigger> */}
         </TabsList>
-        <TabsContent value="MarketTrades">
+        <TabsContent
+          className="h-[300px] overflow-y-auto scrollbar-hide"
+          value="MarketTrades"
+        >
           <PriceAlert />
         </TabsContent>
-        <TabsContent value="TopTraders">
+        <TabsContent
+          className="h-[300px] overflow-y-auto scrollbar-hide"
+          value="TopTraders"
+        >
           <LatestTrades />
         </TabsContent>
-        <TabsContent value="Watchlist">
+        <TabsContent
+          className="h-[300px] overflow-y-auto scrollbar-hide"
+          value="Watchlist"
+        >
           <LatestTrades />
         </TabsContent>
       </Tabs>

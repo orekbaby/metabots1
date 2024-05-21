@@ -48,7 +48,7 @@ const Terminal = () => {
         <TokenDetails />
       </div>
       <div className="flex w-full gap-2">
-        <div className="flex-[72%] flex flex-col gap-2">
+        <div className="flex-[70%] flex flex-col gap-2">
           <div className="flex gap-2">
             <div className="hidden md:inline lg:inline flex-[39%] mr-4">
               <Dialog>
@@ -71,11 +71,11 @@ const Terminal = () => {
               <Tabs />
             </div>
           </div>
-          <div className="hidden md:inline lg:inline h-[250px] md:h-[340px] lg:h-[340px] overflow-x-hidden overflow-y-auto scrollbar-hide w-full border-[1px] border-[#212E40] rounded-[8px] mt-4">
+          <div className="hidden md:inline lg:inline h-auto  w-full border-[1px] border-[#212E40] rounded-[8px] mt-4">
             <PriceTabs />
           </div>
         </div>
-        <div className="hidden md:inline lg:inline flex-[25%] w-full">
+        <div className="hidden md:inline lg:inline flex-[30%] w-full ml-2">
           <YourWallet />
           <div className="border-[1px] border-[#212E40] rounded-[8px] p-2 mt-3">
             <TradeTabs />

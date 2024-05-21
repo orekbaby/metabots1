@@ -43,13 +43,13 @@ export default function InnerTabs() {
           Ape Mode
         </TabsTrigger>
       </TabsList>
-      <TabsContent value="All">
+      <TabsContent className="px-2" value="All">
         <All />
       </TabsContent>
-      <TabsContent value="Limit">
+      <TabsContent className="px-2" value="Limit">
         <Limit />
       </TabsContent>
-      <TabsContent value="CopyTrades">
+      <TabsContent className="px-2" value="CopyTrades">
         <CopyTrades />
       </TabsContent>
     </Tabs>
