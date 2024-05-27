@@ -9,7 +9,7 @@ const YourWallet = () => {
   return (
     <>
       {" "}
-      <div className="bg-[#0C141F] border border-[#212E40] rounded-[8px] p-2 mt-2  md:mt-0 lg:mt-0 w-full mb-5 md:mb-10 lg:mb-10">
+      <div className="bg-[#0C141F] border-transparent md:border lg:border md:border-[#212E40] lg:border-[#212E40] rounded-[8px] p-2 mt-2  md:mt-0 lg:mt-0 w-full mb-3 md:mb-10 lg:mb-10">
         {/* Title and Icon */}
         <div className="flex justify-between items-center w-full">
           <div className="flex justify-center gap-2 items-center ">

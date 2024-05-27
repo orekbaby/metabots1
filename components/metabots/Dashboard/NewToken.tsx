@@ -39,7 +39,7 @@ export default function All() {
               <TableCell className="w-[100px] flex items-center font-normal text-[9px] md:text-xs lg:text-xs pl-4">
                 {row.Age}
               </TableCell>
-              <TableCell className="w-[80px] font-normal text-[9px]md:text-xs lg:text-xs pl-4">
+              <TableCell className="w-[80px]  text-center md:text-left lg:text-left font-normal text-[9px]md:text-xs lg:text-xs pl-6 md:pl-4 lg:pl-4">
                 {row.TokenName}
               </TableCell>
               <TableCell className="text-center w-[120px] font-bold text-[9px] md:text-xs lg:text-xs pr-2">

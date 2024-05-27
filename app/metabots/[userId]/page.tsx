@@ -20,25 +20,28 @@ const Page: React.FC<PageProps> = (props) => {
   return (
     <>
       <div className="w-full flex pl-0 md:pl-2 lg:pl-2 mt-20 mb-5  items-center gap-3 p-3 bg-transparent border-t border-[#212E40]">
-        <Tabs defaultValue="SmartTradingTerminal" className="w-full">
-          <TabsList className="w-fit flex lg:mt-0 mb-0 items-center justify-start gap-[16px]">
+        <Tabs
+          defaultValue="SmartTradingTerminal"
+          className="w-full pl-0 md:pl-0 lg:pl-0"
+        >
+          <TabsList className="w-full flex lg:mt-0 mb-0 items-center justify-between md:justify-start lg:justify-start gap-0 md:gap-[16px] lg:gap-[16px] bg-[#0C141F] px-5 md:px-0 lg:px-0">
             <TabsTrigger
-              className="w-fit pl-3 md:pl-0 lg:pl-0 font-semibold focus-visible:border-b-[2px] data-[state=active]:border-b-[2px] data-[state=active]:text-[#0D6EFD]
-             text-white text-[10px] md:text-sm lg:text-sm border-[#0D6EFD]"
+              className="w-fit pl-3 md:pl-0 lg:pl-0 font-medium md:font-semibold lg:font-semibold  focus-visible:border-b-[2px] data-[state=active]:border-b-[2px] data-[state=active]:text-[#0D6EFD]
+             text-[#E7E7E7] text-[12px] md:text-sm lg:text-sm border-[#0D6EFD]"
               value="AboutMetabots"
             >
               {" "}
               About Metabots
             </TabsTrigger>
             <TabsTrigger
-              className="flex items-center gap-1 w-fit px-0 font-semibold focus-visible:border-b-[2px]  data-[state=active]:border-b-[2px] data-[state=active]:text-[#0D6EFD] text-white text-[10px] md:text-sm lg:text-[14px] border-[#0D6EFD]"
+              className="flex items-center gap-1 w-fit px-0 font-medium md:font-semibold lg:font-semibold focus-visible:border-b-[2px]  data-[state=active]:border-b-[2px] data-[state=active]:text-[#0D6EFD] text-[#E7E7E7] text-[10px] md:text-sm lg:text-[14px] border-[#0D6EFD]"
               value="SmartTradingTerminal"
             >
               Smart Trading Terminal
               <BsFillExclamationCircleFill className="text-[#989898] text-xs" />
             </TabsTrigger>
             <TabsTrigger
-              className="w-fit px-0 font-semibold focus-visible:border-b-[2px] data-[state=active]:border-b-[2px] data-[state=active]:text-[#0D6EFD] text-white text-[10px] md:text-sm lg:text-sm border-[#0D6EFD]"
+              className="w-fit px-0 font-medium md:font-semibold lg:font-semibold  focus-visible:border-b-[2px] data-[state=active]:border-b-[2px] data-[state=active]:text-[#0D6EFD] text-[#E7E7E7] text-[10px] md:text-sm lg:text-sm border-[#0D6EFD]"
               value="AlphaHunt"
             >
               Alpha Hunt

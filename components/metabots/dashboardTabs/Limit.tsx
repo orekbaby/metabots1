@@ -53,7 +53,7 @@ export default function Limit() {
               <TableCell className=" pl-2 md:pl-4 lg:pl-4 text-center md:text-left lg:text-left w-[50px] font-normal text-[9px] md:text-xs lg:text-xs">
                 {row.token}
               </TableCell>
-              <TableCell className="text-left font-normal text-[9px] md:text-xs lg:text-xs pl-6 md:pl-12 lg:pl-12">
+              <TableCell className="text-left font-normal text-[9px] md:text-xs lg:text-xs pl-5 md:pl-12 lg:pl-12">
                 {row.quantity}
               </TableCell>
               <TableCell className="flex text-right md:text-center lg:text-center items-center gap-1 font-normal text-[9px] md:text-xs lg:text-xs  pl-8 md:pl-4 lg:pl-4">

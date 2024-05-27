@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import dynamic from "next/dynamic";
+import { FaAngleRight } from "react-icons/fa6";
 
 const TradeTabs = dynamic(
   () => import("@/components/metabots/Dashboard/tradeTabs/TradeTabs"),
@@ -9,10 +10,7 @@ const TradeTabs = dynamic(
   }
 );
 
-import {
-  MdOutlineContentCopy,
-  MdOutlineKeyboardArrowDown,
-} from "react-icons/md";
+import { MdOutlineContentCopy } from "react-icons/md";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { FaStar } from "react-icons/fa";
 import Image from "next/image";
@@ -46,11 +44,13 @@ const TokenDetailsMobile = () => {
       {/* visible to the screen show this contents */}
       <div className="mb-4 flex justify-between items-center md:hidden lg:hidden pl-3 md:pl-0 lg:pl-0 border-b md:border-none lg:border-none border-[#212E40] pb-3">
         <div
-          className="flex md:hidden lg:hidden gap-2 items-center"
+          className="flex md:hidden lg:hidden gap-1 items-center"
           onClick={toggleTokenDetails}
         >
-          <h2 className="font-bold text-base text-[#0D6EFD]">Token Details</h2>
-          <MdOutlineKeyboardArrowDown />
+          <h2 className="font-bold text-xs md:text-base lg:text-base text-[#0D6EFD]">
+            Token Details
+          </h2>
+          <FaAngleRight />
         </div>
         {/* image within token details */}
         {showTokenDetails ? null : (
@@ -142,12 +142,12 @@ const TokenDetailsMobile = () => {
       {/* your wallet section and the trigger to hide and show the remaining contents */}
 
       <div className="flex-[25%] md:hidden lg:hidden">
-        <div className="px-2">
+        <div className="pl-4 pr-1">
           <YourWallet />
         </div>
         {/* tradetabs */}
 
-        <div className="border-[1px] border-[#212E40] rounded-[8px] mt-0">
+        <div className="border-[#212E40] rounded-[8px] pl-4 pr-1 mt-0">
           <TradeTabs />
         </div>
 
