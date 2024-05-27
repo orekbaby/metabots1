@@ -38,7 +38,7 @@ export default function Limits() {
               <TableCell className="flex items-center font-normal text-[9px] md:text-sm lg:text-sm pl-4">
                 {row.Time}
               </TableCell>
-              <TableCell className="font-normal text-[9px] md:text-sm lg:text-sm pl-2 md:pl-0 lg:pl-0">
+              <TableCell className="font-normal text-[9px] md:text-sm lg:text-sm pl-2 md:pl-2 lg:pl-2">
                 <span
                   style={{
                     color:

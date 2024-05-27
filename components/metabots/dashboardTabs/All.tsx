@@ -45,7 +45,7 @@ export default function All() {
         <TableBody>
           {mainPage?.map((row, index) => (
             <TableRow key={index} className="border-none">
-              <TableCell className="flex items-center font-normal text-[9px] md:text-xs lg:text-xs pl-4 md:pl-2 lg:pl-2">
+              <TableCell className="flex items-center font-normal text-[9px] md:text-xs lg:text-xs pl-2 md:pl-2 lg:pl-2">
                 {row.payment}
               </TableCell>
               <TableCell className="font-normal text-[9px] md:text-xs lg:text-xs">
@@ -54,7 +54,7 @@ export default function All() {
               <TableCell className="font-normal text-center md:text-left lg:text-left text-[9px] md:text-xs lg:text-xs">
                 {row.token}
               </TableCell>
-              <TableCell className="font-normal text-[9px] md:text-xs lg:text-xs text-left md:text-left lg:text-left pl-3 md:pl-0 lg:pl-0">
+              <TableCell className="font-normal text-[9px] md:text-xs lg:text-xs text-left md:text-left lg:text-left pl-3 md:pl-4 lg:pl-3">
                 {row.quantity}
               </TableCell>
               <TableCell className="flex mt-2 items-center gap-1 font-normal text-[9px] md:text-xs lg:text-xs">
