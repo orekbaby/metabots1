@@ -15,7 +15,7 @@ export default function Limits() {
       <Table className="text-left overflow-x-hidden w-full">
         <TableHeader>
           <TableRow className="border-none">
-            <TableHead className="w-1/4 font-semibold md:font-bold lg:font-bold text-[10px] md:text-[12px] lg:text-[12px] p-2 ">
+            <TableHead className="w-1/4 font-semibold md:font-bold lg:font-bold text-[10px] md:text-[12px] lg:text-[12px] pl-4">
               Time
             </TableHead>
             <TableHead className="font-semibold md:font-bold lg:font-bold text-[10px] md:text-[12px] lg:text-[12px] p-2">
@@ -35,7 +35,7 @@ export default function Limits() {
         <TableBody>
           {latestTradesMock?.map((row, index) => (
             <TableRow key={index} className="border-none">
-              <TableCell className="flex items-center font-normal text-[9px] md:text-sm lg:text-sm">
+              <TableCell className="flex items-center font-normal text-[9px] md:text-sm lg:text-sm pl-4">
                 {row.Time}
               </TableCell>
               <TableCell className="font-normal text-[9px] md:text-sm lg:text-sm">

@@ -75,7 +75,7 @@ const Terminal = () => {
             <PriceTabs />
           </div>
         </div>
-        <div className="hidden md:inline lg:inline flex-[30%] w-full ml-2">
+        <div className="hidden md:inline lg:inline flex-[30%] w-full ml-2 pt-2">
           <YourWallet />
           <div className="border-[1px] border-[#212E40] rounded-[8px]  mt-3">
             <TradeTabs />

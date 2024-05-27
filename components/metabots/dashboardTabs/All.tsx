@@ -17,7 +17,7 @@ export default function All() {
       <Table className="text-left overflow-x-hidden w-full">
         <TableHeader>
           <TableRow className="border-none bg-[#0A1019]">
-            <TableHead className="w-[75px] pl-2 md:pl-4 lg:pl-4 ">
+            <TableHead className="w-[75px] pl-2 md:pl-2 lg:pl-2 ">
               <Image
                 src="/payments.png"
                 width={20}
@@ -45,7 +45,7 @@ export default function All() {
         <TableBody>
           {mainPage?.map((row, index) => (
             <TableRow key={index} className="border-none">
-              <TableCell className="flex items-center font-normal text-[9px] md:text-xs lg:text-xs pl-2 md:pl-4 lg:pl-4">
+              <TableCell className="flex items-center font-normal text-[9px] md:text-xs lg:text-xs pl-2 md:pl-2 lg:pl-2">
                 {row.payment}
               </TableCell>
               <TableCell className="font-normal text-[9px] md:text-xs lg:text-xs">

@@ -18,15 +18,15 @@ export default function Tab() {
   return (
     <>
       <Tabs defaultValue="TopTraders" className="w-full ">
-        <TabsList className="flex justify-start mb-4 items-center md:justify-start lg:justify-start border-b-[1px] border-[#212E40]">
+        <TabsList className="flex justify-start mb-2 items-center md:justify-start lg:justify-start border-b-[1px] border-[#212E40]">
           <TabsTrigger
-            className="w-1/3 md:w-fit lg:w-fit px-5 md:px-5 lg:px-5 font-bold focus-visible:border-b-[2px] data-[state=active]:border-b-[2px] data-[state=active]:text-[white] text-[#6C757D] text-[10px] md:text-sm lg:text-sm border-[#0D6EFD]"
+            className="w-1/3 md:w-fit lg:w-fit font-bold focus-visible:border-b-[2px] data-[state=active]:border-b-[2px] data-[state=active]:text-[white] text-[#6C757D] text-[10px] md:text-sm lg:text-sm border-[#0D6EFD]"
             value="TopTraders"
           >
             Top Traders
           </TabsTrigger>
           <TabsTrigger
-            className=" w-1/3 md:w-fit lg:w-fit px-5 md:px-5 lg:px-5 font-bold focus-visible:border-b-[2px] data-[state=active]:border-b-[2px] data-[state=active]:text-[white] text-[#6C757D] text-[10px] md:text-sm lg:text-sm border-[#0D6EFD]"
+            className=" w-1/3 md:w-fit lg:w-fit font-bold focus-visible:border-b-[2px] data-[state=active]:border-b-[2px] data-[state=active]:text-[white] text-[#6C757D] text-[10px] md:text-sm lg:text-sm border-[#0D6EFD]"
             value="MarketTrades"
           >
             {" "}

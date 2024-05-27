@@ -42,7 +42,7 @@ export default function All() {
               <TableCell className="w-[80px] font-normal text-[9px]md:text-xs lg:text-xs pl-4">
                 {row.TokenName}
               </TableCell>
-              <TableCell className="text-center w-[120px] font-bold text-[9px] md:text-xs lg:text-xs pr-4">
+              <TableCell className="text-center w-[120px] font-bold text-[9px] md:text-xs lg:text-xs pr-2">
                 <span
                   className="font-normal text-center text-[9px] md:text-xs lg:text-xs"
                   style={{

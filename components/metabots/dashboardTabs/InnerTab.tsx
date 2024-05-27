@@ -24,7 +24,7 @@ export default function InnerTabs() {
     <Tabs defaultValue="All" className="w-full">
       <TabsList className="w-fit flex justify-between mt-0 mb-0 items-center">
         <TabsTrigger
-          className="w-full md:w-[100px] lg:w-fit font-medium focus-visible:border  focus-visible:border-b-yellow-600 border-b data-[state=active]:border-b-yellow-600 data-[state=active]:text-yellow-600 text-[#6C757D] text-[10px] md:text-sm lg:text-sm border-b-[#FFC107]"
+          className="w-full md:w-[100px] lg:w-fit font-medium focus-visible:border  focus-visible:border-b-yellow-600  data-[state=active]:border-b-yellow-600 data-[state=active]:text-yellow-600 text-[#6C757D] text-[10px] md:text-sm lg:text-sm border-b-[#FFC107]"
           value="All"
         >
           {" "}
