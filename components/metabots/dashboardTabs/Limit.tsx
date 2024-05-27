@@ -30,7 +30,7 @@ export default function Limit() {
             <TableHead className="font-semibold md:font-bold lg:font-bold text-[12px]">
               Type
             </TableHead>
-            <TableHead className="font-semibold md:font-bold lg:font-bold text-[12px] text-center md:text-left lg:text-left pl-4 md:pl-0 lg:pl-0">
+            <TableHead className="font-semibold md:font-bold lg:font-bold text-[12px] text-center md:text-left lg:text-left pl-4 md:pl-4 lg:pl-4">
               Token
             </TableHead>
             <TableHead className="text-center font-semibold md:font-bold lg:font-bold text-[12px]">
