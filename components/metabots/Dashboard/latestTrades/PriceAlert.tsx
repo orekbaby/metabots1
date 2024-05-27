@@ -16,7 +16,7 @@ export default function Limits() {
     <>
       <Table className="text-left overflow-x-hidden w-full">
         <TableHeader>
-          <TableRow className="border-none bg-[#0C141F] flex items-center pt-2">
+          <TableRow className="border-none bg-[#0C141F] flex items-center pt-3 h-[40px]">
             <TableHead className="text-left w-[120px] md:w-[150px] lg:w-[150px] font-normal md:font-bold lg:font-bold text-[9px] md:text-[12px] lg:text-[12px]">
               Set Alert Date
             </TableHead>

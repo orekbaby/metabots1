@@ -30,7 +30,7 @@ export default function Limit() {
             <TableHead className="font-semibold md:font-bold lg:font-bold text-[12px]">
               Type
             </TableHead>
-            <TableHead className="font-semibold md:font-bold lg:font-bold text-[12px] text-center md:text-left lg:text-left">
+            <TableHead className="font-semibold md:font-bold lg:font-bold text-[12px] text-center md:text-left lg:text-left pl-4 md:pl-0 lg:pl-0">
               Token
             </TableHead>
             <TableHead className="text-center font-semibold md:font-bold lg:font-bold text-[12px]">
@@ -56,7 +56,7 @@ export default function Limit() {
               <TableCell className="text-left font-normal text-[9px] md:text-xs lg:text-xs pl-5 md:pl-12 lg:pl-12">
                 {row.quantity}
               </TableCell>
-              <TableCell className="flex text-right md:text-center lg:text-center items-center gap-1 font-normal text-[9px] md:text-xs lg:text-xs  pl-8 md:pl-4 lg:pl-4">
+              <TableCell className="flex text-right md:text-center lg:text-center items-center gap-1 font-normal text-[9px] md:text-xs lg:text-xs  pl-6 md:pl-4 lg:pl-4">
                 {row.status.toLowerCase() === "completed" ? (
                   <span style={{ color: "#06C270" }}>{row.status}</span>
                 ) : (
