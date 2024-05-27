@@ -18,7 +18,7 @@ export default function All() {
             <TableHead className="w-[100px] font-semibold md:font-bold lg:font-bold text-[9px] md:text-xs lg:text-xs ">
               Age
             </TableHead>
-            <TableHead className="w-[80px] font-semibold md:font-bold lg:font-bold text-[9px] md:text-xs lg:text-xs">
+            <TableHead className="w-[100px] font-semibold md:font-bold lg:font-bold text-[9px] md:text-xs lg:text-xs">
               Token Name
             </TableHead>
 
@@ -36,13 +36,13 @@ export default function All() {
         <TableBody>
           {newTokensMock?.map((row, index) => (
             <TableRow key={index} className="border-none">
-              <TableCell className="w-[100px] flex items-center font-normal text-[9px] md:text-xs lg:text-xs">
+              <TableCell className="w-[100px] flex items-center font-normal text-[9px] md:text-xs lg:text-xs pl-4">
                 {row.Age}
               </TableCell>
-              <TableCell className="w-[80px] font-normal text-[9px]md:text-xs lg:text-xs">
+              <TableCell className="w-[80px] font-normal text-[9px]md:text-xs lg:text-xs pl-4">
                 {row.TokenName}
               </TableCell>
-              <TableCell className="text-center w-[120px]  font-bold text-[9px] md:text-xs lg:text-xs">
+              <TableCell className="text-center w-[120px] font-bold text-[9px] md:text-xs lg:text-xs pr-4">
                 <span
                   className="font-normal text-center text-[9px] md:text-xs lg:text-xs"
                   style={{
@@ -52,7 +52,7 @@ export default function All() {
                   {row.scamScore}
                 </span>
               </TableCell>
-              <TableCell className="w-[100px] font-normal text-[9px] md:text-xs lg:text-xs">
+              <TableCell className="w-[100px] font-normal text-[9px] md:text-xs lg:text-xs pl-4">
                 {row.price}
               </TableCell>
             </TableRow>

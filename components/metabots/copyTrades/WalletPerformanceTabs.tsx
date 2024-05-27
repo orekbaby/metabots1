@@ -22,23 +22,36 @@ const WalletPerformanceTabs = () => {
   };
   return (
     <>
-      <div className="w-full border-2 border-[#101720] py-1 rounded-lg">
-        <div className="block md:hidden lg:hidden text-center">
+      <div
+        className="w-full border-none md:border-2 md:border-[#101720] lg:border-2
+       lg:border-[#101720] py-1 rounded-lg mt-2"
+      >
+        <div className="block md:hidden lg:hidden text-center px-1">
           <YourWallet />
         </div>
         {/* trending wallet mobile  */}
-        <div className="block md:hidden lg:hidden my-3">
-          <div className="flex bg-[#17212F] h-auto w-full  rounded-l-[50px]">
-            <div className="font-normal py-2 block text-[10px] bg-[#212E40] w-1/3 h-auto text-center rounded-l-[50px]">
+        <div className="block md:hidden lg:hidden my-5">
+          <div className="flex bg-[#0C141F] h-auto w-full rounded-l-[50px] pl-2">
+            <div
+              className="font-normal py-2 block text-[10px] bg-[#0C141F] w-1/3 h-auto
+             text-center rounded-l-[50px]"
+            >
               <select
                 value={selectedOption}
                 onChange={handleSelectChange}
-                className="bg-[#212E40] text-[9px] font-normal outline-none"
+                className="bg-[#17212F] text-[9px] rounded-l-[50px] font-normal outline-none py-1 px-[3px]"
               >
-                <option className="w-fit" value="trending">
+                <option
+                  className="w-fit font-normal text-[9px]
+                  "
+                  value="trending"
+                >
                   Trending Wallets
                 </option>
-                <option className="w-fit" value="walletList">
+                <option
+                  className="w-fit font-normal text-[9px]"
+                  value="walletList"
+                >
                   My Wallet List
                 </option>
               </select>
@@ -78,26 +91,29 @@ const WalletPerformanceTabs = () => {
         </div>
         <Tabs
           defaultValue="TradeAnalysis"
-          className="w-full px-1 md:px-0 lg:px-0 pr-0 bg-[#0C141F] border-none md:border-b-2 lg:border-b-2 border-[#212E40]"
+          className="w-full px-1 md:px-0 lg:px-0 pr-0 border-none md:border-b-2 lg:border-b-2 border-[#212E40] "
         >
-          <TabsList className="w-full flex items-center justify-between  pl-2 h-[50px]">
-            <div className="flex items-center w-fit">
+          <TabsList
+            className="w-full flex items-center border-none md:border-b-2 lg:border-b-2 border-[#212E40]  justify-between pl-0 md:pl-6 lg:pl-6 h-[40px] md:h-[50px] lg:h-[50px]
+           bg-[#0C141F]"
+          >
+            <div className="flex items-center w-fit ">
               <TabsTrigger
-                className="w-full border-b-2 border-transparent pb-1 md:font-medium lg:font-medium data-[state=active]:border-b-[#FFC107] text-[#E7E7E7] text-[12px] font-normal md:text-[18px] lg:text-[18px]"
+                className="w-full border-b-2 border-transparent pb-1 data-[state=active]:border-b-[#FFC107] data-[state=active]:text-[white] text-[#B3B5B8] text-[10px] font-normal md:text-[18px] lg:text-[18px]"
                 value="TradeAnalysis"
               >
                 Trade Analysis
               </TabsTrigger>
 
               <TabsTrigger
-                className=" hidden md:block lg:block w-full border-b-2 border-transparent pb-1 md:font-medium lg:font-medium data-[state=active]:border-b-[#FFC107] text-[#E7E7E7] text-[12px] font-normal md:text-[18px] lg:text-[18px]"
+                className="w-full border-b-2 border-transparent pb-1 data-[state=active]:border-b-[#FFC107] data-[state=active]:text-[white] text-[#B3B5B8] text-[10px] font-normal md:text-[18px] lg:text-[18px]"
                 value="TopRelatedAddress"
               >
                 Top Related Address
               </TabsTrigger>
 
               <TabsTrigger
-                className="w-fit nline md:hidden lg:hidden border-b-2 border-transparent pb-1 font-medium data-[state=active]:border-b-[#FFC107] text-[#E7E7E7] text-[12px] md:text-[18px] lg:text-[18px]"
+                className="w-fit border-b-2 border-transparent pb-1 font-medium data-[state=active]:border-b-[#FFC107] data-[state=active]:text-[white] text-[#B3B5B8] text-[10px] md:text-[18px] lg:text-[18px]"
                 value="TradeHistory"
               >
                 {" "}
@@ -106,7 +122,7 @@ const WalletPerformanceTabs = () => {
             </div>
             <Dialog>
               <DialogTrigger>
-                <div className="w-fit font-normal text-sm pr-12 hidden md:block lg:block">
+                <div className="w-fit font-norma border-b border-[#212E40] text-sm pr-12 hidden md:block lg:block">
                   My Alerts & Copied Trade Settings
                 </div>
               </DialogTrigger>
@@ -116,7 +132,7 @@ const WalletPerformanceTabs = () => {
             </Dialog>
           </TabsList>
           <TabsContent
-            className="w-full h-auto md:h-[40vh] lg:h-[40vh] 
+            className="w-full h-auto md:h-[40vh] lg:h-[25vh] 
             md:overflow-y-auto lg:overflow-y-auto scrollbar-hide overflow-x-hidden"
             value="TradeAnalysis"
           >
@@ -131,10 +147,12 @@ const WalletPerformanceTabs = () => {
           </TabsContent>
 
           <TabsContent
-            className="inline md:hidden lg:hidden w-full h-auto md:h-[40vh] lg:h-[40vh] overflow-y-auto scrolbar-hide"
+            className="hidden md:flex lg:flex w-full h-auto md:h-[40vh] lg:h-[40vh] 
+            md:overflow-y-auto lg:overflow-y-auto scrollbar-hide overflow-x-hidden"
             value="TradeHistory"
           >
-            <TradingHistory />
+            show me something
+            <TradeHistory />
           </TabsContent>
         </Tabs>
       </div>

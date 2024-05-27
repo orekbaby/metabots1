@@ -9,9 +9,9 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 const WalletDetails = () => {
   return (
     <>
-      <div className="w-full pl-2 bg-[#0A1019] border-b-2 border-[#101720] mb-2 py-3">
+      <div className="w-full pl-8 bg-[#0A1019] border-b-2 border-[#101720] mb-2 py-4">
         <div className="jusify-center gap-2 hidden md:flex lg:flex py-0 md:py-3 lg:py-3">
-          <h2 className="font-normal text-base mb-2">Chains Supported:</h2>
+          <h2 className="font-normal text-base mb-5">Chains Supported:</h2>
           <div className="w-[20px] h-[20px] rounded-full bg-white flex justify-center items-center">
             <FaEthereum className="text-black text-sm" />
           </div>
@@ -24,7 +24,7 @@ const WalletDetails = () => {
                 ETH.BEN
               </h2>
 
-              <MdOutlineContentCopy className=" md:text-[24px] lg:text-[24px]" />
+              <MdOutlineContentCopy className="text-base md:text-[24px] lg:text-[24px]" />
             </div>
             <div className="flex justify-center items-center gap-3">
               <h3 className="font-normal text-[9px] md:text-sm lg:text-sm">
@@ -50,7 +50,7 @@ const WalletDetails = () => {
               <DialogTrigger>
                 <Button
                   variant="outline"
-                  className=" w-[59px] h-[22px] md:w-[112px] lg:w-[112px] md:h-[35px] lg:h-[35px] bg-[#0D6EFD] border-none text-[white] font-normal text-[9px] md:text-sm lg:text-sm rounded-[4px] md:rounded-lg lg:rounded-lg"
+                  className=" w-[59px] h-[22px] md:w-[112px] lg:w-[112px] md:h-[35px] lg:h-[35px] bg-[#0D6EFD] border-none text-[white] font-normal text-[9px] md:text-sm lg:text-base rounded-[4px] md:rounded-lg lg:rounded-lg"
                 >
                   Copy Wallet
                 </Button>
@@ -73,7 +73,7 @@ const WalletDetails = () => {
                 <DialogTrigger>
                   <Button
                     variant="outline"
-                    className="flex items-center justify-center w-[115px] h-[35px] bg-[#0B0F16] border-[#B3B5B8] border-[1px] rounded-[8px] text-sm font-normal text-[#B3B5B8]"
+                    className="flex items-center justify-center w-[115px] h-[35px] bg-[#0B0F16] border-[#B3B5B8] border-[1px] rounded-[8px] text-base font-normal text-[#B3B5B8]"
                   >
                     <IoIosNotificationsOutline
                       className="text-[24px] mr-1 text-[#B3B5B8]"

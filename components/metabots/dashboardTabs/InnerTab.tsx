@@ -22,34 +22,34 @@ const CopyTrades = dynamic(
 export default function InnerTabs() {
   return (
     <Tabs defaultValue="All" className="w-full">
-      <TabsList className="w-2/4 flex justify-start gap-6 mt-0 mb-0 items-center">
+      <TabsList className="w-fit flex justify-between mt-0 mb-0 items-center">
         <TabsTrigger
-          className=" w-1/4 md:w-[100px] lg:w-[50px] font-medium focus-visible:border  focus-visible:border-b-yellow-600 data-[state=active]:border-b-yellow-600  data-[state=active]:text-yellow-600 text-[#E7E7E7] text-[10px] md:text-sm lg:text-sm border-b-[#FFC107]"
+          className="w-full md:w-[100px] lg:w-fit font-medium focus-visible:border  focus-visible:border-b-yellow-600 border-b data-[state=active]:border-b-yellow-600 data-[state=active]:text-yellow-600 text-[#6C757D] text-[10px] md:text-sm lg:text-sm border-b-[#FFC107]"
           value="All"
         >
           {" "}
-          Buy
+          Order History
         </TabsTrigger>
         <TabsTrigger
-          className="text-center w-1/4 md:w-[100px] lg:w-[70px] font-medium focus-visible:border  focus-visible:border-b-yellow-600 data-[state=active]:border-b-yellow-600  data-[state=active]:text-yellow-600 text-[#E7E7E7] text-[10px] md:text-sm lg:text-sm"
+          className="text-center w-full md:w-[100px] lg:w-fit font-medium focus-visible:border  focus-visible:border-b-yellow-600  data-[state=active]:border-b-yellow-600  data-[state=active]:text-yellow-600 text-[#6C757D] text-[10px] md:text-sm lg:text-sm"
           value="Limit"
         >
           Limit
         </TabsTrigger>
         <TabsTrigger
-          className="text-right w-1/4 md:w-[100px] lg:w-[70px] font-medium focus-visible:border  focus-visible:border-b-yellow-600 data-[state=active]:border-b-yellow-600  data-[state=active]:text-yellow-600 text-[#E7E7E7] text-[10px] md:text-sm lg:text-sm"
+          className="text-right w-full md:w-[100px] lg:w-fit font-medium focus-visible:border  focus-visible:border-b-yellow-600  data-[state=active]:border-b-yellow-600  data-[state=active]:text-yellow-600 text-[#6C757D] text-[10px] md:text-sm lg:text-sm"
           value="CopyTrades"
         >
-          Ape Mode
+          copy Trades
         </TabsTrigger>
       </TabsList>
-      <TabsContent className="px-2" value="All">
+      <TabsContent className="" value="All">
         <All />
       </TabsContent>
-      <TabsContent className="px-2" value="Limit">
+      <TabsContent className="" value="Limit">
         <Limit />
       </TabsContent>
-      <TabsContent className="px-2" value="CopyTrades">
+      <TabsContent className="" value="CopyTrades">
         <CopyTrades />
       </TabsContent>
     </Tabs>

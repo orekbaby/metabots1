@@ -7,14 +7,14 @@ import { CiSettings } from "react-icons/ci";
 const WalletDetailsMobile = () => {
   return (
     <>
-      <div className="justify-between flex-col  pr-8 flex md:hidden lg:hidden">
+      <div className="justify-between flex-col  pr-8 pl-2 flex md:hidden lg:hidden">
         <div className="flex gap-4 mb-5">
           <div className="flex items-center gap-1">
-            <h2 className="font-bold text-12 md:text-[24px] lg:text-[24px]">
+            <h2 className="font-bold text-xs md:text-[24px] lg:text-[24px]">
               ETH.BEN
             </h2>
 
-            <MdOutlineContentCopy className=" md:text-[24px] lg:text-[24px]" />
+            <MdOutlineContentCopy className=" text-base md:text-[24px] lg:text-[24px]" />
           </div>
           <div className="flex justify-center items-center">
             <h3 className="font-normal text-[9px] md:text-sm lg:text-sm">
@@ -24,7 +24,7 @@ const WalletDetailsMobile = () => {
             <span className="font-bold text-base md:text-[27px] lg:text-[27px] text-[#FFC107]">
               $141,160,817.62
             </span>
-            <p className="font-normal text-base items-center border-b-2 border-[#212E40] hidden md:block lg:block">
+            <p className="font-normal text-xs items-center border-b-2 border-[#212E40] hidden md:block lg:block">
               View balance history
             </p>
           </div>

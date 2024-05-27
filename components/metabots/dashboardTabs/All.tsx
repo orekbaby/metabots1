@@ -16,8 +16,8 @@ export default function All() {
     <>
       <Table className="text-left overflow-x-hidden w-full">
         <TableHeader>
-          <TableRow className="border-none bg-[#0A1019] p-0">
-            <TableHead className="w-[75px] pl-2 ">
+          <TableRow className="border-none bg-[#0A1019]">
+            <TableHead className="w-[75px] pl-2 md:pl-4 lg:pl-4 ">
               <Image
                 src="/payments.png"
                 width={20}
@@ -28,10 +28,13 @@ export default function All() {
             <TableHead className="font-semibold md:font-bold lg:font-bold text-[12px] pl-2">
               Type
             </TableHead>
-            <TableHead className="font-semibold md:font-bold lg:font-bold text-[12px] pl-2">
+            <TableHead
+              className="font-semibold text-center md:text-left lg:text-left md:font-bold 
+            lg:font-bold text-[12px] pl-6 md:pl-2 lg:pl-2"
+            >
               Token
             </TableHead>
-            <TableHead className="font-semibold md:font-bold lg:font-bold text-[12px] pl-2">
+            <TableHead className="font-semibold md:font-bold lg:font-bold text-center md:text-left lg:text-left text-[12px] pl-2">
               Quantity
             </TableHead>
             <TableHead className="font-semibold md:font-bold lg:font-bold text-[12px] pl-2">
@@ -42,16 +45,16 @@ export default function All() {
         <TableBody>
           {mainPage?.map((row, index) => (
             <TableRow key={index} className="border-none">
-              <TableCell className="flex items-center font-normal text-[9px] md:text-xs lg:text-xs">
+              <TableCell className="flex items-center font-normal text-[9px] md:text-xs lg:text-xs pl-2 md:pl-4 lg:pl-4">
                 {row.payment}
               </TableCell>
               <TableCell className="font-normal text-[9px] md:text-xs lg:text-xs">
                 {row.type}
               </TableCell>
-              <TableCell className="font-normal text-[9px] md:text-xs lg:text-xs">
+              <TableCell className="font-normal text-center md:text-left lg:text-left text-[9px] md:text-xs lg:text-xs">
                 {row.token}
               </TableCell>
-              <TableCell className="font-normal text-[9px] md:text-xs lg:text-xs">
+              <TableCell className="font-normal text-[9px] md:text-xs lg:text-xs text-center md:text-left lg:text-left pr-4 md:pr-0 lg:pr-0">
                 {row.quantity}
               </TableCell>
               <TableCell className="flex mt-2 items-center gap-1 font-normal text-[9px] md:text-xs lg:text-xs">

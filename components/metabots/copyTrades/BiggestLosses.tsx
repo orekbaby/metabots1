@@ -25,7 +25,7 @@ const BiggestLosses = () => {
              bg-[#161F2C] rounded-[8px] px-3"
             value={`item-${row.id}`}
           >
-            <AccordionTrigger className="flex items-center gap-6 pr-[10%]">
+            <AccordionTrigger className="flex items-center gap-10 pr-[10%]">
               <div className="flex items-center justify-center gap-2">
                 <Image
                   className="mr-2"
@@ -41,7 +41,10 @@ const BiggestLosses = () => {
               <p className="text-[#E63E3A] font-bold text-xs md:text-base lg:text-base">
                 {row.token}
               </p>
-              <Button className="bg-[#017B46] text-[8px] md:text-[10px] lg:text-[10px] px-6 text-white rounded-[8px] w-[48px] h-[26px]">
+              <Button
+                className="bg-[#0D6EFD] text-[8px] md:text-[10px] lg:text-[10px] px-4 py-2
+               text-white rounded-[4px] font-semibold w-[60px] h-[26px]"
+              >
                 {row.button}
               </Button>
             </AccordionTrigger>

@@ -9,7 +9,7 @@ const Watchlist = () => {
         <h3 className="text-[10px] md:text-xs lg:text-xs semi-bold md:font-bold lg:font-bold">
           Watched Token
         </h3>
-        <p className="text-[10px] md:text-xs lg:text-xs semi-bold md:font-bold lg:font-bold">
+        <p className="text-[10px] md:text-xs lg:text-xs semi-bold md:font-bold lg:font-bold pr-3 md:pr-4 lg:pr-4">
           price/%
         </p>
       </div>

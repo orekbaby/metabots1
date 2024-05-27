@@ -25,7 +25,7 @@ export default function Limits() {
               Token
             </TableHead>
 
-            <TableHead className="text-left w-[120px] md:w-[150px] lg:w-[150px] font-normal md:font-bold lg:font-bold text-[9px] md:text-[12px] lg:text-[12px]">
+            <TableHead className="text-center  w-[120px] md:w-[150px] lg:w-[150px] font-normal md:font-bold lg:font-bold text-[9px] md:text-[12px] lg:text-[12px]">
               Alert Price
             </TableHead>
 
@@ -48,13 +48,13 @@ export default function Limits() {
         <TableBody>
           {priceAlertsMock?.map((row, index) => (
             <TableRow key={index} className="border-none flex items-center">
-              <TableCell className=" text-left w-[120px] md:w-[150px] lg:w-[150px] flex items-center font-normal text-[9px] md:text-xs lg:text-xs">
+              <TableCell className=" text-left w-[120px] md:w-[150px] lg:w-[150px] flex items-center font-normal text-[9px] md:text-xs lg:text-xs pl-4">
                 {row.Date}
               </TableCell>
-              <TableCell className="text-center w-[50px] md:w-[80px] lg:w-[80px] font-normal text-[9px] md:text-xs lg:text-xs">
+              <TableCell className="text-center w-[50px] md:w-[80px] lg:w-[80px] font-normal text-[9px] md:text-xs lg:text-xs pr-2 md:pr-4 lg:pr-4">
                 {row.Token}
               </TableCell>
-              <TableCell className="text-left w-[120px] md:w-[150px] lg:w-[150px] font-normal text-[9px] md:text-sm lg:text-sm flex gap-2 items-center justify-start">
+              <TableCell className="text-center w-[120px] md:w-[150px] lg:w-[150px] font-normal text-[9px] md:text-sm lg:text-sm flex gap-2 items-center justify-center md:justify-start lg:justify-start pl-6 md:pl-8 lg:pl-8">
                 <span
                   className={`text-left lowercase ${
                     row.RaisesAbove === "rises above"
@@ -73,7 +73,7 @@ export default function Limits() {
                 />
               </TableCell>
 
-              <TableCell className=" text-left  w-[120px] md:w-[150px] lg:w-[150px] font-normal text-[9px] md:text-xs lg:text-xs">
+              <TableCell className=" text-left  w-[120px] md:w-[150px] lg:w-[150px] font-normal text-[9px] md:text-xs lg:text-xs pl-4">
                 {row.Status === "completed" ? (
                   <span className="text-[#06C270] text-left lowercase">
                     {" "}
@@ -86,10 +86,10 @@ export default function Limits() {
                 )}
               </TableCell>
 
-              <TableCell className="text-left w-[120px] md:w-[150px] lg:w-[150px] font-normal text-[9px] md:text-xs lg:text-xs">
+              <TableCell className="text-left w-[120px] md:w-[150px] lg:w-[150px] font-normal text-[9px] md:text-xs lg:text-xs pl-4">
                 {row.AlertPrice}
               </TableCell>
-              <TableCell className="text-left w-[120px] md:w-[150px] lg:w-[150px] font-normal text-[9px] md:text-xs lg:text-xs">
+              <TableCell className="text-left w-[120px] md:w-[150px] lg:w-[150px] font-normal text-[9px] md:text-xs lg:text-xs pl-4">
                 {row.AlertType}
               </TableCell>
 

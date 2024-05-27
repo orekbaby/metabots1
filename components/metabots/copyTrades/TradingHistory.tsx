@@ -53,7 +53,7 @@ export default function Limit() {
             <TableHead className=" w-[100px] font-normal p-2 md:font-bold lg:font-bold text-[9px] md:text-[12px] lg:text-[12px]">
               Realized Loss
             </TableHead>
-            <TableHead className="font-normal text-center md:font-bold lg:font-bold text-[9px] md:text-[12px] lg:text-[12px]">
+            <TableHead className="font-normal text-left md:text-center lg:text-center md:font-bold lg:font-bold text-[9px] md:text-[12px] lg:text-[12px]">
               <div className="w-[100px]">Action</div>
             </TableHead>
           </TableRow>
@@ -61,12 +61,12 @@ export default function Limit() {
         <TableBody>
           {tradeHistory?.map((row, index) => (
             <TableRow key={index} className="border-[#212E40]">
-              <TableCell className="flex items-center font-normal text-[9px] md:text-sm lg:text-sm">
+              <TableCell className="flex items-center font-normal text-[9px] md:text-sm lg:text-sm pl-4 md:pr-4 lg:pr-4">
                 <div className="w-[100px]">{row.time}</div>
               </TableCell>
               <TableCell className=" font-normal text-[9px] md:text-sm lg:text-sm text-center">
-                <div className="w-[100px] md:w-[150px] lg:w-[150px] text-center pl-4">
-                  <div className=" flex gap-1 text-center pl-3">
+                <div className="w-[100px] md:w-[150px] lg:w-[150px] text-center pl-2 md:pl-4 lg:pl-4 ">
+                  <div className=" flex gap-1 text-left pl-3">
                     <Image
                       src="/sol.png"
                       width={18}
@@ -83,7 +83,7 @@ export default function Limit() {
                   </p>
                 </div>
               </TableCell>
-              <TableCell className="text-center font-normal text-[9px] md:text-sm lg:text-sm">
+              <TableCell className="text-center font-normal text-[9px] md:text-sm lg:text-sm pl-8">
                 <div className="w-[150px] md:w-[100px] lg:w-[100px]">
                   {row.price.includes("BUY") ? (
                     <>
@@ -96,7 +96,7 @@ export default function Limit() {
                 </div>
               </TableCell>
 
-              <TableCell className="font-normal text-[9px] md:text-sm lg:text-sm">
+              <TableCell className="font-normal text-[9px] md:text-sm lg:text-sm pl-4">
                 <div className="w-[100px]">{row.amount}</div>
               </TableCell>
               <TableCell className="font-normal text-[9px] text-[#4CA244] md:text-sm lg:text-sm">
@@ -105,8 +105,8 @@ export default function Limit() {
               <TableCell className=" flex mt-2 items-center gap-1 font-normal text-[8px] md:text-sm lg:text-sm">
                 <div className="w-[100px]">{row.loss}</div>
               </TableCell>
-              <TableCell className="font-semi-bold  text-[9px] md:text-sm lg:text-sm">
-                <div className="w-[100px] pl-4 ">
+              <TableCell className="font-semi-bold  text-[9px] md:text-sm lg:text-sm pr-4">
+                <div className="w-[100px]">
                   <div className="text-right rounded-[6px] bg-[#0D6EFD] w-[73px] md:w-[110px] lg:w-[110px] p-1">
                     {row.button}
                   </div>

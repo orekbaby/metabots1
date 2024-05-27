@@ -38,7 +38,7 @@ const SmartTradeUpdates = () => {
             <div key={index} className="flex items-center basis-[20%]">
               <Button
                 variant="outline"
-                className={`font-normal gap-2 py-0 px-2 md:py-2 md:px-4 lg:py-2 lg:px-4 text-center text-[10px] md:text-base lg:text-base h-[28px] md:h-10 lg:h-10 rounded-[4px] md:rounded-md lg:rounded-md outline-none border-none ${
+                className={`font-normal gap-2 py-0 px-2 md:py-2 md:px-4 lg:py-2 lg:px-4 text-center text-[10px] md:text-base lg:text-base h-[28px] md:h-10 lg:h-[44px] rounded-[4px] md:rounded-md lg:rounded-md outline-none border-none ${
                   index === activeIndex
                     ? "bg-[#084298] hover:bg-[#084298]"
                     : "bg-[#17212F] hover:bg-[#084298] hover:text-white"
@@ -84,8 +84,8 @@ const SmartTradeUpdates = () => {
           ))}
         </div>
         <hr className="border-[#212E40] p-1" />
-        <div className="w-full h-[60vh] overflow-y-auto scrollbar-hide">
-          <div className="flex justify-between border-2 rounded-lg border-[#212E40] mb-3 p-2">
+        <div className="w-full h-[30vh] overflow-y-auto scrollbar-hide border border-[#212E40] rounded-lg">
+          <div className="flex justify-between  rounded-lg border-b  border-[#212E40] mb-3 py-2 px-6">
             <h3 className="font-bold text-xs md:text-[16px] lg:text-base text-[#0D6EFD]">
               All
             </h3>
@@ -120,10 +120,10 @@ const SmartTradeUpdates = () => {
             <TableBody>
               {smartTradesTable?.map((row, index) => (
                 <TableRow key={index} className="border-[#212E40]">
-                  <TableCell className="flex items-center font-normal text-[7.59px] md:text-sm lg:text-sm">
+                  <TableCell className="flex items-center font-normal text-[7.59px] md:text-sm lg:text-sm pl-4">
                     <div className="w-[100px]">{row.time}</div>
                   </TableCell>
-                  <TableCell className="">
+                  <TableCell className="pl-4">
                     <div className=" w-[100px] md:w-[200px] lg:w-[200px] gap-0">
                       <div className="flex gap-1 items-center">
                         <p className="font-semibold text-[6.5px] md:text-xs lg:text-xs">
@@ -132,7 +132,7 @@ const SmartTradeUpdates = () => {
                         <MdOutlineContentCopy className=" text-[6.5px] md:text-xs lg:text-xs" />
                       </div>
                       <span
-                        className="font-medium text-[6.5px] md:text-xs lg:text-xs rounded-md bg-[#8B85DF] px-2"
+                        className="font-medium text-[6.5px] md:text-xs lg:text-xs rounded-md bg-[#8B85DF] pl-1 pr-4"
                         style={{
                           backgroundColor:
                             index === 0 || index === 3 || index === 6
@@ -174,7 +174,7 @@ const SmartTradeUpdates = () => {
                       </div>
                     </div>
                   </TableCell>
-                  <TableCell className="">
+                  <TableCell className="pl-4">
                     <div className="w-[100px] md:w-[150px] lg:w-[150px]">
                       <div className="flex gap-1">
                         <Image
@@ -192,7 +192,7 @@ const SmartTradeUpdates = () => {
                       </p>
                     </div>
                   </TableCell>
-                  <TableCell className="w-[100px] text-center md:text-left lg:text-left flex flex-col pt-6 font-normal text-[7.59px] md:text-sm lg:text-sm">
+                  <TableCell className="pl-4 w-[100px] text-center md:text-left lg:text-left flex flex-col pt-6 font-normal text-[7.59px] md:text-sm lg:text-sm">
                     {row.price.includes("BUY") ? (
                       <>
                         <span
@@ -223,7 +223,7 @@ const SmartTradeUpdates = () => {
                     {row.priceValue}
                   </TableCell>
 
-                  <TableCell className="font-normal text-center md:text-left lg:text-left text-[6.5px] md:text-sm lg:text-sm">
+                  <TableCell className="font-normal text-center md:text-left lg:text-left text-[6.5px] md:text-sm lg:text-sm pl-2">
                     <div className="w-[150px] md:w-[100px] lg:w-[100px]">
                       <p className="font-bold text-[10px] md:text-sm lg:text-sm">
                         {row.amount1}
@@ -231,8 +231,8 @@ const SmartTradeUpdates = () => {
                       {row.amount2}
                     </div>
                   </TableCell>
-                  <TableCell className="w-[100px] font-normal">
-                    <Button className="text-center rounded-l md:rounded-[6px] lg:rounded-[6px] text-[9px] md:text-base lg:text-base bg-[#0D6EFD] w-[83px] h-[28px] md:w-[112px] md:h-[35px] lg:w-[112px] lg:h-[35px] p-1">
+                  <TableCell className="w-[100px] font-normal pl-12">
+                    <Button className="text-left rounded-l md:rounded-[6px] lg:rounded-[6px] text-[9px] md:text-base lg:text-base bg-[#0D6EFD] w-[83px] h-[28px] md:w-[112px] md:h-[35px] lg:w-[112px] lg:h-[35px] p-1">
                       {row.button}
                     </Button>
                   </TableCell>

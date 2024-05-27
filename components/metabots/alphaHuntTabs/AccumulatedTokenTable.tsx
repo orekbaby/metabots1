@@ -46,8 +46,8 @@ const AccumulatedTokenTable = () => {
               </TooltipProvider>
             </div>
           </TableCell>
-          <TableCell className="font-normal text-[9px] md:text-base lg:text-base text-center md:text-right lg:text-right">
-            <div className="w-[100px] md:w-[350px] lg:w-[350px]">
+          <TableCell className="font-normal text-[9px] md:text-base lg:text-base text-center md:text-right lg:text-right pl-8">
+            <div className="w-[100px] md:w-[350px] lg:w-[350px] ">
               <p className="">
                 {row.smartWallet} {""} {""}
                 <Dialog>

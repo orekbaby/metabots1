@@ -9,16 +9,16 @@ const walletPerformanceMobileTabs = () => {
         defaultValue="MostProfitableTrades"
         className="w-full px-1 md:px-0 lg:px-0 pr-0 bg-[#0C141F] border-none md:border-b-2 lg:border-b-2 border-[#212E40]"
       >
-        <TabsList className="w-full flex items-center justify-between gap-8 h-[50px]">
+        <TabsList className="w-full flex items-center justify-between h-[50px]">
           <div className="flex items-center w-full justify-between">
             <TabsTrigger
-              className="w-full pb-1 md:font-medium lg:font-medium data-[state=active]:bg-[#084298] text-[#E7E7E7] text-[12px] font-normal md:text-[18px] lg:text-[18px]"
+              className="w-full pb-1 md:font-medium lg:font-medium data-[state=active]:bg-[#084298] text-[#E7E7E7] text-[12px] font-normal md:text-[18px] lg:text-[18px] rounded-s"
               value="MostProfitableTrades"
             >
               Most Profitable Trades
             </TabsTrigger>
             <TabsTrigger
-              className="w-full border-b-2 border-transparent pb-1 font-medium data-[state=active]:bg-[#084298] text-[#E7E7E7] text-[12px] md:text-[18px] lg:text-[18px]"
+              className="w-full border-b-2 border-transparent pb-1 font-medium data-[state=active]:bg-[#084298] text-[#E7E7E7] text-[12px] md:text-[18px] lg:text-[18px] rounded-s"
               value="BiggestLosses"
             >
               {" "}

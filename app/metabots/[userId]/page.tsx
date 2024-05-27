@@ -5,6 +5,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Metabots from "@/components/metabots/Metabots";
 import AlphaHuntTabs from "@/components/metabots/alphaHuntTabs/AlphaHuntTabs";
 import Terminal from "@/components/metabots/terminal/Terminal";
+import { BsFillExclamationCircleFill } from "react-icons/bs";
 // const Tabs = dynamic(() => import("@/components/metabots/Dashboard/Tabs"), {
 //   ssr: false,
 // });
@@ -18,11 +19,11 @@ const Page: React.FC<PageProps> = (props) => {
 
   return (
     <>
-      <div className="w-full flex pl-0 md:pl-2 lg:pl-2 mt-20 mb-5 s items-center gap-3 p-3 bg-transparent border-t border-[#212E40]">
+      <div className="w-full flex pl-0 md:pl-2 lg:pl-2 mt-20 mb-5  items-center gap-3 p-3 bg-transparent border-t border-[#212E40]">
         <Tabs defaultValue="SmartTradingTerminal" className="w-full">
-          <TabsList className="flex justify-between mt-0 mb-0 items-center md:justify-start lg:justify-start">
+          <TabsList className="w-fit flex lg:mt-0 mb-0 items-center justify-start gap-[16px]">
             <TabsTrigger
-              className="w-1/3 md:w-fit lg:w-fit px-5 md:px-5 lg:px-5 font-semibold focus-visible:border-b-[2px] data-[state=active]:border-b-[2px] data-[state=active]:text-[#0D6EFD]
+              className="w-fit pl-3 md:pl-0 lg:pl-0 font-semibold focus-visible:border-b-[2px] data-[state=active]:border-b-[2px] data-[state=active]:text-[#0D6EFD]
              text-white text-[10px] md:text-sm lg:text-sm border-[#0D6EFD]"
               value="AboutMetabots"
             >
@@ -30,13 +31,14 @@ const Page: React.FC<PageProps> = (props) => {
               About Metabots
             </TabsTrigger>
             <TabsTrigger
-              className="w-1/3 md:w-fit lg:w-fit px-5 md:px-5 lg:px-5 font-semibold focus-visible:border-b-[2px]  data-[state=active]:border-b-[2px] data-[state=active]:text-[#0D6EFD] text-white text-[10px] md:text-sm lg:text-[14px] border-[#0D6EFD]"
+              className="flex items-center gap-1 w-fit px-0 font-semibold focus-visible:border-b-[2px]  data-[state=active]:border-b-[2px] data-[state=active]:text-[#0D6EFD] text-white text-[10px] md:text-sm lg:text-[14px] border-[#0D6EFD]"
               value="SmartTradingTerminal"
             >
               Smart Trading Terminal
+              <BsFillExclamationCircleFill className="text-[#989898] text-xs" />
             </TabsTrigger>
             <TabsTrigger
-              className="w-1/3 md:w-fit lg:w-fit px-5 md:px-5 lg:px-5 font-semibold focus-visible:border-b-[2px] data-[state=active]:border-b-[2px] data-[state=active]:text-[#0D6EFD] text-white text-[10px] md:text-sm lg:text-sm border-[#0D6EFD]"
+              className="w-fit px-0 font-semibold focus-visible:border-b-[2px] data-[state=active]:border-b-[2px] data-[state=active]:text-[#0D6EFD] text-white text-[10px] md:text-sm lg:text-sm border-[#0D6EFD]"
               value="AlphaHunt"
             >
               Alpha Hunt

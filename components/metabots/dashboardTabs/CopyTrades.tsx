@@ -17,7 +17,7 @@ export default function CopyTrades() {
     <>
       <Table className="text-left overflow-x-hidden w-full">
         <TableHeader>
-          <TableRow className="border-none bg-[#0C141F]">
+          <TableRow className="border-none bg-[#0A1019]">
             <TableHead className="w-[150px] font-semibold md:font-bold lg:font-bold text-[12px]">
               Time
             </TableHead>
@@ -35,13 +35,13 @@ export default function CopyTrades() {
         <TableBody>
           {copyMock?.map((row, index) => (
             <TableRow key={index} className="border-none">
-              <TableCell className="flex items-center font-normal text-[9px] md:text-xs lg:text-xs">
+              <TableCell className="flex items-center font-normal text-[9px] md:text-xs lg:text-xs pl-4">
                 {row.time}
               </TableCell>
-              <TableCell className="font-normal text-[9px] md:text-xs lg:text-xs">
+              <TableCell className="font-normal text-[9px] md:text-xs lg:text-xs pl-4">
                 {row.address}
               </TableCell>
-              <TableCell className="text-center font-normal text-[9px] md:text-xs lg:text-xs">
+              <TableCell className="text-center font-normal text-[9px] md:text-xs lg:text-xs pl-2 md:pl-4 lg:pl-4">
                 {row.status.toLowerCase() === "completed" ? (
                   <span style={{ color: "#06C270" }}> {row.status} </span>
                 ) : (
@@ -49,7 +49,7 @@ export default function CopyTrades() {
                 )}
               </TableCell>
 
-              <TableCell className="text-center flex items-center gap-1 font-normal text-[9px] md:text-xs lg:text-xs">
+              <TableCell className="text-center flex items-center gap-1 font-normal text-[9px] md:text-xs lg:text-xs pl-4">
                 <BiPencil className="text-white" />
                 <MdDeleteOutline className="text-xs text-white" />
               </TableCell>

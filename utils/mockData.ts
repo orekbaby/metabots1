@@ -292,7 +292,7 @@ export const walletPerformamcePositive = [
     logo: "/kukoin.png",
     name: "Kukoin",
     token: "+456.789.07",
-    button: "Buy",
+    button: "View More",
   },
 
   {
@@ -300,7 +300,7 @@ export const walletPerformamcePositive = [
     logo: "/kukoin.png",
     name: "Kukoin",
     token: "+456.789.07",
-    button: "Buy",
+    button: "View More",
   },
 
   {
@@ -308,7 +308,7 @@ export const walletPerformamcePositive = [
     logo: "/kukoin.png",
     name: "Kukoin",
     token: "+456.789.07",
-    button: "Buy",
+    button: "View More",
   },
 
   {
@@ -316,7 +316,7 @@ export const walletPerformamcePositive = [
     logo: "/kukoin.png",
     name: "Kukoin",
     token: "+456.789.07",
-    button: "Buy",
+    button: "View More",
   },
 
   {
@@ -324,7 +324,7 @@ export const walletPerformamcePositive = [
     logo: "/kukoin.png",
     name: "Kukoin",
     token: "+456.789.07",
-    button: "Buy",
+    button: "View More",
   },
 ];
 
@@ -334,7 +334,7 @@ export const walletPerformamceNegative = [
     logo: "/kukoin.png",
     name: "Kukoin",
     token: "-456.789.07",
-    button: "Buy",
+    button: "View More",
   },
 
   {
@@ -342,7 +342,7 @@ export const walletPerformamceNegative = [
     logo: "/kukoin.png",
     name: "Kukoin",
     token: "-456.789.07",
-    button: "Buy",
+    button: "View More",
   },
 
   {
@@ -350,7 +350,7 @@ export const walletPerformamceNegative = [
     logo: "/kukoin.png",
     name: "Kukoin",
     token: "-456.789.07",
-    button: "Buy",
+    button: "View More",
   },
 
   {
@@ -358,7 +358,7 @@ export const walletPerformamceNegative = [
     logo: "/kukoin.png",
     name: "Kukoin",
     token: "-456.789.07",
-    button: "Buy",
+    button: "View More",
   },
 
   {
@@ -366,7 +366,7 @@ export const walletPerformamceNegative = [
     logo: "/kukoin.png",
     name: "Kukoin",
     token: "-456.789.07",
-    button: "Buy",
+    button: "View More",
   },
 ];
 

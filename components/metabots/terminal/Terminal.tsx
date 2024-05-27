@@ -63,11 +63,11 @@ const Terminal = () => {
               </Dialog>
 
               {/* Pass the props to the Chart component */}
-              <div className="h-[270px] border-2 rounded-2xl border-[#212E40]">
+              <div className="h-[264px] w-[346px] border-[0.94px] rounded-lg border-[#212E40]">
                 <Chart />
               </div>
             </div>
-            <div className="h-[250px] md:h-[300px] lg:h-[300px]  overflow-y-auto scrollbar-hide hidden md:inline lg:inline flex-[59%] border-[1px] border-[#212E40] rounded-[8px] mt-4 md:mt-0 lg:mt-0">
+            <div className="h-[250px] md:h-[300px] lg:h-[291.7px] bg-[#0C141F]  overflow-y-auto scrollbar-hide hidden md:inline lg:inline flex-[59%] border-[1px] border-[#212E40] rounded-[8px] mt-4 md:mt-4 lg:mt-2 pt-1   ">
               <Tabs />
             </div>
           </div>
@@ -77,7 +77,7 @@ const Terminal = () => {
         </div>
         <div className="hidden md:inline lg:inline flex-[30%] w-full ml-2">
           <YourWallet />
-          <div className="border-[1px] border-[#212E40] rounded-[8px] p-2 mt-3">
+          <div className="border-[1px] border-[#212E40] rounded-[8px]  mt-3">
             <TradeTabs />
           </div>
         </div>

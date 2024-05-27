@@ -44,7 +44,7 @@ const TokenDetailsMobile = () => {
   return (
     <>
       {/* visible to the screen show this contents */}
-      <div className="mb-4 flex justify-between items-center md:hidden lg:hidden px-2">
+      <div className="mb-4 flex justify-between items-center md:hidden lg:hidden pl-3 md:pl-0 lg:pl-0 border-b md:border-none lg:border-none border-[#212E40] pb-3">
         <div
           className="flex md:hidden lg:hidden gap-2 items-center"
           onClick={toggleTokenDetails}
@@ -147,7 +147,7 @@ const TokenDetailsMobile = () => {
         </div>
         {/* tradetabs */}
 
-        <div className="border-[1px] border-[#212E40] rounded-[8px] p-2 mt-8">
+        <div className="border-[1px] border-[#212E40] rounded-[8px] mt-0">
           <TradeTabs />
         </div>
 

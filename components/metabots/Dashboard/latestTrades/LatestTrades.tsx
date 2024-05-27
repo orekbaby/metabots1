@@ -49,7 +49,7 @@ export default function Limits() {
                 </span>
               </TableCell>
 
-              <TableCell className="font-normal text-[9px] md:text-sm lg:text-sm">
+              <TableCell className="font-normal text-center md:text-left lg:text-left pr-6 md:pr-0 lgpr-0 text-[9px] md:text-sm lg:text-sm">
                 {row.Metacoin}
               </TableCell>
               <TableCell className="font-normal text-[9px] md:text-sm lg:text-sm">

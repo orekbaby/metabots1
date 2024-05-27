@@ -9,25 +9,35 @@ export default function Tab() {
     <>
       <Tabs
         defaultValue="CopyTrade"
-        className="w-full border-b-2 bg-[#0C141F] md:bg-transparent
-         lg:bg-transparent rounded-lg pl-2 pr-3 md:pl-0 lg:pl-0 mt-5 md:mt-0 lg:mt-0"
+        className="w-full md:bg-transparent
+         lg:bg-transparent rounded-lg mt-5 md:mt-0 lg:mt-0 px-2"
       >
-        <TabsList className="flex mt-0 mb-0 items-center justify-start">
+        <TabsList className="flex mt-0 mb-0 items-center justify-start bg-[#0C141F] md:bg-transparent lg:bg-transparent h-[40px] rounded-lg py-[6px] border-b-transparent md:border-b lg:border-b md:border-[#212E40] border-[#212E40] lg:border-[#212E40]  md:py-0 lg:py-0">
           <TabsTrigger
-            className=" w-1/2 md:w-fit lg:w-fit px-5 md:px-2 lg:px-2 md:font-bold lg:font-bold focus-visible:border-b-[2px]  data-[state=active]:border-b-[2px] data-[state=active]:text-[#0D6EFD] text-white text-[12px] md:text-base lg:text-base border-[#0D6EFD] gap-2 font-medium"
+            className="w-fit md:w-fit lg:w-fit font-medium focus-visible:border-b-[2px]  data-[state=active]:border-b-[2px] data-[state=active]:text-[#0D6EFD] text-[#DADBDD]
+             text-[12px] md:text-base lg:text-base border-[#0D6EFD] gap-2"
             value="CopyTrade"
           >
             {" "}
             Copy Trading
-            <BsFillExclamationCircleFill className="text-[#0D6EFD] text-base" />
+            <BsFillExclamationCircleFill className="text-[#0D6EFD] text-base hidden md:block lg:block" />
           </TabsTrigger>
           <TabsTrigger
-            className="w-1/2 md:w-fit lg:w-fit px-5 md:px-5 lg:px-5 font-medium md:font-bold lg:font-bold focus-visible:border-b-[2px] data-[state=active]:border-b-[2px] data-[state=active]:text-[#0D6EFD] text-white text-[12px] 
+            className="w-fit md:w-fit lg:w-fit font-medium focus-visible:border-b-[2px] data-[state=active]:border-b-[2px] data-[state=active]:text-[#0D6EFD] text-[#DADBDD] text-[12px] 
             md:text-base
              lg:text-base border-[#0D6EFD]"
             value="SmartWalletExplorer"
           >
             Smart Wallet Explorer
+          </TabsTrigger>
+
+          <TabsTrigger
+            className="w-fit md:w-fit lg:w-fit font-medium focus-visible:border-b-[2px] data-[state=active]:border-b-[2px] data-[state=active]:text-[#0D6EFD] text-[#DADBDD] text-[12px] 
+            md:text-base
+             lg:text-base border-[#0D6EFD]"
+            value="PreVettedTraders"
+          >
+            Pre Vetted Traders
           </TabsTrigger>
         </TabsList>
         <TabsContent className="w-full h-full" value="CopyTrade">
@@ -36,6 +46,9 @@ export default function Tab() {
 
         <TabsContent className="w-full h-full" value="SmartWalletExplorer">
           <SmartWalletTabs />
+        </TabsContent>
+        <TabsContent className="w-full h-full" value="PreVettedTraders">
+          Details coming soon
         </TabsContent>
       </Tabs>
     </>

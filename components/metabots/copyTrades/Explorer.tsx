@@ -100,13 +100,13 @@ const Explorer = () => {
                 <TableBody>
                   {explorer?.map((row, index) => (
                     <TableRow key={index} className="border-[#212E40]">
-                      <TableCell className="w-[150px] md:w-full lg:w-full flex items-center font-normal text-[9px] md:text-sm lg:text-sm">
+                      <TableCell className="w-[150px] md:w-full lg:w-full flex items-center font-normal text-[9px] md:text-sm lg:text-sm pl-4">
                         {row.address}
                       </TableCell>
 
-                      <TableCell className="pl-3 text-center">
+                      <TableCell className=" text-center pl-4">
                         <div className="w-[100px]">
-                          <p className="items-center justify-center pl-3 text-[#FFC107] font-bold text-[9px] md:text-sm lg:text-sm">
+                          <p className="items-center justify-center  text-[#FFC107] font-bold text-[9px] md:text-sm lg:text-sm">
                             {row.winRate}
                           </p>
                           <div className="flex items-center justify-center gap-2">
@@ -126,12 +126,12 @@ const Explorer = () => {
                         </div>
                       </TableCell>
 
-                      <TableCell className="text-[#05AC32] font-normal text-[9px] md:text-sm lg:text-sm">
+                      <TableCell className="text-[#05AC32] font-normal text-[9px] text-center md:text-sm lg:text-sm ">
                         <div className="w-[100px]">{row.profit}</div>
                       </TableCell>
-                      <TableCell className="p-1">
+                      <TableCell className="pl-4">
                         <div className="w-[100px]">
-                          <Button className=" w-[63px] h-[24px] md:w-[81px] lg:w-[81px] text-center md:h-[27px] lg:h-[27px] bg-[#084298] text-[#fff] rounded-[4px] text-[9px] md:text-xs lg:text-xs font-semibold">
+                          <Button className=" w-[63px] h-[24px] md:w-[81px] lg:w-[81px] text-center md:h-[27px] lg:h-[27px] bg-[#084298] text-[#fff] rounded-[4px] text-[9px] md:text-xs lg:text-xs font-semibold ">
                             {row.button}
                           </Button>
                         </div>

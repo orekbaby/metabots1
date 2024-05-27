@@ -9,29 +9,36 @@ import Image from "next/image";
 export default function TradeTabs() {
   return (
     <>
-      <Tabs defaultValue="Buy" className="w-full">
-        <TabsList className="bg-[#0C141F] w-full flex justify-between md:gap-10 lg:gap-10 mb-3 items-center md:justify-start lg:justify-start">
+      <Tabs defaultValue="Buy" className="w-full ">
+        <TabsList className=" w-full flex justify-between items-center border-b border-[#212E40]">
           <TabsTrigger
-            className="w-1/4  md:w-[70px] lg:w-70px] font-semi-bold focus-visible:border focus-visible:bg-[#111827] data-[state=active]:bg-[#111827]  data-[state=active]:text-[#0D6EFD] text-white text-[10px] md:text-xs lg:text-xs border-b-[#0D6EFD]  border-[#212E40]"
+            className="w-full font-semi-bold focus-visible:border
+             focus-visible:bg-[#0C141F] data-[state=active]:bg-[#0C141F] data-[state=active]:text-[#0D6EFD]
+             text-white text-[10px] md:text-base lg:text-base border-r border-[#212E40]"
             value="Buy"
           >
             {" "}
             Buy
           </TabsTrigger>
           <TabsTrigger
-            className=" bg-none w-1/4 md:w-[70px] lg:[w-70px] font-semi-bold focus-visible:border  focus-visible:bg-[#111827] data-[state=active]:bg-[#111827]  data-[state=active]:text-[#0D6EFD] text-white text-[10px] md:text-xs lg:text-xs border-b-[#0D6EFD] border-[#212E40]"
+            className="w-full font-semi-bold focus-visible:border focus-visible:bg-[#0C141F]
+             data-[state=active]:bg-[#0C141F] data-[state=active]:text-[#0D6EFD] text-white text-[10px] md:text-base lg:text-base   border-[#212E40]"
             value="Sell"
           >
             Sell
           </TabsTrigger>
-          {/* <TabsTrigger
-            className=" bg-none w-1/4 md:w-[70px] lg:w-70px] font-semi-bold focus-visible:border  focus-visible:border-b-[#0D6EFD] data-[state=active]:border-b-[#0D6EFD]  data-[state=active]:text-[#0D6EFD] text-[#fff] text-[10px] md:text-xs lg:text-xs border-b-[#0D6EFD] border-none"
+          <TabsTrigger
+            className="w-full font-semi-bold focus-visible:border focus-visible:bg-[#0C141F]
+             data-[state=active]:bg-[#0C141F] data-[state=active]:text-[#0D6EFD] text-white text-[10px] md:text-base lg:text-base border-[#212E40]"
             value="CopyTrades"
           >
             Copy Trades
-          </TabsTrigger> */}
+          </TabsTrigger>
           <TabsTrigger
-            className="w-1/4 md:w-[70px] lg:w-70px] font-semi-bold focus-visible:border  focus-visible:bg-[#111827] data-[state=active]:bg-[#111827]  data-[state=active]:text-[#0D6EFD] text-white text-[10px] md:text-xs lg:text-xs border-b-[#0D6EFD] border-[#212E40]"
+            className="w-full font-semi-bold 
+            focus-visible:border focus-visible:bg-[#0C141F] data-[state=active]:bg-[#0C141F]
+             border-[#212E40] 
+              data-[state=active]:text-[#0D6EFD] text-white text-[10px] md:text-base lg:text-base"
             value="Limits"
           >
             Limits
@@ -44,8 +51,8 @@ export default function TradeTabs() {
         <TabsContent value="Sell">
           <Sell />
         </TabsContent>
-        <TabsContent value="Limit">
-          <CopyTrades />
+        <TabsContent value="Limits">
+          <Buy />
         </TabsContent>
         <TabsContent value="CopyTrades">
           <CopyTrades />

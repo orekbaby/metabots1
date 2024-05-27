@@ -8,8 +8,8 @@ import WalletPerformanceMobileTabs from "@/components/metabots/copyTrades/wallet
 export const WalletPerformance = () => {
   return (
     <>
-      <div className="bg-[#0C141F] h-auto md:h-[650px] lg:h-[650px] w-full border-2 mb-5 md:mb-10 lg:mb-10 border-[#212E40] pt-2 pr-0 md:pr-4 rounded-md">
-        <h2 className="font-bold text-xs md:text-[18px] lg:text-[18px] mb-8 pt-2 px-3">
+      <div className=" bg-transparent md:bg-[#0C141F] lg:bg-[#0C141F] h-auto md:h-[650px] lg:h-[650px] w-full border-transparent  md:border md:border-[#212E40]  lg:border lg:border-[#212E40] mb-5 md:mb-10 lg:mb-10 mt-0 md:mt-2 lg:mt-2  pt-0 md:pt-2 lg:pt-2 pr-0 md:pr-4 rounded-md">
+        <h2 className="font-semibold md:font-bold lg:font-bold text-[10px] md:text-[18px] lg:text-[18px] mb-3 md:mb-8 lg:mb-10 pt-0 md:pt-2 lg:pt-2  pl-0 md:pl-5 lg:pl-5 px-3 text-[#E7E7E7]">
           Wallet Performance
         </h2>
         <div className="flex justify-end">
@@ -26,19 +26,35 @@ export const WalletPerformance = () => {
             </SelectContent>
           </Select> */}
         </div>
-        <div className="ml-0 md:ml-2 lg:ml-2 w-full h-auto md:h-[555px] lg:h-[555px] border-[#212E40] border-2 pt-3 px-2">
-          <div className="bg-[#17212F] py-3 px-3 rounded-[8px] w-full">
-            <p className="font-normal text-[8px] md:text-sm lg:text-sm">
+        <div className="ml-0 md:ml-2 lg:ml-3 w-full h-auto md:h-[560px] lg:h-[560px] border-transparent md:border md:border-[#212E40] lg:border lg:border-[#212E40] pt-4 pb-0 md:pb-2 lg:pb-2  px-0 md:px-3 lg:px-3">
+          <div className="bg-[#17212F] py-2 px-3 rounded-[8px] w-full mb-5 md:mb-1 lg:mb-1">
+            <p className="font-normal text-[9px] md:text-sm lg:text-sm  mb-[2px] md:mb-2 lg:mb-1">
               Win Rate:
             </p>
 
-            <div className="w-full flex justify-start gap-4 md:gap-10 lg:gap-10 mt-2">
-              <p className="text-[#0D6EFD] text-xs md:text-[24px] lg:text-[24px] font-bold">
+            <div className="w-full flex justify-start  mb-0 md:mb-1 lg:mb-1">
+              <p className="text-[#FFC107] text-[10px] md:text-[24px] lg:text-[24px] font-bold">
                 63.97%
               </p>
+            </div>
+
+            <div className="flex justify-start gap-4 md:gap-10 lg:gap-10 w-full">
+              {/* ist item */}
+              <div className="flex justify-center items-center gap-5">
+                <p className="font-medium text-[8px] md:text-[12.5px] lg:text-[12.5px]">
+                  Wins:{" "}
+                  <span className="text-[8px] md:text-[12.5px] lg:text-[12.5px] font-medium text-[#4CA244]">
+                    71
+                  </span>{" "}
+                  Loses:{" "}
+                  <span className="text-[8px] md:text-[12.5px] lg:text-[12.5px] font-medium text-[#E63E3A]">
+                    21
+                  </span>
+                </p>
+              </div>
 
               <div className="flex justify-center items-center gap-1">
-                <p className="font-normal text-[8px] md:text-sm lg:text-sm ">
+                <p className="font-normal text-[9px] md:text-sm lg:text-sm ">
                   Total Realized Gains:
                 </p>
 
@@ -48,7 +64,7 @@ export const WalletPerformance = () => {
               </div>
 
               <div className="flex justify-center items-center gap-1">
-                <p className="font-normal text-[8px] md:text-sm lg:text-sm">
+                <p className="font-normal text-[9px] md:text-sm lg:text-sm">
                   Total Unrealized gains:
                 </p>
 
@@ -58,10 +74,10 @@ export const WalletPerformance = () => {
               </div>
 
               <div className="justify-center items-center gap-1 hidden md:flex lg:flex">
-                <p className="font-normal  text-[8px] md:text-sm lg:text-sm">
+                <p className="font-normal text-[9px] md:text-sm lg:text-sm">
                   Total Volume:
                 </p>
-                <span className="text-[#DBE9FF] text-[8px] md:text-sm lg:text-sm font-semibold">
+                <span className="text-[#DBE9FF] text-[9px] md:text-sm lg:text-sm font-semibold">
                   $10k
                 </span>
               </div>
@@ -73,13 +89,13 @@ export const WalletPerformance = () => {
             <WalletPerformanceMobileTabs />
           </div>
           <div
-            className=" hidden md:grid lg:grid w-full grid-cols-1 text-center
+            className="hidden md:grid lg:grid w-full grid-cols-1 text-center
            md:grid-cols-2 lg:grid-cols-2 md:gap-32 lg:gap-12 overflow-x-hidden"
           >
             {/* Positive Trades */}
 
             <div className="w-full hidden md:block lg:block">
-              <div className="w-full flex justify-start items-center pl-2">
+              <div className="w-full flex justify-start items-center mb-3">
                 <h4 className="mt-8 font-bold text-[9px] md:text-base lg:text-base">
                   Most Profitable Trades
                 </h4>
@@ -90,7 +106,7 @@ export const WalletPerformance = () => {
             {/* Negative Trades */}
 
             <div className="w-full hidden md:block lg:block">
-              <div className="flex justify-start items-center pl-2">
+              <div className="flex justify-start items-center pl-2 mb-3">
                 <h4 className="mt-8 font-bold text-[9px] md:text-base lg:text-base">
                   Biggest Losses
                 </h4>
@@ -100,9 +116,9 @@ export const WalletPerformance = () => {
           </div>
         </div>
       </div>
-      <div className="hidden md:block lg:block mb-10 md:mb-20 lg:mb-20">
+      {/* <div className="hidden md:block lg:block mb-10 md:mb-20 lg:mb-20 px-5">
         <TradeHistory />
-      </div>
+      </div> */}
     </>
   );
 };

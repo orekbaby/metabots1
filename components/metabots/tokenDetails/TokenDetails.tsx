@@ -7,7 +7,7 @@ import { tokenDetails } from "@/utils/mockData";
 const TokenDetails = () => {
   return (
     <>
-      <div className=" w-full  hidden md:flex lg:flex justify-between flex-row mb-4 border-2 border-[#212E40] p-2 rounded-lg">
+      <div className="hidden md:flex lg:flex justify-between  gap-[30px] flex-row mb-4 border-1 border-[#212E40] p-2 rounded-lg">
         {/* First column */}
         <div className="flex gap-4 flex-row">
           <div className="flex items-center">
@@ -29,8 +29,10 @@ const TokenDetails = () => {
             </div>
             <div className="flex items-center gap-2">
               <div className="flex flex-col items-center">
-                <div className="flex gap-2 items-center">
-                  <h3 className="font-normal text-[18px]">Etherum</h3>
+                <div className="flex gap-[6px] items-center">
+                  <h3 className="font-normal text-[18px] border-b border-white">
+                    Etherum
+                  </h3>
                   <IoMdNotificationsOutline className="text-[#0D6EFD] text-[24px]" />
                   <FaStar className="text-[#DBDBDC] text-[22px]" />
                 </div>

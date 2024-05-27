@@ -19,7 +19,7 @@ const AccumulatedTokens = () => {
               <TableHead className="w-[100px] font-normal text-[9px] md:text-[16px] lg:text-[16px] text-[#E7E7E7]">
                 Token
               </TableHead>
-              <TableHead className="w-[100px] md:w-[150px] lg:w-[150px] font-normal  text-[9px] md:text-[16px] lg:text-[16px] text-center">
+              <TableHead className=" pr-20 w-[100px] md:w-[150px] lg:w-[150px] font-normal  text-[9px] md:text-[16px] lg:text-[16px] text-center">
                 Number Of Wallets
               </TableHead>
               <TableHead className="w-[100px] md:w-[150px] lg:w-[150px] font-normal  text-[9px] md:text-[16px] lg:text-[16px] text-left md:text-center lg:text-center pr-4 md:pr-32 lg:pr-32">
