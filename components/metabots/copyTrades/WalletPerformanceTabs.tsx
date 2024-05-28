@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Marquee from "react-fast-marquee";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import TradingHistory from "@/components/metabots/copyTrades/TradingHistory";
+
 import YourWallet from "@/components/metabots/Dashboard/YourWallet";
 import WalletPerformance from "@/components/metabots/copyTrades/WalletPerformance";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
@@ -10,7 +10,7 @@ import WalletDetails from "@/components/metabots/copyTrades/WalletDetails";
 import WalletDetailsMobile from "@/components/metabots/copyTrades/WalletDetailsMobile";
 import { marqueeTokens } from "@/utils/mockData";
 import { marqueeDetails } from "@/utils/mockData";
-import TradeHistory from "./TradeHistory";
+import TradeHistory from "@/components/metabots/copyTrades/TradeHistory";
 
 const WalletPerformanceTabs = () => {
   const [selectedOption, setSelectedOption] = useState("trending");
@@ -86,50 +86,59 @@ const WalletPerformanceTabs = () => {
           {" "}
           <WalletDetails />{" "}
         </div>
-        <div className="inline md:hidden lg:hidden">
+        <div className="block md:hidden lg:hidden">
           <WalletDetailsMobile />
         </div>
         <Tabs
           defaultValue="TradeAnalysis"
-          className="w-full px-1 md:px-0 lg:px-0 pr-0 border-none md:border-b-2 lg:border-b-2 border-[#212E40] "
+          className="w-full px-1 md:px-0 lg:px-0 pr-0 border-none md:border-b-2 lg:border-b-2 border-[#212E40]"
         >
           <TabsList
-            className="w-full flex items-center border-none md:border-b-2 lg:border-b-2 border-[#212E40]  justify-between pl-0 md:pl-6 lg:pl-6 h-[40px] md:h-[50px] lg:h-[50px]
-           bg-[#0C141F]"
+            className="w-full flex items-center border-none md:border-b-2 lg:border-b-2 border-[#212E40] gap-6 md:gap-0 lg:gap-0 justify-between pl-0 md:pl-6 lg:pl-6 h-[40px] md:h-[50px] lg:h-[50px]
+           bg-[#0C141F] px-0 md:px-0 lg:px-0"
           >
-            <div className="flex items-center w-fit ">
+            <div className="w-fit flex items-center ">
               <TabsTrigger
-                className="w-full border-b-2 border-transparent pb-1 data-[state=active]:border-b-[#FFC107] data-[state=active]:text-[white] text-[#B3B5B8] text-[10px] font-normal md:text-[18px] lg:text-[18px]"
+                className="w-full border-b-2 border-transparent pb-1 data-[state=active]:border-b-[#FFC107]
+                 data-[state=active]:text-[white] text-[#B3B5B8]
+                  text-[10px] font-normal md:text-[18px] lg:text-[18px]"
                 value="TradeAnalysis"
               >
                 Trade Analysis
               </TabsTrigger>
 
               <TabsTrigger
-                className="w-full border-b-2 border-transparent pb-1 data-[state=active]:border-b-[#FFC107] data-[state=active]:text-[white] text-[#B3B5B8] text-[10px] font-normal md:text-[18px] lg:text-[18px]"
+                className="w-full border-b-2 border-transparent pb-1
+                 data-[state=active]:border-b-[#FFC107] data-[state=active]:text-[white]
+                  text-[#B3B5B8] text-[10px]
+                 font-normal md:text-[18px] lg:text-[18px]"
                 value="TopRelatedAddress"
               >
                 Top Related Address
               </TabsTrigger>
 
               <TabsTrigger
-                className="w-fit border-b-2 border-transparent pb-1 font-medium data-[state=active]:border-b-[#FFC107] data-[state=active]:text-[white] text-[#B3B5B8] text-[10px] md:text-[18px] lg:text-[18px]"
+                className="w-full border-b-2 border-transparent pb-1 font-medium
+                 data-[state=active]:border-b-[#FFC107] data-[state=active]:text-[white]
+                 text-[#B3B5B8] text-[10px] md:text-[18px] lg:text-[18px]"
                 value="TradeHistory"
               >
                 {" "}
                 Trade History
               </TabsTrigger>
             </div>
-            <Dialog>
-              <DialogTrigger>
-                <div className="w-fit font-norma border-b border-[#212E40] text-sm pr-12 hidden md:block lg:block">
-                  My Alerts & Copied Trade Settings
-                </div>
-              </DialogTrigger>
-              <DialogContent className="w-1/2 p-5 bg-[#0C141F] border-none">
-                no content yet
-              </DialogContent>
-            </Dialog>
+            <div className="">
+              <Dialog>
+                <DialogTrigger>
+                  <div className="w-fit font-norma border-b border-[#212E40] text-sm pr-12 hidden md:block lg:block">
+                    My Alerts & Copied Trade Settings
+                  </div>
+                </DialogTrigger>
+                <DialogContent className="w-1/2 p-5 bg-[#0C141F] border-none">
+                  no content yet
+                </DialogContent>
+              </Dialog>
+            </div>
           </TabsList>
           <TabsContent
             className="w-full h-auto md:h-[40vh] lg:h-[25vh] 
@@ -139,19 +148,18 @@ const WalletPerformanceTabs = () => {
             <WalletPerformance />
           </TabsContent>
           <TabsContent
-            className="hidden md:flex lg:flex w-full h-auto md:h-[40vh] lg:h-[40vh] 
-            md:overflow-y-auto lg:overflow-y-auto scrollbar-hide overflow-x-hidden"
+            className="w-full h-auto md:h-[40vh] lg:h-[25vh] 
+            md:overflow-y-auto lg:overflow-y-auto  scrollbar-hide overflow-x-hidden"
             value="TopRelatedAddress"
           >
-            No data yet
+            <p>Top Related Address</p>
           </TabsContent>
 
           <TabsContent
-            className="hidden md:flex lg:flex w-full h-auto md:h-[40vh] lg:h-[40vh] 
-            md:overflow-y-auto lg:overflow-y-auto scrollbar-hide overflow-x-hidden"
+            className="w-full h-auto md:h-[40vh] lg:h-[25vh]
+            md:overflow-y-auto lg:overflow-y-auto scrollbar-hide overflow-x-hidden mb-5 md:mb-0 lg:mb-0"
             value="TradeHistory"
           >
-            show me something
             <TradeHistory />
           </TabsContent>
         </Tabs>

@@ -84,8 +84,8 @@ const SmartTradeUpdates = () => {
           ))}
         </div>
         <hr className="border-[#212E40] p-1" />
-        <div className="w-full h-[30vh] overflow-y-auto scrollbar-hide border border-[#212E40] rounded-lg">
-          <div className="flex justify-between  rounded-lg border-b  border-[#212E40] mb-3 py-2 px-6">
+        <div className="w-full h-auto md:h-[30vh] lg:h-[30vh] overflow-y-auto scrollbar-hide border border-[#212E40] rounded-lg">
+          <div className="flex justify-between  rounded-lg border-b  border-[#212E40] mb-0 py-2 px-6">
             <h3 className="font-bold text-xs md:text-[16px] lg:text-base text-[#0D6EFD]">
               All
             </h3>
@@ -192,7 +192,7 @@ const SmartTradeUpdates = () => {
                       </p>
                     </div>
                   </TableCell>
-                  <TableCell className="pl-4 w-[100px] text-center md:text-left lg:text-left flex flex-col pt-6 font-normal text-[7.59px] md:text-sm lg:text-sm">
+                  <TableCell className="pl-2 md:pl-4 lg:pl-4 w-[100px] text-center md:text-left lg:text-left flex flex-col pt-6 font-normal text-[7.59px] md:text-sm lg:text-sm">
                     {row.price.includes("BUY") ? (
                       <>
                         <span

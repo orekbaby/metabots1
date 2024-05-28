@@ -31,14 +31,14 @@ export default function Tab() {
             Smart Wallet Explorer
           </TabsTrigger>
 
-          <TabsTrigger
+          {/* <TabsTrigger
             className="w-fit md:w-fit lg:w-fit font-medium focus-visible:border-b-[2px] data-[state=active]:border-b-[2px] data-[state=active]:text-[#0D6EFD] text-[#DADBDD] text-[12px] 
             md:text-base
              lg:text-base border-[#0D6EFD]"
             value="PreVettedTraders"
           >
             Pre Vetted Traders
-          </TabsTrigger>
+          </TabsTrigger> */}
         </TabsList>
         <TabsContent className="w-full h-full" value="CopyTrade">
           <CopyTrading />

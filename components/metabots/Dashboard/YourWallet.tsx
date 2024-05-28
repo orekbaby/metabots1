@@ -31,23 +31,22 @@ const YourWallet = () => {
 
         {/* Wallet information */}
         <div
-          className="flex gap-2 items-center border
-         border-[#0D6EFD] bg-[#0A1019] rounded-[4px] h-[50px] px-[10px] py-[6px]"
+          className="flex justify-between items-center border
+         border-[#0D6EFD] bg-[#0A1019]w-full rounded-[4px] h-[50px] px-[10px] py-[6px]"
         >
-          {/* Check icon and "W1" */}
-          <div>
-            <FaRegSquareCheck className="text-[#0D6EFD] text-[18px]" />
-          </div>
-          <div className="w-[26px] flex items-center text-center justify-center  h-[26px] rounded-full bg-[#17212F] text-[#0D6EFD] object-cover">
-            <p className="text-[8.38px] font-normal text-center">W1</p>
-          </div>
-
-          {/* First and Second Column */}
-          <div className="flex w-full">
-            {" "}
-            {/* Removed gap-[96px] */}
+          <div className=" gap-5 flex w-auto items-center">
+            {/* Check icon and "W1" */}
+            <div className="gap-2 flex items-center">
+              <div>
+                <FaRegSquareCheck className="text-[#0D6EFD] text-[18px]" />
+              </div>
+              <div className="w-[26px] flex items-center text-center justify-center  h-[26px] rounded-full bg-[#17212F] text-[#0D6EFD] object-cover">
+                <p className="text-[8.38px] font-normal text-center">W1</p>
+              </div>
+            </div>
+            {/* First and Second Column */} {/* Removed gap-[96px] */}
             {/* First column */}
-            <div className="flex flex-col gap-3 p-1 flex-grow">
+            <div className="flex flex-col gap-3 ">
               {" "}
               {/* Added flex-grow here */}
               <p className="font-normal text-xs text-[#E0E0E0]">
@@ -59,16 +58,16 @@ const YourWallet = () => {
                 </div>
               </div>
             </div>
-            {/* Second column */}
-            <div className="flex flex-col justify-end gap-3  p-1">
-              <div className="flex gap-2 items-center">
-                <FaRegCopy className="text-sm text-white" />
-                <FaGlobe className="text-sm text-white" />
-              </div>
-              <div className="flex items-center">
-                <div className="flex flex-col">
-                  <p className="font-normal text-xs text-[#CED4DA]">TX: 1000</p>
-                </div>
+          </div>
+          {/* Second column */}
+          <div className="flex flex-col justify-end gap-3  p-1">
+            <div className="flex gap-2 items-center">
+              <FaRegCopy className="text-sm text-white" />
+              <FaGlobe className="text-sm text-white" />
+            </div>
+            <div className="flex items-center">
+              <div className="flex flex-col">
+                <p className="font-normal text-xs text-[#CED4DA]">TX: 1000</p>
               </div>
             </div>
           </div>

@@ -11,9 +11,6 @@ const TradeHistory = () => {
   return (
     <>
       {" "}
-      <h3 className="text-xs md:text-[18px] lg:text-[18px] font-bold">
-        Trade History
-      </h3>
       <div className="w-full flex justify-end px-3 md:px-20 lg:px-20  ">
         <Select>
           <SelectTrigger className="w-fit bg-transparent gap-2 mb-3">

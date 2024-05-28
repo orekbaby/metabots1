@@ -21,7 +21,7 @@ import {
 export default function Limit() {
   return (
     <>
-      <Table className="text-left overflow-x-hidden w-full">
+      <Table className="overflow-x-hidden w-full">
         <TableHeader>
           <TableRow className="border-none bg-[#0C141F]">
             <TableHead className="w-[150px]">

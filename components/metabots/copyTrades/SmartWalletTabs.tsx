@@ -25,7 +25,10 @@ const SmartWalletTabs = () => {
             Explorer
           </TabsTrigger>
         </TabsList>
-        <TabsContent className="w-full h-auto" value="SmartTradeUpdates">
+        <TabsContent
+          className="w-full h-[400px] md:h-auto lg:h-auto overflow-y-auto scrollbar-hide"
+          value="SmartTradeUpdates"
+        >
           <SmartTradeUpdates />
         </TabsContent>
         <TabsContent
