@@ -18,7 +18,7 @@ export default function All() {
             <TableHead className="w-[100px] font-semibold md:font-bold lg:font-bold text-[9px] md:text-xs lg:text-xs ">
               Age
             </TableHead>
-            <TableHead className="w-[100px] font-semibold md:font-bold lg:font-bold text-[9px] md:text-xs lg:text-xs pl-8 md:pl-0 lg:pl-0">
+            <TableHead className="w-[100px] font-semibold md:font-bold lg:font-bold text-[9px] md:text-xs lg:text-xs pl-8 md:pl-4 lg:pl-4">
               Token Name
             </TableHead>
 
