@@ -83,7 +83,7 @@ export default function Limit() {
                   </p>
                 </div>
               </TableCell>
-              <TableCell className="text-center font-normal text-[9px] md:text-sm lg:text-sm pl-8">
+              <TableCell className="text-center font-normal text-[9px] md:text-sm lg:text-sm pl-6">
                 <div className="w-[150px] md:w-[100px] lg:w-[100px]">
                   {row.price.includes("BUY") ? (
                     <>

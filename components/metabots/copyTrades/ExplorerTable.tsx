@@ -42,12 +42,12 @@ const ExplorerTable = () => {
 
               <TableCell
                 className="w-[200px] md:w-[100px] lg:w-[100px] text-right items-center text-[#05AC32] font-normal text-[9px]
-               md:text-sm lg:text-sm  pt-0md:pt-4 lg:pt-4 pr-4"
+               md:text-sm lg:text-sm  pt-0 md:pt-4 lg:pt-4 pr-5 md:pr-4 lg:pr-4"
               >
                 {row.totalProfit}
               </TableCell>
 
-              <TableCell className="w-[200px] md:w-[100px] lg:w-[100px] text-center items-center  text-[#05AC32] font-normal text-[9px] md:text-sm lg:text-sm pr-0 md:pr-4 lg:pr-4">
+              <TableCell className="w-[200px] md:w-[100px] lg:w-[100px] text-center items-center  text-[#05AC32] font-normal text-[9px] md:text-sm lg:text-sm pr-2 md:pr-4 lg:pr-4">
                 {row.profit}
               </TableCell>
               <TableCell className="w-[100px] text-center md:text-left lg:text-center pr-0 md:pr-4 lg:pr-4">

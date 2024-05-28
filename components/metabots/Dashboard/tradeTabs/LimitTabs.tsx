@@ -7,17 +7,17 @@ const LimitTabs = () => {
     <>
       <Tabs defaultValue="BuyLimitOrder" className="w-full overflow-x-hidden">
         <TabsList
-          className="w-full flex items-center justify-between md:justify-start lg:justify-start
+          className="w-full flex items-center justify-between 
          bg-[#212E40] px-1"
         >
           <TabsTrigger
-            className="w-full md:w-fit lg:w-fit  font-semibold text-[10px] md:text-sm lg:text-sm ring-offset-[#084298] focus-visible:bg-[#084298] data-[state=active]:bg-[#084298] data-[state=active]:text-[#E7E7E7] text-[#fff]"
+            className="w-full font-semibold text-[10px] md:text-sm lg:text-sm ring-offset-[#084298] focus-visible:bg-[#084298] data-[state=active]:bg-[#084298] data-[state=active]:text-[#E7E7E7] text-[#fff]"
             value="BuyLimitOrder"
           >
             Buy Limit Order
           </TabsTrigger>
           <TabsTrigger
-            className="w-full md:w-fit lg:w-fit  font-semibold text-[10px] md:text-sm lg:text-sm ring-offset-[#084298] focus-visible:bg-[#084298] data-[state=active]:bg-[#084298] data-[state=active]:text-[#E7E7E7] text-[#fff]"
+            className="w-full font-semibold text-[10px] md:text-sm lg:text-sm ring-offset-[#084298] focus-visible:bg-[#084298] data-[state=active]:bg-[#084298] data-[state=active]:text-[#E7E7E7] text-[#fff]"
             value="SellLimitOrder"
           >
             {" "}
