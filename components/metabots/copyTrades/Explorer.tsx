@@ -126,7 +126,7 @@ const Explorer = () => {
                         </div>
                       </TableCell>
 
-                      <TableCell className="text-[#05AC32] font-normal text-[9px] text-center md:text-sm lg:text-sm ">
+                      <TableCell className="text-[#05AC32] font-normal text-[9px] text-left md:text-center lg:text-center md:text-sm lg:text-sm pl-4  ">
                         <div className="w-[100px]">{row.profit}</div>
                       </TableCell>
                       <TableCell className="pl-4">
