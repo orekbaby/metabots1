@@ -1,15 +1,18 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
 import { TbMenuDeep } from "react-icons/tb";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
 import { MdOutlineNotificationsNone } from "react-icons/md";
 
-export default function Navigation() {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const menuRef = useRef<HTMLDivElement>(null);
+import ConnectWalletButton from "../ConnectWalletButton";
 
+
+export default function Navigation() {
+ const [menuOpen, setMenuOpen] = useState(false);
+ const menuRef = useRef<HTMLDivElement>(null);
+ 
+  
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
@@ -35,6 +38,8 @@ export default function Navigation() {
   const MenuItem: React.FC<MenuItemProps> = ({ label }) => {
     return <div className="text-white text-sm font-semibold">{label}</div>;
   };
+
+
 
   return (
     <header className="px-2 md:pl-28 lg:pl-28 p-3 border-b-2 border-[#212E40] flex justify-between fixed top-0 left-0 items-center md:p-2 lg:p-2 bg-[#0B0F16] w-full z-40">
@@ -64,15 +69,25 @@ export default function Navigation() {
         </div>
       </div>
       {/* Right */}
-      <div className="flex items-center gap-6 justify-end">
+      <div className="flex items-center gap-6 justify-end px-6">
         <MdOutlineNotificationsNone className="text-[27px] hidden md:block lg:block" />
-        <button
-          className="bg-[#0D6EFD] items-center justify-center rounded-md text-sm font-medium ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-400 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 dark:ring-offset-neutral-950 dark:focus-visible:ring-neutral-800 hover:scale-95 dark:text-secondary text-white bg-button transition ease-in-out delay-150 hover:border-2 hover:bg-[#0B0F16] duration-300 dark:hover:bg-[#0B0F16] h-10 px-4 w-28 py-1"
-          value="Log In"
-        >
-          {" "}
-          Log In{" "}
-        </button>
+        <div>
+      {/* Connect Wallet Button */}
+
+    <ConnectWalletButton/>
+      {/* Success Message */}
+      {/* {isConnected && showSuccessMessage ? (
+        <div className="fixed top-16 left-1/2 transform -translate-x-1/2 bg-navyblue text-white px-4 py-2 rounded-md flex items-center gap-2">
+          <Image src={deerImage} alt="Success" width={32} height={32} />
+          <span>Your wallet has been successfully connected!</span>
+        </div>
+      ):(
+        <div className="fixed top-16 left-1/2 transform -translate-x-1/2 bg-navyblue text-white px-4 py-2 rounded-md flex items-center gap-2">
+        <span>Your wallet has been disconnected!</span>
+      </div>
+      )} */}
+     
+    </div>
 
         <div
           ref={menuRef}

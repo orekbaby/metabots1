@@ -11,7 +11,8 @@ const TradeHistory = () => {
   return (
     <>
       {" "}
-      <div className="w-full flex justify-end px-3 md:px-20 lg:px-20  ">
+      <div className="w-full flex justify-between px-3 md:px-10 lg:px-4  ">
+        <h4 className="font-bold text-base text-[#E7E7E7]">Trade History</h4>
         <Select>
           <SelectTrigger className="w-fit bg-transparent gap-2 mb-3">
             <SelectValue placeholder="All" />

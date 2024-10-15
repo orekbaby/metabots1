@@ -2,9 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@layer base {
+  body {
+    @apply font-sans;
+  }
+}
+
 body {
   background: #0a1019;
-  color: #e8e8e8; /* Setting text color for the whole body */
+  color: #e8e8e8;
   margin: 0;
   padding: 0;
   max-width: 100%;

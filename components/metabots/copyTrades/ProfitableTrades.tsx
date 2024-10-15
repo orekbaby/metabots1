@@ -9,23 +9,24 @@ import {
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import CopyTradeDetails from "@/components/CopyTradeDetails";
 
 const ProfitableTrades = () => {
   return (
     <>
       {" "}
       <Accordion
-        className="w-full md:w-[510px] lg:w-[510px]"
+        className="w-full"
         type="single"
         collapsible
       >
         {walletPerformamcePositive.map((row) => (
           <AccordionItem
             key={row.id}
-            className="w-full border-none mb-3 md:mb-5 lg:mb-5 bg-[#161F2C] rounded-[8px] px-3"
+            className="w-full border-none mb-3 md:mb-5 lg:mb-5 bg-[#161F2C] rounded-[8px] px-2"
             value={`item-${row.id}`}
           >
-            <AccordionTrigger className="flex items-center gap-10 pr-[10%]">
+            <AccordionTrigger className="flex items-center gap-10  px-2">
               <div className="flex items-center justify-center gap-2">
                 <Image
                   className="mr-2"
@@ -42,14 +43,14 @@ const ProfitableTrades = () => {
                 {row.token}
               </p>
               <Button
-                className="bg-[#0D6EFD] text-[8px] md:text-[10px] lg:text-[10px] px-4 py-2
-               text-white rounded-[4px] font-semibold w-[60px] h-[26px]"
+                className="border-[#0D6EFD] border text-[8px] md:text-[10px] lg:text-[10px] px-4 py-2
+               text-[#E7E7E7] rounded-[4px] font-semibold w-[60px] h-[26px]"
               >
                 {row.button}
               </Button>
             </AccordionTrigger>
             <AccordionContent>
-              Yes. It adheres to the WAI-ARIA design pattern.
+            <CopyTradeDetails/>
             </AccordionContent>
           </AccordionItem>
         ))}

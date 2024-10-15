@@ -41,7 +41,7 @@ export default function Limit() {
             <TableHead className="w-[100px] font-normal md:font-bold lg:font-bold text-[9px] md:text-[12px] lg:text-[12px] text-center">
               Token
             </TableHead>
-            <TableHead className="w-[150px] text-center font-normal md:font-bold lg:font-bold text-[9px] md:text-[12px] lg:text-[12px]">
+            <TableHead className="w-[150px] text-center md:text-left lg:text-left font-normal md:font-bold lg:font-bold text-[9px] md:text-[12px] lg:text-[12px]">
               Type/Price
             </TableHead>
             <TableHead className=" w-[150px] font-normal md:font-bold lg:font-bold text-[9px] md:text-[12px] lg:text-[12px]">
@@ -78,12 +78,9 @@ export default function Limit() {
                       SOLANA{" "}
                     </h3>
                   </div>
-                  <p className="text-[9px] md:text-xs lg:text-xs font-normal">
-                    {row.token}
-                  </p>
-                </div>
+                 </div>
               </TableCell>
-              <TableCell className="text-center font-normal text-[9px] md:text-sm lg:text-sm pl-6">
+              <TableCell className="text-center md:text-left lg:text-left font-normal text-[9px] md:text-sm lg:text-sm pl-6">
                 <div className="w-[150px] md:w-[100px] lg:w-[100px]">
                   {row.price.includes("BUY") ? (
                     <>

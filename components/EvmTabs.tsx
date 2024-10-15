@@ -10,6 +10,8 @@ import WalletDetailsMobile from "@/components/metabots/copyTrades/WalletDetailsM
 import { marqueeTokens } from "@/utils/mockData";
 import { marqueeDetails } from "@/utils/mockData";
 import TradeHistory from "@/components/metabots/copyTrades/TradeHistory";
+import TransactionHistory from "./metabots/copyTrades/TransactionHistory";
+import EvmDetails from "./metabots/copyTrades/EvmDetails";
 
 const WalletPerformanceTabs = () => {
   const [selectedOption, setSelectedOption] = useState("trending");
@@ -81,85 +83,57 @@ const WalletPerformanceTabs = () => {
             </Marquee>
           </div>
         </div>
-        <div className="hidden md:block lg:block">
-          {" "}
-          <WalletDetails />{" "}
-        </div>
+       
         <div className="block md:hidden lg:hidden">
           <WalletDetailsMobile />
         </div>
         <Tabs
-          defaultValue="TradeAnalysis"
+          defaultValue="WalletAnalysis"
           className="w-full px-1 md:px-0 lg:px-0 pr-0 border-none md:border-b-2 lg:border-b-2 border-[#212E40]"
         >
           <TabsList
             className="w-full flex items-center border-none md:border-b-2 lg:border-b-2 border-[#212E40] gap-6 md:gap-0 lg:gap-0 justify-between pl-0 md:pl-6 lg:pl-6 h-[40px] md:h-[50px] lg:h-[50px]
            bg-[#0C141F] px-0 md:px-0 lg:px-6"
           >
-            <div className="w-fit flex items-center ">
+                       <div className="w-fit flex items-center ">
               <TabsTrigger
-                className="w-full border-b-2 border-transparent pb-1 data-[state=active]:border-b-[#FFC107]
-                 data-[state=active]:text-[white] text-[#B3B5B8]
-                  text-[10px] font-normal md:text-base lg:text-base"
-                value="TradeAnalysis"
+                className="border-b-2 border-transparent py-2 data-[state=active]:bg-[#084298]
+                 data-[state=active]:text-[white] text-[#B5B6B6]
+                  text-[10px] font-normal md:text-base lg:text-sm w-[158px] h-[26px] p-[10px]"
+                value="WalletAnalysis"
               >
-                Trade Analysis
+                Wallet Analysis
               </TabsTrigger>
 
               <TabsTrigger
-                className="w-full border-b-2 border-transparent pb-1
-                 data-[state=active]:border-b-[#FFC107] data-[state=active]:text-[white]
-                  text-[#B3B5B8] text-[10px]
-                 font-normal  md:text-base lg:text-base"
-                value="TopRelatedAddress"
+                className="border-b-2 border-transparent py-2
+                 data-[state=active]:bg-[#084298] data-[state=active]:text-[white]
+                  text-[#B5B6B6] text-[10px]
+                 font-normal md:text-base lg:text-sm  w-[158px] h-[26px] p-[10px]"
+                value="TransactionHistory"
               >
-                Top Related Address
+              Transaction History
               </TabsTrigger>
 
-              <TabsTrigger
-                className="w-full border-b-2 border-transparent pb-1 font-medium
-                 data-[state=active]:border-b-[#FFC107] data-[state=active]:text-[white]
-                 text-[#B3B5B8] text-[10px] md:text-base lg:text-base"
-                value="TradeHistory"
-              >
-                {" "}
-                Trade History
-              </TabsTrigger>
-            </div>
-            <div className="">
-              <Dialog>
-                <DialogTrigger>
-                  <div className="w-fit font-norma border-b border-[#212E40] text-xs pr-12 hidden md:block lg:block">
-                    My Alerts & Copied Trade Settings
-                  </div>
-                </DialogTrigger>
-                <DialogContent className="w-1/2 p-5 bg-[#0C141F] border-none">
-                  no content yet
-                </DialogContent>
-              </Dialog>
-            </div>
+                </div>
+          
           </TabsList>
+         
           <TabsContent
-            className="w-full h-auto md:h-[40vh] lg:h-[25vh] 
+            className="w-full h-auto md:h-[40vh] lg:h-[80vh] 
             md:overflow-y-auto lg:overflow-y-auto scrollbar-hide overflow-x-hidden"
-            value="TradeAnalysis"
+            value="WalletAnalysis"
           >
             <WalletPerformance />
           </TabsContent>
-          <TabsContent
-            className="w-full h-auto md:h-[40vh] lg:h-[25vh] 
-            md:overflow-y-auto lg:overflow-y-auto  scrollbar-hide overflow-x-hidden"
-            value="TopRelatedAddress"
-          >
-            <p>Top Related Address</p>
-          </TabsContent>
+         
 
           <TabsContent
             className="w-full h-auto md:h-[40vh] lg:h-[25vh]
             md:overflow-y-auto lg:overflow-y-auto scrollbar-hide overflow-x-hidden mb-5 md:mb-0 lg:mb-0"
-            value="TradeHistory"
+            value="TransactionHistory"
           >
-            <TradeHistory />
+            <TransactionHistory />
           </TabsContent>
         </Tabs>
       </div>

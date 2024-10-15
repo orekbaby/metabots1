@@ -79,7 +79,7 @@ const SideTabs = () => {
       <div className="w-full h-auto bg-[#0C141F] border-[#212E40] border-r-2 py-10 mb-5 hidden md:block lg:block">
         <div className="px-3 w-full h-auto">
           <div className=" h-[65px] text-center items-center">
-            <Button className=" w-[160px] h-[40px] rounded-lg variant=outline border-2 border-[#FFC107]">
+            <Button className=" w-[160px] h-[40px]font-normal text-xs rounded-lg variant=outline border-[1.2px] border-[#FFC107]">
               Add Wallet To Track
             </Button>
           </div>
@@ -123,7 +123,9 @@ const SideTabs = () => {
                   >
                     {row.name}
                   </h3>
+                  <h3 className="font-normal text-white">
                   {row.name === "Trending Smart Wallets" && "🔥"}{" "}
+                  </h3>
                   {/* Display emoji only for "Trending Smart Wallets" */}
                 </div>
               ))}

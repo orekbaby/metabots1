@@ -1,8 +1,12 @@
 import dynamic from "next/dynamic";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Instrument_Sans, Inter } from "next/font/google";
 import "./globals.css";
 import FooterNav from "@/components/layout/FooterNav";
+
+import { Toaster } from "@/components/ui/toaster"
+
+import ClientProviders from "@/components/ClientProviders";
 
 const SideBar = dynamic(() => import("@/components/layout/Sidebar"), {
   ssr: false,
@@ -10,6 +14,9 @@ const SideBar = dynamic(() => import("@/components/layout/Sidebar"), {
 const Navigation = dynamic(() => import("@/components/layout/Navigation"), {
   ssr: false,
 });
+
+import { headers } from 'next/headers';
+import ContextProvider from '@/context';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,17 +30,29 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const cookies = headers().get('cookie'); // Get cookies from headers
+  // No need to derive initialState here for ClientProviders
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <div className="flex w-full h-auto">
-          <SideBar />
-          <div className="relative h-auto w-full overflow-x-hidden scrollbar-hide overflow-y-auto">
-            <Navigation />
-            <div className=" pl-0 md:pl-20 lg:pl-20 px-0">{children}</div>
-            <FooterNav />
+      <head>
+        <link href="https://db.onlinewebfonts.com/c/09cc8698f1f0506ad91591c4149c76f8?family=Instrument+Sans" rel="stylesheet" type="text/css" />
+      </head>
+      <body className="font-sans">
+        <ClientProviders cookies={cookies}> {/* Pass only cookies */}
+          <div className="flex w-full h-auto">
+            <SideBar />
+            <div className="relative h-auto w-full overflow-x-hidden scrollbar-hide overflow-y-auto">
+              <Navigation />
+              <div className="pl-0 md:pl-20 lg:pl-20 px-0">
+                <ContextProvider cookies={cookies}>
+                 {children}
+                 </ContextProvider>
+              </div>
+              <FooterNav />
+            </div>
           </div>
-        </div>
+        </ClientProviders>
+        <Toaster />
       </body>
     </html>
   );

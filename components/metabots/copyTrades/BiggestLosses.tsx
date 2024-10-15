@@ -9,12 +9,13 @@ import {
 } from "@/components/ui/accordion";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import LossTradeDetails from "./LossTradeDetails";
 
 const BiggestLosses = () => {
   return (
     <>
       <Accordion
-        className="pr-0  w-full md:w-[510px] lg:w-[510px]"
+        className="pr-0 w-full"
         type="single"
         collapsible
       >
@@ -42,14 +43,14 @@ const BiggestLosses = () => {
                 {row.token}
               </p>
               <Button
-                className="bg-[#0D6EFD] text-[8px] md:text-[10px] lg:text-[10px] px-4 py-2
-               text-white rounded-[4px] font-semibold w-[60px] h-[26px]"
+                className="border-[#0D6EFD] border text-[8px] md:text-[10px] lg:text-[10px] px-4 py-2
+               text-[#E7E7E7] rounded-[4px] font-semibold w-[60px] h-[26px]"
               >
                 {row.button}
               </Button>
             </AccordionTrigger>
             <AccordionContent>
-              Yes. It adheres to the WAI-ARIA design pattern.
+            <LossTradeDetails/>
             </AccordionContent>
           </AccordionItem>
         ))}

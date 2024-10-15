@@ -374,7 +374,6 @@ export const tradeHistory = [
   {
     time: "30 seconds",
     img: "/sol.png",
-    token: "MCap:$123K Vol:",
     price: "BUY $0.0003476 ",
     amount: "$ 1,678 4K SOL",
     profit: "$1.4567",
@@ -385,8 +384,7 @@ export const tradeHistory = [
   {
     time: "7 min",
     img: "/sol.png",
-    token: " MCap:$123K Vol:",
-    price: "BUY $0.0003476 ",
+   price: "BUY $0.0003476 ",
     amount: "$ 1,678 4K SOL",
     profit: "$1.4567",
     loss: "------",
@@ -396,8 +394,7 @@ export const tradeHistory = [
   {
     time: "15 min",
     img: "/sol.png",
-    token: "MCap:$123K Vol:",
-    price: "BUY $0.0003476 ",
+   price: "BUY $0.0003476 ",
     amount: "$ 1,678 4K SOL",
     profit: "$1.4567",
     loss: "------",
@@ -849,6 +846,10 @@ export const explorer = [
     button: "Copy wallet",
   },
 ];
+
+
+
+
 export const explorer2 = [
   {
     address: "0x9c8bB....6107D21",
@@ -1443,6 +1444,60 @@ export const tokenDetails = [
   },
 ];
 
+
+
+
+export const copyTradingDetails = [
+  {
+    name: "Realized PnL",
+    token: "$1,987.90",
+    
+  },
+
+  {
+    name: "Unrealized PnL",
+    token: "$87.90",
+   
+  },
+
+  {
+    name: "Avg.Buy Price:",
+    token: "$0.005634",
+    
+  },
+  
+  {
+    name: "Avg.Sell Price:",
+    token: "$0.005634",
+   
+  },
+
+  {
+    name: "Holding",
+    token: " 2345",
+   
+  },
+
+  {
+    name: "Held",
+    token: "23",
+   
+  },
+
+  {
+    name: "Sold:",
+    token: "45",
+  
+  },
+  
+  {
+    name: "Total Invested",
+    token: " $200,000",
+  }
+
+
+]
+
 export const freshWallet = [
   {
     name: "Price (USD)",
@@ -1523,3 +1578,75 @@ export const smartWalletList = [
     address: "0x9c8bB8355629A72EB506c8bB8355629A72EB...",
   },
 ];
+
+
+export const copyTableWallet = [
+
+  {
+   time: "03/10/23-18:05:45",
+    type: "Buy",
+   amount: "980.89K",
+   amount2: "980.89K",
+   price: "$0.00967812",
+    },
+
+    {
+      time: "03/10/23-18:05:45",
+       type: "Buy",
+      amount: "980.89K",
+      amount2: "980.89K",
+      price: "$0.00967812",
+       },
+
+       {
+        time: "03/10/23-18:05:45",
+         type: "Buy",
+        amount: "980.89K",
+        amount2: "980.89K",
+        price: "$0.00967812",
+         },
+
+         {
+          time: "03/10/23-18:05:45",
+           type: "Buy",
+          amount: "980.89K",
+          amount2: "980.89K",
+          price: "$0.00967812",
+           },
+]
+
+
+export const copyLossWallet = [
+
+  {
+   time: "03/10/23-18:05:45",
+    type: "Sell",
+   amount: "980.89K",
+   amount2: "980.89K",
+   price: "$0.00967812",
+    },
+
+    {
+      time: "03/10/23-18:05:45",
+       type: "Buy",
+      amount: "980.89K",
+      amount2: "980.89K",
+      price: "$0.00967812",
+       },
+
+       {
+        time: "03/10/23-18:05:45",
+         type: "Sell",
+        amount: "980.89K",
+        amount2: "980.89K",
+        price: "$0.00967812",
+         },
+
+         {
+          time: "03/10/23-18:05:45",
+           type: "Sell",
+          amount: "980.89K",
+          amount2: "980.89K",
+          price: "$0.00967812",
+           },
+          ]

@@ -33,12 +33,12 @@ const SmartTradeUpdates = () => {
   return (
     <>
       <div className="w-auto md:w-full lg:w-full items-center border-[#212E40] border-2 p-4 rounded-[12px]">
-        <div className="flex flex-row md:flex-wrap lg:flex-wrap gap-4 w-full md:w-4/5 lg:w-4/5 mb-4 overflow-x-auto scrollbar-hide">
+        <div className="flex flex-row md:flex-wrap  items-centerlg:flex-wrap gap-4 w-full md:w-4/5 lg:w-4/5 mb-4 overflow-x-auto scrollbar-hide">
           {smartTradeButtons?.map((row, index: number) => (
             <div key={index} className="flex items-center basis-[20%]">
               <Button
                 variant="outline"
-                className={`font-normal gap-2 py-0 px-2 md:py-2 md:px-4 lg:py-2 lg:px-4 text-center text-[10px] md:text-base lg:text-base h-[28px] md:h-10 lg:h-[44px] rounded-[4px] md:rounded-md lg:rounded-md outline-none border-none ${
+                className={`font-normal gap-2 py-0 px-2 md:py-2 md:px-4 lg:py-2 lg:px-4 text-center text-[10px] md:text-sm lg:text-sm h-[28px] md:h-10 lg:h-[44px] rounded-[4px] md:rounded-md lg:rounded-md outline-none border-none ${
                   index === activeIndex
                     ? "bg-[#084298] hover:bg-[#084298]"
                     : "bg-[#17212F] hover:bg-[#084298] hover:text-white"
@@ -46,7 +46,7 @@ const SmartTradeUpdates = () => {
                 onClick={() => handleButtonClick(index)}
               >
                 {row.name}
-                <div className="relative items-center">
+                <div className="relative items-center pt-1">
                   <input
                     type="checkbox"
                     id={`checkbox-${index}`}
@@ -61,7 +61,7 @@ const SmartTradeUpdates = () => {
                   />
                   {checkedIndexes[index] && (
                     <svg
-                      className={`absolute top-[40%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3  h-3 pointer-events-none items-center ${
+                      className={`absolute top-[40%] pt-1 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3  h-3 pointer-events-none items-center ${
                         index === activeIndex
                           ? "text-[#DBE9FF] hover:text-white"
                           : "text-[#084298]"
@@ -97,22 +97,22 @@ const SmartTradeUpdates = () => {
           <Table className="text-left w-full">
             <TableHeader>
               <TableRow className="border-none bg-[#080D14]">
-                <TableHead className="w-[150px] font-bold text-[10px] md:text-xs lg:text-xs">
+                <TableHead className="w-[150px] font-bold text-[10px] text-white md:text-xs lg:text-sm">
                   Time
                 </TableHead>
-                <TableHead className="w-[100px] font-semibold md:font-bold lg:font-bold text-[10px] md:text-xs lg:text-xs">
+                <TableHead className="w-[100px] font-semibold md:font-bold lg:font-bold text-[10px] md:text-xs lg:text-sm">
                   Trader
                 </TableHead>
-                <TableHead className="w-[150px] font-semibold md:font-bold lg:font-bold text-[10px] md:text-xs lg:text-xs">
+                <TableHead className="w-[150px] font-semibold md:font-bold lg:font-bold text-[10px] md:text-xs lg:text-sm">
                   Token
                 </TableHead>
-                <TableHead className="text-center md:text-left lg:text-left w-[150px] font-semibold md:font-bold lg:font-bold text-[10px] md:text-xs lg:text-xs">
+                <TableHead className="text-center md:text-left lg:text-left w-[150px] font-semibold md:font-bold lg:font-bold text-[10px] md:text-xs lg:text-sm">
                   Type/Price
                 </TableHead>
-                <TableHead className="text-center md:text-left lg:text-left w-[100px] font-semibold p-2 md:font-bold lg:font-bold text-[10px] md:text-xs lg:text-xs">
+                <TableHead className="text-center md:text-left lg:text-left w-[100px] font-semibold p-2 md:font-bold lg:font-bold text-[10px] md:text-xs lg:text-sm">
                   Amount/USD
                 </TableHead>
-                <TableHead className="w-[100px] font-semibold md:font-bold lg:font-boldtext-[10px] md:text-xs lg:text-xs pl-12">
+                <TableHead className="w-[100px] font-semibold md:font-bold lg:font-bold text-[10px] md:text-xs lg:text-sm pl-12">
                   Action
                 </TableHead>
               </TableRow>
@@ -232,7 +232,7 @@ const SmartTradeUpdates = () => {
                     </div>
                   </TableCell>
                   <TableCell className="w-[100px] font-normal pl-12">
-                    <Button className="text-left rounded-l md:rounded-[6px] lg:rounded-[6px] text-[9px] md:text-base lg:text-base bg-[#0D6EFD] w-[83px] h-[28px] md:w-[112px] md:h-[35px] lg:w-[112px] lg:h-[35px] p-1">
+                    <Button className="text-left rounded-l md:rounded-[6px] lg:rounded-[6px] text-[9px] md:text-base lg:text-sm bg-[#0D6EFD] w-[83px] h-[28px] md:w-[112px] md:h-[35px] lg:w-[112px] lg:h-[35px] p-1">
                       {row.button}
                     </Button>
                   </TableCell>

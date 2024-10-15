@@ -13,7 +13,7 @@ const YourWallet = () => {
         {/* Title and Icon */}
         <div className="flex justify-between items-center w-full">
           <div className="flex justify-center gap-2 items-center ">
-            <h3 className="font-semibold md:font-bold lg:font-bold text-[10px] md:text-base lg:text-base mb-2">
+            <h3 className="font-semibold md:font-bold lg:font-bold text-[10px] md:text-base lg:text-sm mb-2">
               Your Wallets
             </h3>
             <div className="pb-2">
