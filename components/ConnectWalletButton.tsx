@@ -1,13 +1,13 @@
-"use client"
-import React, { useEffect, useState } from 'react';
-import { useToast } from "@/hooks/use-toast"
-import Image from "next/image"
-import { Button } from '@/components/ui/button';
-import { modal } from '@/context/index';
-import { useAccount, useDisconnect, useSignMessage } from 'wagmi';
+"use client";
+import React, { useEffect, useState } from "react";
+import { useToast } from "@/hooks/use-toast";
+import { Button } from "@/components/ui/button";
+import { useAccount, useDisconnect, useSignMessage } from "wagmi";
 import { useSelector, useDispatch } from "react-redux";
-import { RootState, AppDispatch } from "@/store/index"; 
-import { connectWallet, logout, setError } from "@/store/slices/authSlice"; // import the actions
+import { RootState, AppDispatch } from "@/store/index";
+import { connectWallet, logout, setError, fetchUserProfile } from "@/store/slices/authSlice";
+import { modal } from "@/context/index";
+import Image from "next/image"
 import {
   Dialog,
   DialogContent,
@@ -16,30 +16,34 @@ import {
 
 const ConnectWalletButton = () => {
   const { isConnected, address: publicAddress } = useAccount();
+  const { signMessageAsync } = useSignMessage();
   const { disconnect } = useDisconnect();
   const dispatch = useDispatch<AppDispatch>();
-
-  // Get state from Redux store
-  const { user, error } = useSelector((state: RootState) => state.auth);
-
+  const { user, error, authToken, isLoading } = useSelector((state: RootState) => state.auth);
   const [isConnecting, setIsConnecting] = useState(false);
-  
   const { toast } = useToast();
-  const { signMessageAsync } = useSignMessage();
 
   useEffect(() => {
-    if (isConnecting && isConnected && publicAddress) {
-      dispatch(connectWallet({ address: publicAddress, signMessage: signMessageAsync }))
-        .finally(() => setIsConnecting(false));
+    if (authToken && !user) { 
+      dispatch(fetchUserProfile(authToken));
     }
-  }, [isConnecting, isConnected, publicAddress, dispatch, signMessageAsync]);
+  }, [authToken, user, dispatch]);
+  
+
+  useEffect(() => {
+    if (isConnecting && isConnected && publicAddress && !authToken) {
+      dispatch(connectWallet({ address: publicAddress, signMessage: signMessageAsync }));
+      setIsConnecting(false);
+    }
+  }, [isConnecting, isConnected, publicAddress, authToken, dispatch, signMessageAsync]);
+  
 
   const handleConnectWallet = async (event: any) => {
     event.preventDefault();
-    dispatch(setError("")); // Clear error state before connecting
+    dispatch(setError(""));
 
     try {
-      await modal.open({ view: 'Connect' });
+      await modal.open({ view: "Connect" });
       setIsConnecting(true);
     } catch (error) {
       dispatch(setError("Connection Declined"));
@@ -64,7 +68,9 @@ const ConnectWalletButton = () => {
       dispatch(logout());
       modal.close();
     }
-  }, [error, disconnect, dispatch, toast, modal.close]);
+  }, [error, dispatch, disconnect, toast]);
+
+  console.log('user - ', user)
 
   return (
     <>
@@ -86,10 +92,10 @@ const ConnectWalletButton = () => {
             <div className="flex justify-between">
               <div className="text-left">
                 <span className="bg-blue-500 border-blue-900 border-2 text-xs px-3 py-2 rounded-full">Normal User</span>
-                <p className="text-white pt-5 font-medium text-sm">MetaPoints: <span className="text-yellow-500">0</span></p>
+                <p className="text-white pt-5 font-medium text-sm">MetaPoints: <span className="text-yellow-500">{user?.points}</span></p>
               </div>
               <div className="text-right">
-                <p className="text-white text-sm font-medium">Subscription: Beta</p>
+                <p className="text-white text-sm font-medium">Beta</p>
                 <div className="flex items-center justify-center bg-black text-xs w-auto px-1 py-2 rounded-full border-green-500 text-green-500 border-2">
                   <div className="h-2 w-2 bg-green-500 rounded-full mr-2"></div>
                   <span className="text-xs font-medium">Active Beta</span>

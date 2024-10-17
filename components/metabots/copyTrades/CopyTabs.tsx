@@ -4,6 +4,7 @@ import CopyTrading from "@/components/metabots/copyTrades/CopyTrading";
 
 import { BsFillExclamationCircleFill } from "react-icons/bs";
 import SmartWalletTabs from "./SmartWalletTabs";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 export default function Tab() {
   return (
     <>
@@ -40,9 +41,18 @@ export default function Tab() {
           >
             Pre Vetted Traders
           </TabsTrigger>
-          <div className="flex justify-end ml-auto items-center text-sm font-normal border-b border-[#1A232F] text-[#E7E7E7] px-8">
+
+
+          <Dialog>
+          <div className="flex justify-end ml-auto items-center cursor-pointer text-sm font-normal border-b border-[#1A232F] text-[#E7E7E7] px-8">
+        <DialogTrigger>
           Copied Trades
+         </DialogTrigger>
           </div>
+              <DialogContent className="w-full p-5 bg-[#0C141F] h-[600px] border-none">
+                no content yet
+              </DialogContent>
+            </Dialog>
 
         </TabsList>
         <TabsContent className="w-full h-full" value="CopyTrade">

@@ -1,148 +1,122 @@
-"use client";
-import { createSlice, PayloadAction, createAsyncThunk } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { postLoginWallet, fetchProfileData } from "@/app/api/auth/auth";
 import Cookies from "js-cookie";
-import { modal } from '@/context/index';
 
-// Define initial state
 interface AuthState {
   user: any;
   authToken: string | null;
   error: string;
   isConnected: boolean;
   publicAddress: string | null;
-  showSuccessDialog: boolean;
   isLoading: boolean;
+  isProfileFetched: boolean; 
 }
 
 const initialState: AuthState = {
   user: null,
-  authToken: null,
+  authToken: Cookies.get("authToken") || null,
   error: "",
   isConnected: false,
   publicAddress: null,
-  showSuccessDialog: true,
   isLoading: false,
+  isProfileFetched: false,
 };
 
-// Async Thunks for handling side effects
+// Connect Wallet and authenticate
 export const connectWallet = createAsyncThunk(
   "auth/connectWallet",
   async (
     { address, signMessage }: { address: string; signMessage: (message: { message: string }) => Promise<string> },
-    { getState, dispatch }
+    { rejectWithValue }
   ) => {
-    try {
-      // Clear previous user data and pending requests
-      dispatch(clearPendingRequest());
-
-      console.log("Attempting to login with address:", address);
-      const message = "Please sign this message to log in.";
-      const signature = await signMessage({ message });
-
-      // Call the login API with the signature and address
-      await postLoginWallet(
-        signMessage, // Pass the signMessage function here
-        (user: any, token: string) => {
-          console.log("Login successful:", user, token);
-          dispatch(setUser({ user, token }));
-          Cookies.set("authToken", token, { expires: 7 });
+    return new Promise<{ user: any; authToken: string }>((resolve, reject) => {
+      postLoginWallet(
+        address,
+        signMessage,
+        (user, authToken) => {
+          Cookies.set("authToken", authToken, { expires: 7 });
+          localStorage.setItem("auth-storage", JSON.stringify({ authToken, user }));
+    
+          resolve({ user, authToken });
         },
-        (error: string) => {
-          console.log("Login failed:", error);
-          dispatch(setError(error));
-          modal.close();
-        },
-        address // The public address remains the same
+        (error) => {
+          reject(rejectWithValue(error));
+        }
       );
-      modal.close();
-    } catch (error) {
-      console.log("Connection declined:", error);
-      dispatch(setError("Connection declined"));
-      modal.close();
-    }
+    });    
   }
 );
 
-
-
+// Fetch user profile using token
 export const fetchUserProfile = createAsyncThunk(
   "auth/fetchUserProfile",
-  async (token: string, { dispatch }) => {
+  async (token: string, { getState, rejectWithValue }) => {
+    const { auth } = getState() as { auth: AuthState };
+
+    // Avoid fetching the profile if already fetched
+    if (auth.isProfileFetched) {
+      return rejectWithValue("Profile already fetched");
+    }
+
     try {
       const data = await fetchProfileData(token);
-      dispatch(setUser({ user: data, token }));
-      modal.close();
+      return data;
     } catch (error) {
-      dispatch(setError("Failed to fetch user profile"));
-      modal.close();
+      return rejectWithValue("Failed to fetch user profile");
     }
   }
 );
 
-// Create the slice
 const authSlice = createSlice({
   name: "auth",
   initialState,
   reducers: {
-    setUser: (state, action: PayloadAction<{ user: any; token: string }>) => {
-      const { user, token } = action.payload;
-      state.user = user;
-      state.authToken = token;
-      state.isConnected = true;
-      state.publicAddress = user.publicAddress; // Assuming user has a publicAddress
-      state.error = "";
-    },
-    setError: (state, action: PayloadAction<string>) => {
-      state.error = action.payload;
-      state.user = null;
-      state.authToken = null;
-      state.isConnected = false;
-      state.publicAddress = null;
-    },
     logout: (state) => {
       state.user = null;
       state.authToken = null;
       state.isConnected = false;
       state.publicAddress = null;
-      state.showSuccessDialog = false;
+      state.isProfileFetched = false; // Reset profile fetched status on logout
+
       Cookies.remove("authToken");
       localStorage.removeItem("auth-storage");
     },
-    setDisableSuccessDialog: (state, action: PayloadAction<boolean>) => {
-      state.showSuccessDialog = action.payload;
-    },
-    clearPendingRequest: (state) => {
-      // Nullify public address and user to clear any pending requests
-      state.user = null;
-      state.publicAddress = null;
-      state.isConnected = false;
-      state.error = "Previous connection cleared. Ready for fresh connection.";
+    setError: (state, action) => {
+      state.error = action.payload;
     },
   },
   extraReducers: (builder) => {
     builder
+      // Connect Wallet
       .addCase(connectWallet.pending, (state) => {
         state.isLoading = true;
       })
-      .addCase(connectWallet.fulfilled, (state) => {
+      .addCase(connectWallet.fulfilled, (state, action) => {
+        const { user, authToken } = action.payload;
+        state.user = user;
+        state.authToken = authToken;
+        state.isConnected = true;
+        state.isProfileFetched = true; // Mark profile as fetched
+        state.isLoading = false;
+        state.error = "";
+      })
+      .addCase(connectWallet.rejected, (state, action) => {
+        state.error = action.payload as string;
+        state.isLoading = false;
+        state.isConnected = false;
+      })
+      // Fetch User Profile
+      .addCase(fetchUserProfile.fulfilled, (state, action) => {
+        state.user = action.payload;
+        state.isProfileFetched = true; // Set profile fetched flag
         state.isLoading = false;
       })
-      .addCase(connectWallet.rejected, (state) => {
-        state.isLoading = false;
-      })
-      .addCase(fetchUserProfile.pending, (state) => {
-        state.isLoading = true;
-      })
-      .addCase(fetchUserProfile.fulfilled, (state) => {
-        state.isLoading = false;
-      })
-      .addCase(fetchUserProfile.rejected, (state) => {
+      .addCase(fetchUserProfile.rejected, (state, action) => {
+        state.error = action.payload as string;
         state.isLoading = false;
       });
   },
 });
 
-export const { setUser, setError, logout, setDisableSuccessDialog, clearPendingRequest } = authSlice.actions;
-
+export const { logout, setError } = authSlice.actions;
 export default authSlice.reducer;

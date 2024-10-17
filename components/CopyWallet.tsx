@@ -22,7 +22,7 @@ const CopyWallet = () => {
         placeholder="871kxZi2PU4HoDB1iA1L9dyMbdJP6z4m3KUob...."
       />
 
-<label className="font-normal text-sm" htmlFor="">
+<label className="font-normal text-sm" htmlFor="" aria-required>
         Add Wallet Label
       </label>
       <input
@@ -80,18 +80,18 @@ const CopyWallet = () => {
             type="text"
             placeholder="1"
           />
-          <Button className="absolute top-2 left-0 w-[57px] md:w-[65px] lg:[100px] text-xs  h-[38px] md:h-[43px] lg:h-[43px] px-4 py-[11px] bg-[#212E40] text-[#CED4DA] border-[1px] border-[#212E40] rounded-r-[6px] md:rounded-r-[8px] lg:rounded-r-[8px]">
+          <Button className="absolute top-2 left-0 w-[57px] md:w-[65px] lg:[100px] text-[10px]  h-[38px] md:h-[43px] lg:h-[43px] px-2 py-[11px] bg-[#212E40] text-[#CED4DA] border-[1px] border-[#212E40] rounded-r-[6px] md:rounded-r-[8px] lg:rounded-r-[8px]">
             Less than
           </Button>
         </div>
 
         <div className="relative">
           <input
-            className="mb-5 mt-2 text-xs md:text-base lg:text-base w-full h-[38px] md:h-[43px] lg:h-[43px] py-[8px] px-[16px] pr-[32px] bg-[#0C141F] text-[#212E40] border-[1px] border-[#212E40] rounded-[6px] md:rounded-[8px] lg:rounded-[8px]"
+            className="mb-5 mt-2 text-[10px] md:text-base lg:text-base w-full h-[38px] md:h-[43px] lg:h-[43px] py-[8px] px-[16px] pr-[32px] bg-[#0C141F] text-[#212E40] border-[1px] border-[#212E40] rounded-[6px] text-left md:rounded-[8px] lg:rounded-[8px]"
             type="text"
             placeholder="1"
           />
-          <Button className="absolute top-2 left-0 w-[57px] md:w-[65px] lg:[100px]  h-[38px] md:h-[43px] lg:h-[43px] px-4 py-[11px] text-xs bg-[#212E40] text-[#CED4DA] border-[1px] border-[#212E40] rounded-r-[6px] md:rounded-r-[8px] lg:rounded-r-[8px]">
+          <Button className="absolute top-2 left-0 w-[80px] md:w-[65px] lg:w-[100px]  h-[38px] md:h-[43px] lg:h-[43px] px-2 text-left py-[11px] text-[10px] bg-[#212E40] text-[#CED4DA] border-[1px] border-[#212E40] rounded-r-[6px] md:rounded-r-[8px] lg:rounded-r-[8px]">
           Sell at % profit
           </Button>
         </div>

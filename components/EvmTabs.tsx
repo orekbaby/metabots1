@@ -97,7 +97,7 @@ const WalletPerformanceTabs = () => {
           >
                        <div className="w-fit flex items-center ">
               <TabsTrigger
-                className="border-b-2 border-transparent py-2 data-[state=active]:bg-[#084298]
+                className="border-b-2 border-transparent py-3 data-[state=active]:bg-[#084298]
                  data-[state=active]:text-[white] text-[#B5B6B6]
                   text-[10px] font-normal md:text-base lg:text-sm w-[158px] h-[26px] p-[10px]"
                 value="WalletAnalysis"
@@ -106,7 +106,7 @@ const WalletPerformanceTabs = () => {
               </TabsTrigger>
 
               <TabsTrigger
-                className="border-b-2 border-transparent py-2
+                className="border-b-2 border-transparent py-3
                  data-[state=active]:bg-[#084298] data-[state=active]:text-[white]
                   text-[#B5B6B6] text-[10px]
                  font-normal md:text-base lg:text-sm  w-[158px] h-[26px] p-[10px]"
