@@ -4,6 +4,7 @@ import Cookies from "js-cookie";
 
 interface AuthState {
   user: any;
+  walletData: null,
   authToken: string | null;
   error: string;
   isConnected: boolean;
@@ -14,6 +15,7 @@ interface AuthState {
 
 const initialState: AuthState = {
   user: null,
+  walletData: null,
   authToken: Cookies.get("authToken") || null,
   error: "",
   isConnected: false,
@@ -21,6 +23,8 @@ const initialState: AuthState = {
   isLoading: false,
   isProfileFetched: false,
 };
+
+
 
 // Connect Wallet and authenticate
 export const connectWallet = createAsyncThunk(
