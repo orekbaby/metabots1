@@ -12,6 +12,7 @@ import { marqueeDetails } from "@/utils/mockData";
 import TradeHistory from "@/components/metabots/copyTrades/TradeHistory";
 import TransactionHistory from "./metabots/copyTrades/TransactionHistory";
 import EvmDetails from "./metabots/copyTrades/EvmDetails";
+import TradingHistory from "./metabots/copyTrades/TradingHistory";
 
 const WalletPerformanceTabs = () => {
   const [selectedOption, setSelectedOption] = useState("trending");
@@ -129,11 +130,11 @@ const WalletPerformanceTabs = () => {
          
 
           <TabsContent
-            className="w-full h-auto md:h-[40vh] lg:h-[25vh]
+            className="w-full h-auto md:h-[100vh] lg:h-[100vh]
             md:overflow-y-auto lg:overflow-y-auto scrollbar-hide overflow-x-hidden mb-5 md:mb-0 lg:mb-0"
             value="TransactionHistory"
           >
-            <TransactionHistory />
+            <TradingHistory />
           </TabsContent>
         </Tabs>
       </div>

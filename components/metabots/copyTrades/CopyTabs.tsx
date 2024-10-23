@@ -5,6 +5,7 @@ import CopyTrading from "@/components/metabots/copyTrades/CopyTrading";
 import { BsFillExclamationCircleFill } from "react-icons/bs";
 import SmartWalletTabs from "./SmartWalletTabs";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import CopyTradeTabs from "@/components/CopyTradeTabs";
 export default function Tab() {
   return (
     <>
@@ -49,8 +50,10 @@ export default function Tab() {
           Copied Trades
          </DialogTrigger>
           </div>
-              <DialogContent className="w-full p-5 bg-[#0C141F] h-[600px] border-none">
-                no content yet
+              <DialogContent className="w-full max-w-[1000px] p-5 bg-[#0C141F] h-[500px] border-none">
+                <div className="">
+                <CopyTradeTabs/>
+                </div>
               </DialogContent>
             </Dialog>
 

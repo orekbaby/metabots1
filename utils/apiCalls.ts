@@ -1,5 +1,6 @@
 // apiCalls.ts
 "use client"
+import { toast, useToast } from "@/hooks/use-toast";
 const metabotUrl = process.env.NEXT_PUBLIC_METABOT_URL as string;
 const key = process.env.NEXT_PUBLIC_METABOT_API_KEY;
 
@@ -31,9 +32,35 @@ export const fetchWalletAnalysis = async (userToken: string, watchedAddress: str
   }
 };
 
+export const fetchCopyTrade = async (userToken: string, userId: string) => {
+  try {
+    const response = await fetch(`${metabotUrl}copyTrade/${userId}`, {
+      method: 'GET',
+      headers: {
+        Authorization: `${key}:${userToken}`,
+        "Content-Type": "application/json",
+       
+      },
+    });
+
+    if (!response.ok) {
+      const errorMessage = await response.text(); 
+      throw new Error(`Error ${response.status}: ${errorMessage}`);
+    }
+
+    const res = await response.json();
+    console.log('User Data:', res);
+    return res;
+  } catch (error) {
+    console.error('Error fetching the users copied trade:', error);
+    throw error;
+  }
+};
 
 
-export const copyUserTrade = async (
+
+
+export const copyTradeStatus = async (
   userToken: string,
   watchedAddress: string,
   solanaWalletName: string,
@@ -45,18 +72,17 @@ export const copyUserTrade = async (
   maxTradeTab: number,
   expirationTimestamp: number
 ) => {
-  // Prepare the request body for the POST request
   const requestBody = JSON.stringify({
-    watchedAddr: watchedAddress,
+    watchedAddr: walletAddress,
     label: solanaWalletName,
     protocolIdentifier: "pump.fun:solana",
     amount: Number(amount).toFixed(6).toString(),
-    action: "buy", // You can adjust this if needed
+    action: "buy",
     isgreaterThan: isGreaterThan,
     tradeAmount: inputTrade,
     takeProfitParams: {
       pricePercentage: takeProfit,
-      amountPercentage: 100, // Adjust this percentage if needed
+      amountPercentage: 100,
     },
     walletAddress: walletAddress,
     chain: "solana",
@@ -65,29 +91,41 @@ export const copyUserTrade = async (
   });
 
   try {
-    // Make the POST request to the /copyTrade endpoint
     const response = await fetch(`${metabotUrl}/copyTrade`, {
       method: 'POST',
       headers: {
         Authorization: `${key}:${userToken}`,
         "Content-Type": "application/json",
-        "Cache-Control": "no-cache",
-        Pragma: "no-cache",
       },
       body: requestBody,
     });
 
-    // Check for response status
-    if (!response.ok) {
-      const errorMessage = await response.text();
-      throw new Error(`Error ${response.status}: ${errorMessage}`);
+    const res = await response.json();
+
+    // Check if the status is true
+    if (res.status === true) {
+    toast({
+        description: ("CopyTrade is successful"),
+       
+      });
+
+     } else {
+      toast({
+        description: ("CopyTrade failed"),
+        variant: "destructive",
+      });
     }
 
-    // Parse the JSON response
-    const res = await response.json();
     return res;
   } catch (error) {
-    console.error('Error copying user trade:', error);
+    console.error('Error executing CopyTrade:', error);
+    toast({
+      description: ("An error occurred during CopyTrade"),
+      variant: "destructive",
+    });
     throw error;
   }
 };
+
+
+
