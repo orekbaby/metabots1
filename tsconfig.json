@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     "components/metabots/MetabotsNav.tsx",
     "components/metabots/Dashboard/Tabs.1tsx"
-  ],
+, "components/memeTabs"  ],
   "exclude": ["node_modules"]
 }

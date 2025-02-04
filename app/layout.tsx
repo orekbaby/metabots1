@@ -1,12 +1,14 @@
 import dynamic from "next/dynamic";
 import type { Metadata } from "next";
-import { Instrument_Sans, Inter } from "next/font/google";
+import { Instrument_Sans } from "next/font/google";
 import "./globals.css";
 import FooterNav from "@/components/layout/FooterNav";
 
-import { Toaster } from "@/components/ui/toaster"
-
+import { Toaster } from "@/components/ui/toaster";
 import ClientProviders from "@/components/ClientProviders";
+
+import { headers } from "next/headers";
+import ContextProvider from "@/context";
 
 const SideBar = dynamic(() => import("@/components/layout/Sidebar"), {
   ssr: false,
@@ -15,10 +17,8 @@ const Navigation = dynamic(() => import("@/components/layout/Navigation"), {
   ssr: false,
 });
 
-import { headers } from 'next/headers';
-import ContextProvider from '@/context';
-
-const inter = Inter({ subsets: ["latin"] });
+// Load Instrument_Sans
+const instrumentSans = Instrument_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -30,23 +30,19 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const cookies = headers().get('cookie'); // Get cookies from headers
-  // No need to derive initialState here for ClientProviders
+  const cookies = headers().get("cookie"); // Get cookies from headers
+
   return (
-    <html lang="en">
-      <head>
-        <link href="https://db.onlinewebfonts.com/c/09cc8698f1f0506ad91591c4149c76f8?family=Instrument+Sans" rel="stylesheet" type="text/css" />
-      </head>
-      <body className="font-sans">
-        <ClientProviders cookies={cookies}> {/* Pass only cookies */}
+    <html lang="en" className={instrumentSans.className}>
+      <head />
+      <body className={`${instrumentSans.className}`}>
+        <ClientProviders cookies={cookies}>
           <div className="flex w-full h-auto">
             <SideBar />
             <div className="relative h-auto w-full overflow-x-hidden scrollbar-hide overflow-y-auto">
               <Navigation />
               <div className="pl-0 md:pl-20 lg:pl-20 px-0">
-                <ContextProvider cookies={cookies}>
-                 {children}
-                 </ContextProvider>
+                <ContextProvider cookies={cookies}>{children}</ContextProvider>
               </div>
               <FooterNav />
             </div>

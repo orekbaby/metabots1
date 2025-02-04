@@ -3,7 +3,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import KolCalls from "@/components/metabots/alphaHuntTabs/KolCalls";
 import KolList from "@/components/metabots/alphaHuntTabs/KolList";
 
-const KolCallsSnipingTabs = () => {
+const KolCallsSnipingTab = () => {
   return (
     <>
       <Tabs defaultValue="KolCalls" className="w-full">
@@ -34,4 +34,4 @@ const KolCallsSnipingTabs = () => {
   );
 };
 
-export default KolCallsSnipingTabs;
+export default KolCallsSnipingTab;

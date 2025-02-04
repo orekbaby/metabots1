@@ -1,3 +1,5 @@
+import { IoIosWarning } from "react-icons/io";
+
 export const copyMock = [
   {
     time: "3 mins ago",
@@ -215,26 +217,79 @@ export const marqueeDetails = [
 
 export const marqueeTokens = [
   {
+    number: "#13",
+    img: "/lion.svg",
+    name: "pillpump.fun",
+    description: "Official Mascot of the Holy Year",
+    percentage: "+13.27%",
+  },
+  {
+    number: "#14",
+    img: "/lion.svg",
     name: "ETH.BEN",
+    description: "Official Mascot of the Holy Year",
+    percentage: "+7.12%",
   },
-
   {
+    number: "#15",
+    img: "/lion.svg",
     name: "MACHI BIG BROTHER",
+    description: "Official Mascot of the Holy Year",
+    percentage: "+10.45%",
   },
-
   {
+    number: "#16",
+    img: "/lion.svg",
     name: "PEPE COIN DEPLOYER",
+    description: "Official Mascot of the Holy Year",
+    percentage: "+8.56%",
   },
-
   {
-    name: "PROFITABLE MEME COIN TRADER",
-  },
-
-  {
-    img: "",
+    number: "#17",
+    img: "/lion.svg",
     name: "JUSTIN SUN",
+    description: "Official Mascot of the Holy Year",
+    percentage: "+6.78%",
+  },
+  {
+    number: "#18",
+    img: "/lion.svg",
+    name: "PROFITABLE MEME COIN TRADER",
+    description: "Official Mascot of the Holy Year",
+    percentage: "+9.01%",
+  },
+  {
+    number: "#19",
+    img: "/lion.svg",
+    name: "SAFE TOKEN DEPLOYER",
+    description: "Official Mascot of the Holy Year",
+    percentage: "+11.32%",
+  },
+  {
+    number: "#20",
+    img: "/lion.svg",
+    name: "COMMUNITY BUILDER",
+    description: "Official Mascot of the Holy Year",
+    percentage: "+5.44%",
+  },
+  {
+    number: "#21",
+    img: "/lion.svg",
+    name: "MEME COIN HOLDER",
+    description: "Official Mascot of the Holy Year",
+    percentage: "+12.78%",
+  },
+  {
+    number: "#22",
+    img: "/lion.svg",
+    name: "CRYPTO LEGEND",
+    description: "Official Mascot of the Holy Year",
+    percentage: "+14.56%",
   },
 ];
+
+
+
 
 export const sideBar = [
   {
@@ -1649,4 +1704,159 @@ export const copyLossWallet = [
           amount2: "980.89K",
           price: "$0.00967812",
            },
+          ]
+
+         export const box1 = [
+            { id: 1,
+               title: 'Freshly Minted',
+                // content: 'This is the content of Box 1' ,
+              },
+
+
+         
+          ];
+
+          export const box2 = [
+         
+
+
+            { id: 2,
+               title: 'Soon-To-Moon',
+              //  content: 'This is the content of Box 2',
+               },
+
+          
+          ];
+
+          export const box3 = [
+           
+
+            { id: 3, 
+              title: 'Newly Graduated To DEX',
+              // content: 'This is the content of Box 3', 
+              },
+          ];
+
+
+
+          export const content1 = [
+            { 
+              id: 1,
+              img: '/lion2.png',
+             
+             },
+
+             { 
+              id: 2,
+              img: '/lion2.png',
+              
+             },
+
+             { 
+              id: 3,
+              img: '/content.svg' ,
+              
+             },
+
+             { 
+              id: 4,
+              img: '/lion2.png' ,
+              
+             },
+          ]
+
+          export const content2 = [
+            { 
+              id: 1,
+              img: '/lion2.png' ,
+              
+             },
+
+             { 
+              id: 2,
+              img: '/content.svg',
+              
+             },
+             { 
+              id: 3,
+              img: '/lion2.png' ,
+              
+             },
+
+          { 
+              id: 4,
+              img: '/content.svg' ,
+              
+             },
+          ]
+
+          export const content3 = [
+            { 
+              id: 1,
+              img: '/content.svg',
+             
+             },
+
+             { 
+              id: 2,
+              img: '/lion2.png',
+              
+             },
+
+             { 
+              id: 3,
+              img: '/content.svg' ,
+              
+             },
+
+             { 
+              id: 4,
+              img: '/lion2.png' ,
+              
+             },
+          ]
+
+          
+          import { IconType } from 'react-icons';
+          export const tableData = [
+         {
+            img:"/lion2.png", 
+          icon :"" ,
+            },
+
+          {
+              img:"/content.svg",  
+        icon: IoIosWarning,
+              },
+
+               {
+
+              img:"/lion2.png", 
+              icon: "", 
+
+               },
+
+               {
+                img:"/content.svg",  
+                icon: IoIosWarning,
+                },
+
+                
+                {
+                  img:"/content.svg",  
+    
+                  },
+
+                  
+                  {
+                    img:"/content.svg",  
+      
+                    },
+      
+                    {
+
+                      img:"/lion2.png",  
+                      icon: IoIosWarning,
+        
+                       },
           ]

@@ -148,7 +148,7 @@ const TokenDetailsMobile = () => {
         {/* tradetabs */}
 
         <div className="border-[#212E40] rounded-[8px] pl-4 pr-1 mt-0">
-          <TradeTabs />
+          {/* <TradeTabs /> */}
         </div>
 
         {/* tabs */}

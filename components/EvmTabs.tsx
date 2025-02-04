@@ -3,18 +3,15 @@ import React, { useState } from "react";
 import Marquee from "react-fast-marquee";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import YourWallet from "@/components/metabots/Dashboard/YourWallet";
-import WalletPerformance from "@/components/metabots/copyTrades/WalletPerformance";
+import WalletPerformance from "@/components/copyTrades/WalletPerformance";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import WalletDetails from "@/components/metabots/copyTrades/WalletDetails";
-import WalletDetailsMobile from "@/components/metabots/copyTrades/WalletDetailsMobile";
+import WalletDetails from "@/components/copyTrades/WalletDetails";
+import WalletDetailsMobile from "@/components/copyTrades/WalletDetailsMobile";
 import { marqueeTokens } from "@/utils/mockData";
 import { marqueeDetails } from "@/utils/mockData";
-import TradeHistory from "@/components/metabots/copyTrades/TradeHistory";
-import TransactionHistory from "./metabots/copyTrades/TransactionHistory";
-import EvmDetails from "./metabots/copyTrades/EvmDetails";
-import TradingHistory from "./metabots/copyTrades/TradingHistory";
+import TradingHistory from "./copyTrades/TradingHistory";
 
-const WalletPerformanceTabs = () => {
+const EvmTabs = () => {
   const [selectedOption, setSelectedOption] = useState("trending");
 
   const handleSelectChange = (e: {
@@ -93,14 +90,14 @@ const WalletPerformanceTabs = () => {
           className="w-full px-1 md:px-0 lg:px-0 pr-0 border-none md:border-b-2 lg:border-b-2 border-[#212E40]"
         >
           <TabsList
-            className="w-full flex items-center border-none md:border-b-2 lg:border-b-2 border-[#212E40] gap-6 md:gap-0 lg:gap-0 justify-between pl-0 md:pl-6 lg:pl-6 h-[40px] md:h-[50px] lg:h-[50px]
+            className="w-full flex items-center border-none md:border-b-2 lg:border-b-2 border-[#212E40] gap-6 md:gap-0 lg:gap-10 justify-between pl-0 md:pl-6 lg:pl-6 h-[40px] md:h-[50px] lg:h-[50px]
            bg-[#0C141F] px-0 md:px-0 lg:px-6"
           >
                        <div className="w-fit flex items-center ">
               <TabsTrigger
                 className="border-b-2 border-transparent py-3 data-[state=active]:bg-[#084298]
                  data-[state=active]:text-[white] text-[#B5B6B6]
-                  text-[10px] font-normal md:text-base lg:text-sm w-[158px] h-[26px] p-[10px]"
+                  text-[10px] font-normal md:text-base lg:text-sm w-[158px] h-[36px] p-[10px] rounded-md"
                 value="WalletAnalysis"
               >
                 Wallet Analysis
@@ -110,7 +107,7 @@ const WalletPerformanceTabs = () => {
                 className="border-b-2 border-transparent py-3
                  data-[state=active]:bg-[#084298] data-[state=active]:text-[white]
                   text-[#B5B6B6] text-[10px]
-                 font-normal md:text-base lg:text-sm  w-[158px] h-[26px] p-[10px]"
+                 font-normal md:text-base lg:text-sm  w-[158px] h-[36px] p-[10px] rounded-md"
                 value="TransactionHistory"
               >
               Transaction History
@@ -127,9 +124,7 @@ const WalletPerformanceTabs = () => {
           >
             <WalletPerformance />
           </TabsContent>
-         
-
-          <TabsContent
+         <TabsContent
             className="w-full h-auto md:h-[100vh] lg:h-[100vh]
             md:overflow-y-auto lg:overflow-y-auto scrollbar-hide overflow-x-hidden mb-5 md:mb-0 lg:mb-0"
             value="TransactionHistory"
@@ -142,4 +137,4 @@ const WalletPerformanceTabs = () => {
   );
 };
 
-export default WalletPerformanceTabs;
+export default EvmTabs;

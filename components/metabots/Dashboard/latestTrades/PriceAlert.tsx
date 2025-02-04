@@ -11,7 +11,7 @@ import Image from "next/image";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { priceAlertsMock } from "@/utils/copyMockData3";
 
-export default function Limits() {
+export default function PriceAlert() {
   return (
     <>
       <Table className="text-left overflow-x-hidden w-full">

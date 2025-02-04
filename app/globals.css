@@ -5,9 +5,10 @@
 
 @layer base {
   body {
-    @apply font-sans;
+    font-family: "Instrument_Sans", sans-serif;
   }
 }
+
 
 body {
   background: #0a1019;
@@ -37,9 +38,29 @@ main {
 	}
   }
   
-  .animate-spin-fast {
-	animation: spin 1s linear infinite; /* Faster spin with 1s duration */
-	will-change: transform; /* Optimizes for smoother animation */
-	transform: translateZ(0); /* GPU acceleration for smoother performance */
-	display: inline-block; /* Ensures proper layout */
+  .accordion-trigger::after {
+    display: none;
   }
+
+  /* Autofill background color for input */
+input:-webkit-autofill {
+  background-color: #17212F !important;
+  color: #696A6C !important;
+  border: 1px solid #212E40 !important; /* Ensure the border remains styled */
+}
+
+/* Prevent any additional styles when input is focused */
+input:focus {
+  background-color: #17212F !important;
+  color: #696A6C !important;
+}
+
+  
+  .animate-spin-fast {
+	animation: spin 1s linear infinite; 
+	will-change: transform; 
+	transform: translateZ(0); 
+	display: inline-block; 
+  }
+
+  

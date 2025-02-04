@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/table";
 import { newTokensMock } from "@/utils/mockData3";
 
-export default function All() {
+export default function NewToken() {
   return (
     <>
       <Table className="text-left overflow-x-hidden w-full">

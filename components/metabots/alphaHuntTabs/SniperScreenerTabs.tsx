@@ -2,7 +2,7 @@ import React from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import ApeModeSniping from "./ApeModeSniping";
 import KOLCallsSnipingTabs from "@/components/metabots/alphaHuntTabs/KolCallsSnipingTab";
-const SniperScreener = () => {
+const SniperScreenerTabs = () => {
   return (
     <>
       <Tabs
@@ -43,4 +43,4 @@ const SniperScreener = () => {
   );
 };
 
-export default SniperScreener;
+export default SniperScreenerTabs;

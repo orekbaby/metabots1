@@ -9,7 +9,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 
-const AccumulatedTokens = () => {
+const TokenFreshWallet = () => {
   return (
     <>
       <div className="border-b-transparent overflow-hidden">
@@ -36,4 +36,4 @@ const AccumulatedTokens = () => {
   );
 };
 
-export default AccumulatedTokens;
+export default TokenFreshWallet;

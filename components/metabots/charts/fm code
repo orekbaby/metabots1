@@ -1,0 +1,333 @@
+// "use client";
+
+// import dynamic from "next/dynamic";
+// import { FC, useState, useEffect } from "react";
+// import Script from "next/script";
+
+// import {
+//   ChartingLibraryWidgetOptions,
+//   ResolutionString,
+// } from "@/public/static/charting_library/charting_library";
+// import { fetchSolanaData } from "@/utils/apiCalls"; // Assuming this is the path to your API logic
+// import { useQuery } from "@tanstack/react-query";
+// import { ChartInformation, FetchDynamicTokenResponse, LatestData } from "@/utils/types";
+// import { useParams } from "next/navigation";
+
+// interface ChatProps {
+//   tokenAddressDynamic: FetchDynamicTokenResponse;
+//   chartData: ChartInformation;
+//   isScriptReady:boolean
+// }
+
+// const TVChartContainer = dynamic(
+//   () =>
+//     import("@/components/metabots/charts/TvChartContainer").then(
+//       (mod) => mod.TVChartContainer
+//     ),
+//   { ssr: false }
+// );
+
+
+// const Chart: FC<ChatProps> = ({ tokenAddressDynamic }) => {
+//   const [isScriptReady, setIsScriptReady] = useState(false);
+//   const tokenAddress = tokenAddressDynamic?.token?.mint;
+//   const params = useParams(); // Access route params
+//   const slug = params?.slug;
+
+//   const [chartData, setChartData] = useState<any | null>(null);
+//   const [isLoading, setIsLoading] = useState(false);
+//   const [error, setError] = useState<string | null>(null);
+
+//   const [token, setToken] = useState<LatestData | null>(null);
+//   const [pool, setPool] = useState<LatestData | null>(null);
+
+//   useEffect(() => {
+//     const fetchData = async () => {
+//       if (tokenAddress) return;
+
+//       setIsLoading(true);
+//       setError(null);
+
+//       const data = await fetchSolanaData(tokenAddress);
+
+//       if (data) {
+//         setChartData(data);
+//       } else {
+//         setError("Failed to fetch chart data");
+//       }
+
+//       setIsLoading(false);
+//     };
+
+//     fetchData();
+//   }, [ tokenAddress]);
+
+//   console.log({ chartData });
+//   console.log("TradingView script loaded", isScriptReady);
+// console.log({tokenAddressDynamic})
+
+
+//   useEffect(() => {
+//     // Dynamically load TradingView script
+//     const script = document.createElement("script");
+//     script.src = "/static/charting_library/charting_library.js";
+//     script.onload = () => setIsScriptReady(true);
+//     document.body.appendChild(script);
+
+//     return () => {
+//       document.body.removeChild(script);
+//     };
+//   }, []);
+
+//   if (!isScriptReady) return <div>Loading TradingView...</div>;
+//   if (error) return <div>Error loading chart data</div>;
+
+//   // const widgetProps: Partial<ChartingLibraryWidgetOptions> = {
+//   //   symbol: tokenAddressDynamic?.token?.symbol || "defaultSymbol", // Provide a default symbol here
+//   //   interval: "1D" as ResolutionString,
+//   //   library_path: "/static/charting_library/",
+//   //   locale: "en",
+//   //   charts_storage_url: "https://saveload.tradingview.com",
+//   //   charts_storage_api_version: "1.1",
+//   //   client_id: "tradingview.com",
+//   //   user_id: "public_user_id",
+//   //   fullscreen: false,
+//   //   theme: "dark",
+//   //   autosize: true,
+//   // };
+
+//   // if (isLoading) return <div>Loading...</div>;
+//   // if (error) return <div>Error loading chart data</div>;
+
+//   return (
+//     <div className="h-full w-full">
+//       {pool && token ? (
+//         <TVChartContainer
+//           tokenId={token.pools[0]?.tokenAddress || ""}
+//           tokenSymbol={token.token.symbol || token.token.name}
+//           poolId={token.pools[0]?.poolId || ""}
+//           pools={token.pools.map((p) => p.poolId)}
+//           isScriptReady
+//         />
+//       ) : null}
+//     </div>
+//   );
+// };
+
+// export default Chart;
+
+
+
+
+
+
+
+// //TVChartContainer
+
+// //@ts-nocheck
+// import { useEffect, useRef, useState } from "react";
+// import { HistoryCallback, LibrarySymbolInfo, PeriodParams, ErrorCallback } from "@/public/static/charting_library/charting_library";
+// import {
+//   ChartingLibraryWidgetOptions,
+//   LanguageCode,
+//   ResolutionString,
+//   IChartingLibraryWidget,
+//   widget,
+// } from "@/public/static/charting_library";
+// import { ChartInformation, OCLHV } from "@/utils/types";
+// import React from "react";
+// import { flatten, useTvDataFeed } from "./utils";
+
+
+// // interface TVChartContainerProps extends Partial<ChartingLibraryWidgetOptions> {
+// //   chartData: ChartInformation;
+// // }
+
+// interface ChartContainerProps {
+//   symbol: string;
+//   interval: ChartingLibraryWidgetOptions["interval"];
+//   auto_save_delay: ChartingLibraryWidgetOptions["auto_save_delay"];
+//   datafeedUrl: string;
+//   libraryPath: ChartingLibraryWidgetOptions["library_path"];
+//   chartsStorageUrl: ChartingLibraryWidgetOptions["charts_storage_url"];
+//   chartsStorageApiVersion: ChartingLibraryWidgetOptions["charts_storage_api_version"];
+//   clientId: ChartingLibraryWidgetOptions["client_id"];
+//   userId: ChartingLibraryWidgetOptions["user_id"];
+//   fullscreen: ChartingLibraryWidgetOptions["fullscreen"];
+//   autosize: ChartingLibraryWidgetOptions["autosize"];
+//   studiesOverrides: ChartingLibraryWidgetOptions["studies_overrides"];
+//   containerId: ChartingLibraryWidgetOptions["container_id"];
+//   theme: string;
+//   timeframe: ChartingLibraryWidgetOptions["timeframe"];
+// }
+
+// export const TVChartContainer = ({
+//   tokenId,
+//   tokenSymbol,
+//   poolId,
+//   pools,
+//   isScriptReady,
+// }: {
+//   tokenId: string;
+//   tokenSymbol: string;
+//   poolId: string;
+//   pools?: any;
+//   isScriptReady: boolean;
+// }) => {
+
+// const datafeed = useTvDataFeed(tokenId, tokenSymbol, poolId, pools);
+//   const tvWidgetRef = useRef<IChartingLibraryWidget | null>(null);
+
+//   const defaultProps: ChartContainerProps = {
+//     symbol: tokenSymbol,
+//     interval: "1D",
+//     auto_save_delay: 5,
+//     theme: "Dark",
+//     containerId: "tv_chart_container",
+//     libraryPath: "/static/charting_library/",
+//     chartsStorageUrl: "https://saveload.tradingview.com",
+//     chartsStorageApiVersion: "1.1",
+//     clientId: "tradingview.com",
+//     userId: "public_user_id",
+//     fullscreen: false,
+//     autosize: true,
+//     studiesOverrides: {},
+//     timeframe: "1D",
+//     datafeedUrl: "",
+//   };
+
+//   useEffect(() => {
+//     if (!isScriptReady || tvWidgetRef.current) return;
+
+//     const savedProperties = flatten(
+//       JSON.parse(localStorage.getItem("chartproperties") || "{}"),
+//       {
+//         restrictTo: ["scalesProperties", "paneProperties", "tradingProperties"],
+//       }
+//     );
+
+
+//   const tvWidgetRef = React.useRef<IChartingLibraryWidget | null>(null);
+
+//   const chartProperties = JSON.parse(
+//     localStorage.getItem("chartproperties") || "{}"
+//   );
+
+//   React.useEffect(() => {
+//     const savedProperties = flatten(chartProperties, {
+//       restrictTo: ["scalesProperties", "paneProperties", "tradingProperties"],
+//     });
+
+//     const widgetOptions: ChartingLibraryWidgetOptions = {
+//       symbol: tokenSymbol,
+//       datafeed: datafeed,
+//       container: tvWidgetRef?.current,
+//       container_id:
+//         defaultProps.containerId as ChartingLibraryWidgetOptions["container_id"],
+//       library_path: defaultProps.libraryPath as string,
+//       auto_save_delay: 5,
+// locale: "en",
+//       has_seconds: true,
+//       debug: false,
+//       seconds_multipliers: [1],
+//       disabled_features: ["use_localstorage_for_settings"],
+// enabled_features: [
+//         "study_templates",
+//         "iframe_loading_compatibility_mode",
+//       ],
+//       load_last_chart: true,
+//       client_id: defaultProps.clientId,
+//       user_id: defaultProps.userId,
+//       fullscreen: defaultProps.fullscreen,
+//       autosize: defaultProps.autosize,
+// studies_overrides: defaultProps.studiesOverrides,
+//       supports_marks: true,
+//       supported_resolutions: [
+//         "1S",
+//         "1",
+//         "5",
+//         "15",
+//         "30",
+//         "60",
+//         "240",
+//         "360",
+//         "720",
+//         "1440",
+//       ],
+
+// allow_symbol_change: false,
+//       interval: "1s",
+//       seconds_resolution: 1,
+//       theme: "Dark",
+//       overrides: {
+//         ...savedProperties,
+//         "mainSeriesProperties.candleStyle.upColor": "#28A79B",
+//         "mainSeriesProperties.candleStyle.downColor": "#E10000",
+//         "mainSeriesProperties.candleStyle.borderUpColor": "#28A79B",
+//         "mainSeriesProperties.candleStyle.borderDownColor": "#E10000",
+//         "mainSeriesProperties.candleStyle.wickUpColor": "#28A79B",
+// "mainSeriesProperties.candleStyle.wickDownColor": "#E10000",
+//         "paneProperties.background": "#0C141F", // Main background color
+//         "paneProperties.backgroundType": "solid",
+// },
+//       wickUpColor: "#28A79B",
+//       upColor: "#28A79B",
+//       wickDownColor: "#E10000",
+//       downColor: "#E10000",
+//       borderVisible: false,
+//       toolbar_bg: "#0C141F",
+// save_load_adapter: saveLoadAdapter,
+//       supports_timescale_marks: true,
+//       settings_adapter: {
+//         initialSettings: {
+//           "trading.orderPanelSettingsBroker": JSON.stringify({
+//             showRelativePriceControl: false,
+//             showCurrencyRiskInQty: false,
+//             showPercentRiskInQty: false,
+//             showBracketsInCurrency: false,
+//             showBracketsInPercent: false,
+//           }),
+//           // "proterty"
+//           "trading.chart.proterty":
+//             localStorage.getItem("trading.chart.proterty") ||
+//             JSON.stringify({
+//               hideFloatingPanel: 1,
+//             }),
+//             "chart.favoriteDrawings":
+//             localStorage.getItem("chart.favoriteDrawings") ||
+//             JSON.stringify([]),
+//           "chart.favoriteDrawingsPosition":
+//             localStorage.getItem("chart.favoriteDrawingsPosition") ||
+//             JSON.stringify({}),
+//         },
+//         setValue: (key, value) => {
+//           localStorage.setItem(key, value);
+//         },
+// removeValue: (key) => {
+//           localStorage.removeItem(key);
+//         },
+//       },
+//     };
+
+//     const tvWidget = new widget(widgetOptions);
+//     window.inst = tvWidget;
+//     tvWidget.onChartReady(() => {
+//       tvWidgetRef.current = tvWidget;
+//       tvWidget
+//         // @ts-ignore
+//         .subscribe("onAutoSaveNeeded", () => tvWidget.saveChartToServer());
+//     });
+//   }, [tokenSymbol]);
+
+
+
+//   return (
+//     <div className="w-full h-full border-0 outline-0 overflow-hidden m-0 " style={{ colorScheme: "dark" }}>
+    
+//     <div ref={tvWidgetRef} className="w-full h-full" id="tv_chart_container" />
+
+
+//     </div>
+//   );
+// };
+

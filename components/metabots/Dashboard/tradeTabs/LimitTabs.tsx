@@ -1,8 +1,14 @@
-import React from "react";
+import React, { FC } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import BuyLimitOrder from "@/components/metabots/Dashboard/tradeTabs/BuyLimitOrder";
 import SellLimitOrder from "@/components/metabots/Dashboard/tradeTabs/SellLimitOrder";
-const LimitTabs = () => {
+import { FetchDynamicTokenResponse } from "@/utils/types";
+
+interface LimitTabsProps {
+  tokenAddressDynamic: FetchDynamicTokenResponse;
+  
+ }
+const LimitTabs:FC<LimitTabsProps> = ({tokenAddressDynamic}) => {
   return (
     <>
       <Tabs defaultValue="BuyLimitOrder" className="w-full overflow-x-hidden">
@@ -45,14 +51,14 @@ const LimitTabs = () => {
             md:overflow-y-auto lg:overflow-y-auto scrollbar-hide overflow-x-hidden"
           value="BuyLimitOrder"
         >
-          <BuyLimitOrder />
+          <BuyLimitOrder tokenAddressDynamic={tokenAddressDynamic}/>
         </TabsContent>
         <TabsContent
           className="w-full h-auto md:h-[50vh] lg:h-full 
             md:overflow-y-auto lg:overflow-y-auto scrollbar-hide overflow-x-hidden "
           value="SellLimitOrder"
         >
-          <SellLimitOrder />
+          <SellLimitOrder tokenAddressDynamic={tokenAddressDynamic} />
         </TabsContent>
         {/* <TabsContent
           className="w-full h-auto md:h-[50vh] lg:h-full 

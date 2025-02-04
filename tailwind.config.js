@@ -18,7 +18,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        sans: ['Instrument Sans', 'sans-serif'], // Add Instrument Sans here
+        sans: ['Instrument_Sans', 'sans-serif'], // Add Instrument Sans here
       },
       keyframes: {
         "accordion-down": {

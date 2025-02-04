@@ -1,19 +1,19 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import { FaHome } from "react-icons/fa"; // Import IconType from react-icons
+import { FaHome } from "react-icons/fa"; 
 
 import Link from "next/link";
 
 interface SidebarItem {
   id: number;
-  img: React.ElementType | string; // Change the type of img to React.ElementType | string
+  img: React.ElementType | string; 
   alt: string;
   name: string;
   link: string;
 }
 
-export default function SideBar() {
+const Sidebar = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   const sideBar: SidebarItem[] = [
@@ -27,16 +27,16 @@ export default function SideBar() {
     {
       id: 1,
       img: "/metabots.png",
-      name: "Metabots 🔥",
+      name: "Solana Trading Terminal",
       alt: "metabots-img",
-      link: "/metabots/1",
+      link: "/sol/1",
     },
     {
       id: 2,
       img: "/sockettrade.png",
       name: "Copy Trade & Wallet Analysis",
       alt: "metabots-img",
-      link: "/copyTrade",
+      link: "/sol/copyTrade",
     },
     {
       id: 3,
@@ -200,3 +200,5 @@ export default function SideBar() {
     </div>
   );
 }
+
+export default Sidebar

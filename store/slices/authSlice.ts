@@ -1,16 +1,19 @@
+// authSlice.ts
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { postLoginWallet, fetchProfileData } from "@/app/api/auth/auth";
 import Cookies from "js-cookie";
 
+// Define the initial state
 interface AuthState {
   user: any;
-  walletData: null,
+  walletData: any | null;
   authToken: string | null;
   error: string;
+  successMessage: string;
   isConnected: boolean;
   publicAddress: string | null;
   isLoading: boolean;
-  isProfileFetched: boolean; 
+  isProfileFetched: boolean;
 }
 
 const initialState: AuthState = {
@@ -18,15 +21,14 @@ const initialState: AuthState = {
   walletData: null,
   authToken: Cookies.get("authToken") || null,
   error: "",
+  successMessage: "",
   isConnected: false,
   publicAddress: null,
   isLoading: false,
   isProfileFetched: false,
 };
 
-
-
-// Connect Wallet and authenticate
+// Thunk for connecting the wallet and authenticating the user
 export const connectWallet = createAsyncThunk(
   "auth/connectWallet",
   async (
@@ -40,28 +42,20 @@ export const connectWallet = createAsyncThunk(
         (user, authToken) => {
           Cookies.set("authToken", authToken, { expires: 7 });
           localStorage.setItem("auth-storage", JSON.stringify({ authToken, user }));
-    
           resolve({ user, authToken });
         },
         (error) => {
           reject(rejectWithValue(error));
         }
       );
-    });    
+    });
   }
 );
 
-// Fetch user profile using token
+// Thunk for fetching the user profile using the token
 export const fetchUserProfile = createAsyncThunk(
   "auth/fetchUserProfile",
-  async (token: string, { getState, rejectWithValue }) => {
-    const { auth } = getState() as { auth: AuthState };
-
-    // Avoid fetching the profile if already fetched
-    if (auth.isProfileFetched) {
-      return rejectWithValue("Profile already fetched");
-    }
-
+  async (token: string, { rejectWithValue }) => {
     try {
       const data = await fetchProfileData(token);
       return data;
@@ -71,6 +65,7 @@ export const fetchUserProfile = createAsyncThunk(
   }
 );
 
+// Define the auth slice
 const authSlice = createSlice({
   name: "auth",
   initialState,
@@ -80,14 +75,23 @@ const authSlice = createSlice({
       state.authToken = null;
       state.isConnected = false;
       state.publicAddress = null;
-      state.isProfileFetched = false; // Reset profile fetched status on logout
-
+      state.isProfileFetched = false;
+      state.successMessage = "";
       Cookies.remove("authToken");
       localStorage.removeItem("auth-storage");
     },
     setError: (state, action) => {
       state.error = action.payload;
     },
+    setSuccessMessage: (state, action) => {
+      state.successMessage = action.payload;
+    },
+    setLoading: (state) => {
+      state.isLoading = true;
+    },
+    clearLoading: (state) => {
+      state.isLoading = false;
+    }
   },
   extraReducers: (builder) => {
     builder
@@ -100,9 +104,10 @@ const authSlice = createSlice({
         state.user = user;
         state.authToken = authToken;
         state.isConnected = true;
-        state.isProfileFetched = true; // Mark profile as fetched
+        state.isProfileFetched = true;
         state.isLoading = false;
         state.error = "";
+        state.successMessage = "You have now successfully logged in!";
       })
       .addCase(connectWallet.rejected, (state, action) => {
         state.error = action.payload as string;
@@ -110,17 +115,24 @@ const authSlice = createSlice({
         state.isConnected = false;
       })
       // Fetch User Profile
+      .addCase(fetchUserProfile.pending, (state) => {
+        state.isLoading = true;
+      })
       .addCase(fetchUserProfile.fulfilled, (state, action) => {
         state.user = action.payload;
-        state.isProfileFetched = true; // Set profile fetched flag
+        state.isProfileFetched = true;
         state.isLoading = false;
       })
       .addCase(fetchUserProfile.rejected, (state, action) => {
-        state.error = action.payload as string;
-        state.isLoading = false;
+        // Only set error if it's not due to the profile already being fetched
+        if (action.payload !== "Profile already fetched") {
+          state.error = action.payload as string;
+          state.isLoading = false;
+        }
       });
   },
 });
 
-export const { logout, setError } = authSlice.actions;
+// Export actions and reducer
+export const { logout, setError, setSuccessMessage, setLoading, clearLoading } = authSlice.actions;
 export default authSlice.reducer;
